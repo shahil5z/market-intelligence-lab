@@ -64,6 +64,8 @@ class ForecastResponse(BaseModel):
     features: list[str]
     validation_metrics: dict[str, Row]
     test_metrics: dict[str, Row]
+    test_metrics_recursive: dict[str, Row]
+    evaluation_note: str
     selected_model: str
     lowest_test_mae_model: str
     history: list[Row]

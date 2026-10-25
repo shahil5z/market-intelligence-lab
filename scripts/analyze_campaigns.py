@@ -21,8 +21,9 @@ import duckdb
 import numpy as np
 import pandas as pd
 import statsmodels.formula.api as smf
-from common import DB_PATH, MODELS_DIR
+from common import ARTIFACTS_DIR, DB_PATH
 from scipy import stats
+from statsmodels.stats.multitest import multipletests
 
 MIN_ACTIVE_DAYS = 5
 
@@ -129,12 +130,26 @@ def analyse(con, c: pd.Series, all_groups: list[str]) -> dict:
     return base
 
 
+def adjust_for_multiple_tests(results: list[dict]) -> None:
+    """Many campaigns are tested at once, so raw p < 0.05 is expected by chance.
+    Holm controls the family-wise error rate; Benjamini-Hochberg controls the false discovery rate."""
+    tested = [r for r in results if r["sufficient_data"]]
+    for key in ("welch_p_value", "did_p_value"):
+        p = np.array([r[key] for r in tested])
+        for method, label in (("holm", "holm"), ("fdr_bh", "bh")):
+            reject, adj, _, _ = multipletests(p, alpha=0.05, method=method)
+            for r, a, rej in zip(tested, adj, reject, strict=True):
+                r[f"{key}_{label}"] = round(float(a), 4)
+                r[f"{key}_{label}_significant"] = bool(rej)
+
+
 def main() -> None:
     con = duckdb.connect(str(DB_PATH), read_only=True)
     campaigns = con.execute("SELECT * FROM campaigns ORDER BY campaign_id").df()
     groups = [r[0] for r in con.execute("SELECT DISTINCT region_group FROM regions").fetchall()]
     results = [analyse(con, c, groups) for c in campaigns.itertuples()]
     con.close()
+    adjust_for_multiple_tests(results)
     out = {
         "label": "OBSERVATIONAL analysis of SYNTHETIC campaigns laid over real public sales data. No causal claims.",
         "assumptions": [
@@ -142,14 +157,15 @@ def main() -> None:
             "Pre-period of equal length is used as the baseline; seasonality between the two windows is not removed.",
             "Difference-in-differences assumes parallel trends between the target region group and the control groups.",
             "Daily observations are treated as independent in the t-test, which ignores autocorrelation.",
+            "p-values are adjusted for multiple comparisons across all tested campaigns (Holm and Benjamini-Hochberg).",
             "ROI uses revenue, not margin, and treats all observed change as incremental (an upper-bound style simplification).",
         ],
         "campaigns": results,
     }
-    (MODELS_DIR / "campaigns.json").write_text(json.dumps(out, indent=2))
+    (ARTIFACTS_DIR / "campaigns.json").write_text(json.dumps(out, indent=2))
     for r in results:
         print(
-            f"[campaigns] {r['campaign_name']}: sufficient={r['sufficient_data']} uplift={r.get('observed_uplift_pct')} p={r.get('welch_p_value')} did_p={r.get('did_p_value')}"
+            f"[campaigns] {r['campaign_name']}: sufficient={r['sufficient_data']} uplift={r.get('observed_uplift_pct')} p={r.get('welch_p_value')} did_p={r.get('did_p_value')} did_p_holm={r.get('did_p_value_holm')}"
         )
 
 

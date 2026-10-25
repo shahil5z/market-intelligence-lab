@@ -16,7 +16,7 @@ function corrColor(v: number) {
 
 export default function SalesPage() {
   const [f, setF] = useState<FilterState>(EMPTY);
-  const { data, loading, error } = useApi<Row>("/api/sales/eda", { region_group: f.region_group, category: f.category });
+  const { data, loading, error, reload } = useApi<Row>("/api/sales/eda", { region_group: f.region_group, category: f.category });
   const regions = useApi<{ rows: Row[] }>("/api/sales/by-region", { category: f.category });
   const vars = ["units", "avg_price", "discount_pct", "customers", "is_pre_christmas"];
 
@@ -25,7 +25,7 @@ export default function SalesPage() {
       <PageHeader title="Sales Analysis (EDA)"
         description="Exploratory analysis of the cleaned transactions: seasonality, weekday pattern, price and discount versus demand, regional behaviour and campaign periods. Each chart has a short reading of what the numbers show." />
       <FilterBar value={f} onChange={setF} show={["region", "category"]} />
-      <div className="mt-4"><Status loading={loading} error={error} /></div>
+      <div className="mt-4"><Status loading={loading} error={error} what="sales data" onRetry={reload} rows={6} /></div>
       {data && (
         <div className="mt-4 grid gap-4 lg:grid-cols-2">
           <Card title="Seasonality: monthly revenue, 2010 vs 2011" subtitle={data.seasonality.note} className="lg:col-span-2">
@@ -63,6 +63,7 @@ export default function SalesPage() {
           </Card>
 
           <Card title="Regional behaviour" subtitle="Average order value by region group">
+            <Status loading={regions.loading} error={regions.error} what="regional sales" onRetry={regions.reload} empty={regions.data?.rows.length === 0} rows={5} />
             {regions.data && (
               <DataTable caption="Regions" rows={regions.data.rows} columns={[
                 { key: "region_group", label: "Region group" },
@@ -71,7 +72,7 @@ export default function SalesPage() {
                 { key: "customers", label: "Customers", align: "right", format: (v) => fmtNumber(v) },
               ]} />
             )}
-            {regions.data && (() => {
+            {regions.data && regions.data.rows.length > 0 && (() => {
               const r = [...regions.data.rows].sort((a, b) => b.aov - a.aov)[0];
               return <Interpretation>{r.region_group} has the highest average order value ({fmtGBP(r.aov)}), compared with an overall range of {fmtGBP(Math.min(...regions.data.rows.map((x) => x.aov)))} to {fmtGBP(r.aov)}.</Interpretation>;
             })()}

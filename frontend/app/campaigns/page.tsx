@@ -18,7 +18,7 @@ export default function CampaignsPage() {
     <>
       <PageHeader title="Campaign Analysis"
         description="Observed performance of each campaign window against its own pre-period and against a control group (difference-in-differences). This is an observational analysis of synthetic campaigns — it demonstrates the method, not real marketing effects." />
-      <Status loading={list.loading} error={list.error} />
+      <Status loading={list.loading} error={list.error} what="campaign results" onRetry={list.reload} rows={6} />
       {list.data && (
         <>
           <Note tone="warn"><strong>Observational · synthetic campaigns.</strong> {list.data.label}</Note>
@@ -35,11 +35,15 @@ export default function CampaignsPage() {
               { key: "revenue", label: "Revenue", align: "right", format: (v) => fmtGBP(v) },
               { key: "observed_uplift_pct", label: "Observed uplift", align: "right", format: (v, r) => (r.sufficient_data ? fmtPct(v, 1, true) : "insufficient data") },
               { key: "welch_p_value", label: "p (Welch)", align: "right", format: (v) => (v === undefined || v === null ? "—" : fmtP(v)) },
+              { key: "did_p_value", label: "p (DiD)", align: "right", format: (v) => (v === undefined || v === null ? "—" : fmtP(v)) },
+              { key: "did_p_value_holm", label: "p (DiD, Holm)", align: "right", format: (v) => (v === undefined || v === null ? "—" : fmtP(v)) },
+              { key: "did_p_value_bh", label: "p (DiD, BH)", align: "right", format: (v) => (v === undefined || v === null ? "—" : fmtP(v)) },
               { key: "naive_roi_pct", label: "Naive ROI", align: "right", format: (v) => (v === undefined || v === null ? "—" : fmtPct(v, 0, true)) },
             ]} />
           </Card>
         </>
       )}
+      {selected && <div className="mt-6"><Status loading={detail.loading} error={detail.error} what="the campaign detail" onRetry={detail.reload} rows={4} /></div>}
       {c && (
         <>
           <h2 className="mt-6 text-lg font-semibold text-slate-900">{c.campaign_name}: {c.target_category} in {c.target_region_group}</h2>
@@ -64,6 +68,7 @@ export default function CampaignsPage() {
                 Daily revenue in the target segment was {fmtPct(Math.abs(c.observed_uplift_pct))} {c.observed_uplift_pct >= 0 ? "higher" : "lower"} during the window than in the pre-period.
                 {c.welch_p_value < 0.05 ? " This difference is statistically significant at the 5% level" : " This difference is not statistically significant at the 5% level"}
                 {c.did_p_value < 0.05 ? ", and relative to the control group the DiD estimate is also significant." : "; relative to the control group the DiD estimate is not significant."}
+                {" "}After correcting for testing {list.data?.campaigns.filter((x: Row) => x.sufficient_data).length} campaigns at once, the DiD p-value is {fmtP(c.did_p_value_holm)} (Holm) and {fmtP(c.did_p_value_bh)} (Benjamini-Hochberg), so it is {c.did_p_value_holm_significant ? "still" : "not"} significant under Holm.
                 {" "}Because the campaign is synthetic, any difference reflects ordinary variation in real sales, not a campaign effect.
               </Interpretation>
             </>

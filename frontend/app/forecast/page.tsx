@@ -9,7 +9,7 @@ import { COLORS, compact, fmtNumber, fmtPct } from "@/lib/format";
 export default function ForecastPage() {
   const [series, setSeries] = useState("All regions");
   const [model, setModel] = useState("");
-  const { data, loading, error } = useApi<Row>("/api/demand/forecast", { series });
+  const { data, loading, error, reload } = useApi<Row>("/api/demand/forecast", { series });
   const shown = model || data?.selected_model;
 
   const chartRows = useMemo(() => {
@@ -26,6 +26,7 @@ export default function ForecastPage() {
         test_mae: data.test_metrics[m].mae,
         test_rmse: data.test_metrics[m].rmse,
         test_mape: data.test_metrics[m].mape,
+        rec_mae: data.test_metrics_recursive?.[m]?.mae,
       }))
     : [];
   const naive = data?.test_metrics?.Naive?.mae;
@@ -39,7 +40,7 @@ export default function ForecastPage() {
         <Select label="Series" value={series} onChange={(v) => { setSeries(v); setModel(""); }} options={data?.available_series ?? ["All regions"]} />
         {data && <Select label="Model shown in chart" value={shown} onChange={setModel} options={Object.keys(data.test_metrics)} />}
       </div>
-      <div className="mt-4"><Status loading={loading} error={error} /></div>
+      <div className="mt-4"><Status loading={loading} error={error} what="forecast data" onRetry={reload} rows={6} /></div>
       {data && sel && (
         <>
           <div className="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">
@@ -86,7 +87,9 @@ export default function ForecastPage() {
                 { key: "test_mae", label: "Test MAE", align: "right", format: (v) => fmtNumber(v) },
                 { key: "test_rmse", label: "Test RMSE", align: "right", format: (v) => fmtNumber(v) },
                 { key: "test_mape", label: "Test MAPE", align: "right", format: (v) => fmtPct(v) },
+                { key: "rec_mae", label: "Test MAE (12-wk recursive)", align: "right", format: (v) => (v == null ? "—" : fmtNumber(v)) },
               ]} />
+              <p className="mt-2 text-xs text-slate-500">{data.evaluation_note}</p>
             </Card>
             <Card title="Random Forest feature importance">
               {data.rf_feature_importance && (

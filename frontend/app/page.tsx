@@ -24,7 +24,7 @@ export default function OverviewPage() {
       <PageHeader title="Executive Overview"
         description="Headline sales KPIs computed live from the cleaned transaction table. Use the filters to focus on a period, region group or product category. Revenue is in GBP (the dataset's currency)." />
       <FilterBar value={f} onChange={setF} />
-      <div className="mt-4"><Status loading={ov.loading} error={ov.error} /></div>
+      <div className="mt-4"><Status loading={ov.loading} error={ov.error} what="the sales overview" onRetry={ov.reload} rows={2} /></div>
       {o && (
         <>
           <div className="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">
@@ -50,7 +50,7 @@ export default function OverviewPage() {
       <div className="mt-6 grid gap-4 lg:grid-cols-2">
         <Card title="Revenue and units over time" subtitle="Partial first/last periods are shown as-is" className="lg:col-span-2">
           <div className="mb-2 w-40"><Select label="Granularity" value={grain} onChange={setGrain} options={["day", "week", "month", "quarter"]} /></div>
-          <Status loading={trend.loading} error={trend.error} />
+          <Status loading={trend.loading} error={trend.error} what="sales data" onRetry={trend.reload} empty={trend.data?.rows.length === 0} rows={6} />
           {trend.data && (
             <ResponsiveContainer width="100%" height={280}>
               <LineChart data={trend.data.rows}>
@@ -67,7 +67,7 @@ export default function OverviewPage() {
           )}
         </Card>
         <Card title="Revenue by region group">
-          <Status loading={regions.loading} error={regions.error} />
+          <Status loading={regions.loading} error={regions.error} what="regional sales" onRetry={regions.reload} empty={regions.data?.rows.length === 0} rows={5} />
           {regions.data && (
             <ResponsiveContainer width="100%" height={260}>
               <BarChart data={regions.data.rows} layout="vertical" margin={{ left: 40 }}>
@@ -81,7 +81,7 @@ export default function OverviewPage() {
           )}
         </Card>
         <Card title="Revenue by product category" subtitle="Categories are rule-based keyword groups of real product descriptions">
-          <Status loading={products.loading} error={products.error} />
+          <Status loading={products.loading} error={products.error} what="product sales" onRetry={products.reload} empty={products.data?.top_products.length === 0} rows={5} />
           {products.data && (
             <ResponsiveContainer width="100%" height={260}>
               <BarChart data={products.data.categories} layout="vertical" margin={{ left: 40 }}>
@@ -95,7 +95,7 @@ export default function OverviewPage() {
           )}
         </Card>
         <Card title="Order value distribution" subtitle="Number of orders (invoices) per order-value band, £">
-          <Status loading={dist.loading} error={dist.error} />
+          <Status loading={dist.loading} error={dist.error} what="the order value distribution" onRetry={dist.reload} rows={5} />
           {dist.data && (
             <>
               <ResponsiveContainer width="100%" height={240}>

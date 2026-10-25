@@ -1,6 +1,7 @@
 """HTTP routes. Each route validates input, calls one service function and returns a Pydantic model."""
 
 from datetime import date
+from typing import Literal
 
 from fastapi import APIRouter, HTTPException, Query
 
@@ -20,7 +21,7 @@ def filters(start: date | None = None, end: date | None = None, region_group: st
 
 @router.get("/health")
 def health() -> dict:
-    return {"status": "ok", "database": db.DB_PATH.exists()}
+    return {"status": "ok"}
 
 
 @router.get("/meta/dimensions")
@@ -36,7 +37,11 @@ def get_overview(start: date | None = None, end: date | None = None, region_grou
 
 @router.get("/sales/trend", response_model=m.TrendResponse)
 def get_trend(
-    grain: str = "month", start: date | None = None, end: date | None = None, region_group: str | None = None, category: str | None = None
+    grain: Literal["day", "week", "month", "quarter"] = "month",
+    start: date | None = None,
+    end: date | None = None,
+    region_group: str | None = None,
+    category: str | None = None,
 ):
     return {"grain": grain, "rows": overview.sales_trend(filters(start, end, region_group, category), grain)}
 
@@ -84,7 +89,12 @@ def get_segments():
 
 
 @router.get("/anomalies", response_model=m.AnomaliesResponse)
-def get_anomalies(region: str | None = None, metric: str | None = None, severity: str | None = None, limit: int = Query(50, ge=1, le=500)):
+def get_anomalies(
+    region: str | None = None,
+    metric: Literal["revenue", "units", ""] | None = None,
+    severity: Literal["high", "medium", "low", ""] | None = None,
+    limit: int = Query(50, ge=1, le=500),
+):
     return artifacts_views.anomalies(region or None, metric or None, severity or None, limit)
 
 

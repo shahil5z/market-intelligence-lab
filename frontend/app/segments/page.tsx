@@ -15,14 +15,14 @@ function describe(s: Row, med: Row) {
 }
 
 export default function SegmentsPage() {
-  const { data, loading, error } = useApi<Row>("/api/customers/segments");
+  const { data, loading, error, reload } = useApi<Row>("/api/customers/segments");
   const names: string[] = data ? data.segments.map((s: Row) => s.name) : [];
 
   return (
     <>
       <PageHeader title="Customer Segments"
         description="RFM (recency, frequency, monetary) features per identified customer, log-transformed and standardised, clustered with K-Means. Segment names come from rules applied to each cluster's median behaviour, not from hand-picking." />
-      <Status loading={loading} error={error} />
+      <Status loading={loading} error={error} what="customer segments" onRetry={reload} rows={6} />
       {data && (
         <>
           <div className="grid grid-cols-2 gap-3 md:grid-cols-4">

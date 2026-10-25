@@ -8,12 +8,12 @@ type Finding = { area: string; text: string; source: string };
 const PAGE: Record<string, string> = { Regions: "/", Seasonality: "/sales", Pricing: "/sales", Customers: "/segments", Forecasting: "/forecast", Campaigns: "/campaigns", Anomalies: "/anomalies" };
 
 export default function InsightsPage() {
-  const { data, loading, error } = useApi<{ findings: Finding[] }>("/api/insights");
+  const { data, loading, error, reload } = useApi<{ findings: Finding[] }>("/api/insights");
   return (
     <>
       <PageHeader title="Business Insights"
         description="Key findings generated automatically from the computed results. Each sentence is a template filled with numbers returned by the analysis endpoints — nothing is written by hand or by a language model." />
-      <Status loading={loading} error={error} />
+      <Status loading={loading} error={error} what="insights" onRetry={reload} rows={6} />
       {data && (
         <Card title="Key findings">
           <ol className="list-decimal space-y-3 pl-5 text-sm text-slate-800">

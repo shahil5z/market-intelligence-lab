@@ -5,6 +5,7 @@
     "Pre-period of equal length is used as the baseline; seasonality between the two windows is not removed.",
     "Difference-in-differences assumes parallel trends between the target region group and the control groups.",
     "Daily observations are treated as independent in the t-test, which ignores autocorrelation.",
+    "p-values are adjusted for multiple comparisons across all tested campaigns (Holm and Benjamini-Hochberg).",
     "ROI uses revenue, not margin, and treats all observed change as incremental (an upper-bound style simplification)."
   ],
   "campaigns": [
@@ -238,7 +239,15 @@
         370.15
       ],
       "did_p_value": 0.4077,
-      "control_definition": "Toys & Kids in all region groups except United Kingdom"
+      "control_definition": "Toys & Kids in all region groups except United Kingdom",
+      "welch_p_value_holm": 1.0,
+      "welch_p_value_holm_significant": false,
+      "welch_p_value_bh": 0.9359,
+      "welch_p_value_bh_significant": false,
+      "did_p_value_holm": 1.0,
+      "did_p_value_holm_significant": false,
+      "did_p_value_bh": 0.7135,
+      "did_p_value_bh_significant": false
     },
     {
       "campaign_id": 2,
@@ -626,7 +635,15 @@
         186.46
       ],
       "did_p_value": 0.8079,
-      "control_definition": "Stationery & Gifts in all region groups except Western Europe"
+      "control_definition": "Stationery & Gifts in all region groups except Western Europe",
+      "welch_p_value_holm": 0.9366,
+      "welch_p_value_holm_significant": false,
+      "welch_p_value_bh": 0.5464,
+      "welch_p_value_bh_significant": false,
+      "did_p_value_holm": 1.0,
+      "did_p_value_holm_significant": false,
+      "did_p_value_bh": 0.8195,
+      "did_p_value_bh_significant": false
     },
     {
       "campaign_id": 3,
@@ -1295,7 +1312,15 @@
         566.94
       ],
       "did_p_value": 0.6275,
-      "control_definition": "Toys & Kids in all region groups except United Kingdom"
+      "control_definition": "Toys & Kids in all region groups except United Kingdom",
+      "welch_p_value_holm": 1.0,
+      "welch_p_value_holm_significant": false,
+      "welch_p_value_bh": 0.9359,
+      "welch_p_value_bh_significant": false,
+      "did_p_value_holm": 1.0,
+      "did_p_value_holm_significant": false,
+      "did_p_value_bh": 0.8195,
+      "did_p_value_bh_significant": false
     },
     {
       "campaign_id": 5,
@@ -1689,7 +1714,15 @@
         16.45
       ],
       "did_p_value": 0.0542,
-      "control_definition": "Lighting & Candles in all region groups except Ireland & Channel Is."
+      "control_definition": "Lighting & Candles in all region groups except Ireland & Channel Is.",
+      "welch_p_value_holm": 1.0,
+      "welch_p_value_holm_significant": false,
+      "welch_p_value_bh": 0.6992,
+      "welch_p_value_bh_significant": false,
+      "did_p_value_holm": 0.3252,
+      "did_p_value_holm_significant": false,
+      "did_p_value_bh": 0.1897,
+      "did_p_value_bh_significant": false
     },
     {
       "campaign_id": 6,
@@ -2095,7 +2128,15 @@
         -337.01
       ],
       "did_p_value": 0.0081,
-      "control_definition": "Kitchen & Dining in all region groups except Ireland & Channel Is."
+      "control_definition": "Kitchen & Dining in all region groups except Ireland & Channel Is.",
+      "welch_p_value_holm": 0.6335,
+      "welch_p_value_holm_significant": false,
+      "welch_p_value_bh": 0.5464,
+      "welch_p_value_bh_significant": false,
+      "did_p_value_holm": 0.0567,
+      "did_p_value_holm_significant": false,
+      "did_p_value_bh": 0.0567,
+      "did_p_value_bh_significant": false
     },
     {
       "campaign_id": 7,
@@ -2805,7 +2846,15 @@
         1395.86
       ],
       "did_p_value": 0.8195,
-      "control_definition": "Home Decor in all region groups except Western Europe"
+      "control_definition": "Home Decor in all region groups except Western Europe",
+      "welch_p_value_holm": 1.0,
+      "welch_p_value_holm_significant": false,
+      "welch_p_value_bh": 0.5884,
+      "welch_p_value_bh_significant": false,
+      "did_p_value_holm": 1.0,
+      "did_p_value_holm_significant": false,
+      "did_p_value_bh": 0.8195,
+      "did_p_value_bh_significant": false
     },
     {
       "campaign_id": 10,
@@ -3318,7 +3367,15 @@
         782.51
       ],
       "did_p_value": 0.1505,
-      "control_definition": "Bags & Storage in all region groups except United Kingdom"
+      "control_definition": "Bags & Storage in all region groups except United Kingdom",
+      "welch_p_value_holm": 1.0,
+      "welch_p_value_holm_significant": false,
+      "welch_p_value_bh": 0.5884,
+      "welch_p_value_bh_significant": false,
+      "did_p_value_holm": 0.7525,
+      "did_p_value_holm_significant": false,
+      "did_p_value_bh": 0.3512,
+      "did_p_value_bh_significant": false
     },
     {
       "campaign_id": 12,

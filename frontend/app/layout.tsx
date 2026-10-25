@@ -24,7 +24,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             </div>
             <main id="main" className="mx-auto max-w-7xl px-4 py-6 sm:px-8">{children}</main>
             <footer className="px-4 pb-6 text-xs text-slate-500 sm:px-8">
-              Data: UCI Online Retail II (public, CC BY 4.0) + clearly labelled synthetic dimensions. Student portfolio project.
+              <p>Built as a Data Science portfolio project by Shahil.</p>
+              <p className="mt-1">Data: UCI Online Retail II (CC BY 4.0) plus clearly labelled synthetic fields.</p>
             </footer>
           </div>
         </div>

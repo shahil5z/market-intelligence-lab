@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { CartesianGrid, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis } from "recharts";
-import { Card, DataTable, Interpretation, Kpi, Note, PageHeader, Select, Status } from "@/components/ui";
-import { type Row, postJson, useApi } from "@/lib/api";
+import { Card, DataTable, Interpretation, Kpi, Note, PageHeader, Select, Skeleton, Status } from "@/components/ui";
+import { friendlyError, type Row, postJson, useApi } from "@/lib/api";
 import { COLORS, fmtNumber, fmtP } from "@/lib/format";
 
 const TESTS = { welch: "Welch t-test", student: "Student t-test", chi_square: "Chi-square test", correlation: "Correlation" } as const;
@@ -40,7 +40,7 @@ export default function StatisticsPage() {
       setResult(await postJson<Row>("/api/statistics/test", body));
     } catch (ex) {
       setResult(null);
-      setErr((ex as Error).message);
+      setErr(friendlyError(ex, "run this test"));
     } finally {
       setBusy(false);
     }
@@ -50,7 +50,7 @@ export default function StatisticsPage() {
     <>
       <PageHeader title="Statistics Lab"
         description="Run a hypothesis test on the real order data. Choose a test, a metric and the groups to compare; the backend computes the statistics with SciPy and returns sample sizes, means, the difference with its 95% confidence interval, the p-value and an effect size." />
-      <Status loading={opts.loading} error={opts.error} />
+      <Status loading={opts.loading} error={opts.error} what="the test options" onRetry={opts.reload} rows={2} />
       {opts.data && (
         <form onSubmit={run} className="flex flex-wrap items-end gap-3 rounded-lg border border-slate-200 bg-white p-3" aria-label="Test settings">
           <Select label="Test" value={test} onChange={(v) => { setTest(v as TestKey); setResult(null); }} options={Object.keys(TESTS)} />
@@ -80,6 +80,7 @@ export default function StatisticsPage() {
           </button>
         </form>
       )}
+      {busy && <div className="mt-4"><Skeleton rows={4} label="Working" /></div>}
       {err && <div className="mt-4" role="alert"><Note tone="warn">{err}</Note></div>}
       {result && (
         <div className="mt-4 space-y-4">

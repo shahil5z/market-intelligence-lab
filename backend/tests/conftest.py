@@ -1,13 +1,15 @@
 import pytest
 from fastapi.testclient import TestClient
 
-from app.config import DB_PATH
+from app.db import resolve_db_path
 from app.main import app
 
 
 @pytest.fixture(scope="session")
 def client():
-    if not DB_PATH.exists():
+    try:
+        resolve_db_path()
+    except FileNotFoundError:
         pytest.skip("Run `python scripts/run_pipeline.py` before the tests")
     return TestClient(app)
 

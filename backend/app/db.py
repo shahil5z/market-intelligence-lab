@@ -4,8 +4,13 @@ DuckDB is used locally. The queries use standard SQL (joins, GROUP BY, DATE_TRUN
 aggregates) so moving to PostgreSQL means changing `connect()` and a few date functions here only.
 """
 
+import gzip
+import os
+import shutil
+import tempfile
 from dataclasses import dataclass
 from datetime import date
+from pathlib import Path
 
 import duckdb
 import pandas as pd
@@ -13,10 +18,25 @@ import pandas as pd
 from app.config import DB_PATH
 
 
-def connect() -> duckdb.DuckDBPyConnection:
-    if not DB_PATH.exists():
+def resolve_db_path() -> Path:
+    """The database ships gzipped (mil.duckdb.gz, ~6 MB) to stay under upload limits. If the plain file is not
+    there (e.g. on Vercel), decompress it once into the temp dir - the only writable place on a serverless host."""
+    if DB_PATH.exists():
+        return DB_PATH
+    packed = DB_PATH.with_name(DB_PATH.name + ".gz")
+    if not packed.exists():
         raise FileNotFoundError(f"{DB_PATH} not found - run `python scripts/run_pipeline.py` first")
-    return duckdb.connect(str(DB_PATH), read_only=True)
+    target = Path(tempfile.gettempdir()) / f"mil-{packed.stat().st_size}.duckdb"
+    if not target.exists():
+        partial = target.with_suffix(f".{os.getpid()}.part")
+        with gzip.open(packed, "rb") as src, open(partial, "wb") as dst:
+            shutil.copyfileobj(src, dst, length=1 << 20)
+        partial.replace(target)  # atomic, so concurrent cold starts never read half a file
+    return target
+
+
+def connect() -> duckdb.DuckDBPyConnection:
+    return duckdb.connect(str(resolve_db_path()), read_only=True)
 
 
 def query(sql: str, params: list | None = None) -> pd.DataFrame:

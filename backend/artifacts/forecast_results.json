@@ -108,6 +108,45 @@
         "mape_excluded_zero_weeks": 0
       }
     },
+    "test_metrics_recursive": {
+      "Naive": {
+        "mae": 43198.083333333336,
+        "rmse": 48540.78948248919,
+        "mape": 26.58656336730561,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Seasonal Naive": {
+        "mae": 26775.833333333332,
+        "rmse": 41174.39163687384,
+        "mape": 20.118531832374742,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Linear Regression": {
+        "mae": 28706.38333333333,
+        "rmse": 33987.65778325518,
+        "mape": 17.406492268576855,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Random Forest": {
+        "mae": 46444.208333333336,
+        "rmse": 53513.91727850647,
+        "mape": 28.43548420812356,
+        "mape_excluded_zero_weeks": 0
+      },
+      "XGBoost": {
+        "mae": 20869.35833333333,
+        "rmse": 31513.377621482698,
+        "mape": 15.317809950164882,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Exponential Smoothing": {
+        "mae": 54943.89166666667,
+        "rmse": 59236.212366993044,
+        "mape": 34.44151807407233,
+        "mape_excluded_zero_weeks": 0
+      }
+    },
+    "evaluation_note": "test_metrics are one-step-ahead (each week predicted with actual earlier weeks). test_metrics_recursive forecast all 12 test weeks from the end of validation, feeding predictions back as lags.",
     "selected_model": "Exponential Smoothing",
     "lowest_test_mae_model": "Exponential Smoothing",
     "history": [
@@ -961,6 +1000,45 @@
         "mape_excluded_zero_weeks": 0
       }
     },
+    "test_metrics_recursive": {
+      "Naive": {
+        "mae": 39978.416666666664,
+        "rmse": 44859.75738435656,
+        "mape": 29.02994582851896,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Seasonal Naive": {
+        "mae": 22003.666666666668,
+        "rmse": 34736.100800655986,
+        "mape": 19.309485439568853,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Linear Regression": {
+        "mae": 28954.524999999994,
+        "rmse": 33497.304445892856,
+        "mape": 20.801973422633587,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Random Forest": {
+        "mae": 48047.166666666664,
+        "rmse": 57177.786652262665,
+        "mape": 34.505310992799274,
+        "mape_excluded_zero_weeks": 0
+      },
+      "XGBoost": {
+        "mae": 18459.425,
+        "rmse": 22577.770916231595,
+        "mape": 15.656717172169557,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Exponential Smoothing": {
+        "mae": 48507.48333333334,
+        "rmse": 52601.931304674225,
+        "mape": 35.79070360973006,
+        "mape_excluded_zero_weeks": 0
+      }
+    },
+    "evaluation_note": "test_metrics are one-step-ahead (each week predicted with actual earlier weeks). test_metrics_recursive forecast all 12 test weeks from the end of validation, feeding predictions back as lags.",
     "selected_model": "Random Forest",
     "lowest_test_mae_model": "Linear Regression",
     "history": [
@@ -1814,6 +1892,45 @@
         "mape_excluded_zero_weeks": 0
       }
     },
+    "test_metrics_recursive": {
+      "Naive": {
+        "mae": 6154.833333333333,
+        "rmse": 8693.007764864817,
+        "mape": 36.96283822412125,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Seasonal Naive": {
+        "mae": 7929.166666666667,
+        "rmse": 9931.69914130172,
+        "mape": 57.80648208127518,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Linear Regression": {
+        "mae": 5274.783333333333,
+        "rmse": 7102.23431827384,
+        "mape": 41.035967679986136,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Random Forest": {
+        "mae": 5328.858333333333,
+        "rmse": 7891.687493548724,
+        "mape": 35.897269600528645,
+        "mape_excluded_zero_weeks": 0
+      },
+      "XGBoost": {
+        "mae": 5515.383333333334,
+        "rmse": 7334.752389253958,
+        "mape": 42.45064313163048,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Exponential Smoothing": {
+        "mae": 5398.45,
+        "rmse": 7817.584527631707,
+        "mape": 34.012992860242214,
+        "mape_excluded_zero_weeks": 0
+      }
+    },
+    "evaluation_note": "test_metrics are one-step-ahead (each week predicted with actual earlier weeks). test_metrics_recursive forecast all 12 test weeks from the end of validation, feeding predictions back as lags.",
     "selected_model": "XGBoost",
     "lowest_test_mae_model": "Exponential Smoothing",
     "history": [
@@ -2667,6 +2784,45 @@
         "mape_excluded_zero_weeks": 0
       }
     },
+    "test_metrics_recursive": {
+      "Naive": {
+        "mae": 5687.833333333333,
+        "rmse": 6180.598312461343,
+        "mape": 403.0022337984053,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Seasonal Naive": {
+        "mae": 3044.8333333333335,
+        "rmse": 4039.7986335954915,
+        "mape": 199.14169397728253,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Linear Regression": {
+        "mae": 2109.6333333333337,
+        "rmse": 2721.784730650093,
+        "mape": 172.5462460428459,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Random Forest": {
+        "mae": 2018.9416666666668,
+        "rmse": 2649.3707918107652,
+        "mape": 159.37739326977126,
+        "mape_excluded_zero_weeks": 0
+      },
+      "XGBoost": {
+        "mae": 2715.6749999999997,
+        "rmse": 3457.4106400840888,
+        "mape": 188.80332805468763,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Exponential Smoothing": {
+        "mae": 2131.5,
+        "rmse": 2595.2900252187615,
+        "mape": 116.30352266377119,
+        "mape_excluded_zero_weeks": 0
+      }
+    },
+    "evaluation_note": "test_metrics are one-step-ahead (each week predicted with actual earlier weeks). test_metrics_recursive forecast all 12 test weeks from the end of validation, feeding predictions back as lags.",
     "selected_model": "Exponential Smoothing",
     "lowest_test_mae_model": "Random Forest",
     "history": [

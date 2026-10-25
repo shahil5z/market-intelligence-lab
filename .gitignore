@@ -14,7 +14,13 @@ frontend/next-env.d.ts
 # data (rebuilt by scripts/run_pipeline.py)
 data/raw/*
 !data/raw/.gitkeep
-data/processed/*.duckdb
-data/processed/*.duckdb.wal
-# binary models (rebuilt by the pipeline; small JSON results are committed)
-models/*.joblib
+data/processed/*.duckdb*
+data/processed/*.parquet
+backend/artifacts/mil.duckdb
+backend/artifacts/*.wal
+# fitted joblib models (rebuilt by the pipeline; not needed at runtime)
+models/
+# backend/artifacts/ (mil.duckdb.gz ~6 MB + JSON results) IS committed: the API ships with it
+.vercel/
+frontend/out/
+

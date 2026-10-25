@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { Card, DataTable, Note, PageHeader } from "@/components/ui";
-import { type Row, postJson } from "@/lib/api";
+import { Card, DataTable, Note, PageHeader, Skeleton } from "@/components/ui";
+import { friendlyError, type Row, postJson } from "@/lib/api";
 import { COLORS, compact } from "@/lib/format";
 
 const EXAMPLES = ["Why did sales decline in Q3?", "Which region had the strongest growth?", "What are the highest-value customer segments?", "Which campaign had the best uplift?", "What does the demand forecast say?"];
@@ -21,7 +21,7 @@ export default function AiAnalystPage() {
     try {
       setRes(await postJson<Row>("/api/ai/analyze", { question: q, use_llm: useLlm }));
     } catch (e) {
-      setErr((e as Error).message);
+      setErr(friendlyError(e, "answer this question"));
     } finally {
       setBusy(false);
     }
@@ -54,6 +54,7 @@ export default function AiAnalystPage() {
           </label>
         </div>
       </form>
+      {busy && <div className="mt-4"><Skeleton rows={4} label="Working" /></div>}
       {err && <div className="mt-4" role="alert"><Note tone="warn">{err}</Note></div>}
       {res && (
         <div className="mt-4 space-y-4">

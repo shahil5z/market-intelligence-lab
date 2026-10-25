@@ -1,4 +1,4 @@
-"""Load JSON artifacts written by the pipeline (models/*.json)."""
+"""Load JSON artifacts written by the pipeline (backend/artifacts/*.json)."""
 
 import json
 from functools import cache

@@ -18,7 +18,7 @@ import duckdb
 import joblib
 import numpy as np
 import pandas as pd
-from common import DB_PATH, MODELS_DIR, SEED
+from common import ARTIFACTS_DIR, DB_PATH, MODELS_DIR, SEED
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.pipeline import make_pipeline
@@ -132,6 +132,19 @@ def future_forecast(df: pd.DataFrame, model_name: str, fitted, horizon: int) -> 
     return out
 
 
+def recursive_backtest(df: pd.DataFrame, fitted: dict, test_idx: np.ndarray) -> dict:
+    """Stricter check: forecast the whole test window from its origin (end of validation) recursively,
+    so weeks 2..12 use earlier *predictions* as lags instead of actual values."""
+    origin = df.iloc[: test_idx[0]].copy()
+    origin.attrs = df.attrs
+    y = df["units"].to_numpy(float)[test_idx]
+    out = {}
+    for m in ALL_MODELS:
+        path = future_forecast(origin, m, fitted.get(m), len(test_idx))
+        out[m] = metrics(y, np.array([p["forecast"] for p in path]))
+    return out
+
+
 def run_series(con, group: str) -> dict:
     df = add_features(load_weekly(con, group))
     cal = con.execute("""SELECT week_start, SUM(holiday_flag::INT) AS holiday_days,
@@ -148,6 +161,7 @@ def run_series(con, group: str) -> dict:
     val_preds, _ = predict_window(df, train_idx, val_idx)
     test_preds, fitted = predict_window(df, np.concatenate([train_idx, val_idx]), test_idx)
     val_metrics = {m: metrics(y[val_idx], val_preds[m]) for m in ALL_MODELS}
+    recursive_metrics = recursive_backtest(df, fitted, test_idx)
     test_metrics = {m: metrics(y[test_idx], test_preds[m]) for m in ALL_MODELS}
     selected = min(ALL_MODELS, key=lambda m: val_metrics[m]["mae"])
     best_test = min(ALL_MODELS, key=lambda m: test_metrics[m]["mae"])
@@ -157,6 +171,7 @@ def run_series(con, group: str) -> dict:
     if selected in ML_MODELS:
         full = df.dropna(subset=FEATURES)
         final_model = ML_MODELS[selected]().fit(full[FEATURES], full["units"])
+        MODELS_DIR.mkdir(exist_ok=True)
         joblib.dump(final_model, MODELS_DIR / f"forecast_{group.lower().replace(' ', '_').replace('&', 'and').replace('.', '')}.joblib")
     future = future_forecast(df, selected, final_model, HORIZON)
     resid_sd = float(np.std(y[test_idx] - test_preds[selected], ddof=1))
@@ -190,6 +205,9 @@ def run_series(con, group: str) -> dict:
         "features": FEATURES,
         "validation_metrics": val_metrics,
         "test_metrics": test_metrics,
+        "test_metrics_recursive": recursive_metrics,
+        "evaluation_note": "test_metrics are one-step-ahead (each week predicted with actual earlier weeks). "
+        "test_metrics_recursive forecast all 12 test weeks from the end of validation, feeding predictions back as lags.",
         "selected_model": selected,
         "lowest_test_mae_model": best_test,
         "history": history,
@@ -203,7 +221,7 @@ def main() -> None:
     con = duckdb.connect(str(DB_PATH), read_only=True)
     results = {g: run_series(con, g) for g in SERIES}
     con.close()
-    (MODELS_DIR / "forecast_results.json").write_text(json.dumps(results, indent=2))
+    (ARTIFACTS_DIR / "forecast_results.json").write_text(json.dumps(results, indent=2))
     for g, r in results.items():
         print(
             f"[forecast] {g}: selected={r['selected_model']} test MAE="

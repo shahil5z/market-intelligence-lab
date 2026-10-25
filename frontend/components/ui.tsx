@@ -14,7 +14,7 @@ export function PageHeader({ title, description, children }: { title: string; de
 
 export function Card({ title, subtitle, children, className = "" }: { title?: string; subtitle?: string; children: ReactNode; className?: string }) {
   return (
-    <section className={`rounded-lg border border-slate-200 bg-white p-4 ${className}`}>
+    <section className={`min-w-0 rounded-lg border border-slate-200 bg-white p-4 ${className}`}>
       {title && <h2 className="text-sm font-semibold text-slate-900">{title}</h2>}
       {subtitle && <p className="mt-0.5 text-xs text-slate-500">{subtitle}</p>}
       <div className={title ? "mt-3" : ""}>{children}</div>
@@ -46,15 +46,39 @@ export function Interpretation({ children }: { children: ReactNode }) {
   );
 }
 
-export function Status({ loading, error }: { loading: boolean; error: string | null }) {
+/**
+ * Loading / error / empty state for one async section.
+ * `what` names the data in plain words, e.g. "sales data" -> "Unable to load sales data. Please try again."
+ */
+export function Status({ loading, error, what = "this data", onRetry, empty = false, rows = 3 }: {
+  loading: boolean; error: string | null; what?: string; onRetry?: () => void; empty?: boolean; rows?: number;
+}) {
   if (error)
     return (
-      <div role="alert" className="rounded-md border border-rose-300 bg-rose-50 px-3 py-2 text-sm text-rose-900">
-        Could not load data: {error}. Is the backend running on port 8000?
+      <div role="alert" className="flex flex-wrap items-center gap-3 rounded-md border border-rose-300 bg-rose-50 px-3 py-2 text-sm text-rose-900">
+        <span>Unable to load {what}. Please try again.</span>
+        {onRetry && (
+          <button type="button" onClick={onRetry} className="rounded border border-rose-400 bg-white px-2 py-0.5 text-xs font-medium hover:bg-rose-100">
+            Retry
+          </button>
+        )}
       </div>
     );
-  if (loading) return <p className="text-sm text-slate-500" role="status">Loading…</p>;
+  if (loading) return <Skeleton rows={rows} label={`Loading ${what}`} />;
+  if (empty)
+    return <p className="rounded-md border border-dashed border-slate-300 px-3 py-4 text-center text-sm text-slate-500">No {what} for the selected filters.</p>;
   return null;
+}
+
+export function Skeleton({ rows = 3, label = "Loading" }: { rows?: number; label?: string }) {
+  return (
+    <div role="status" aria-label={label} className="animate-pulse space-y-2">
+      {Array.from({ length: rows }, (_, i) => (
+        <div key={i} className="h-4 rounded bg-slate-200" style={{ width: `${95 - i * 12}%` }} />
+      ))}
+      <span className="sr-only">{label}…</span>
+    </div>
+  );
 }
 
 type Column = { key: string; label: string; format?: (v: Row[string], row: Row) => ReactNode; align?: "right" };

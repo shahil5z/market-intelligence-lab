@@ -1,0 +1,7 @@
+tests/
+.pytest_cache/
+__pycache__/
+.venv/
+artifacts/mil.duckdb
+ruff.toml
+pytest.ini

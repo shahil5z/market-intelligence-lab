@@ -11,11 +11,17 @@ import json
 import duckdb
 import numpy as np
 import pandas as pd
-from common import DB_PATH, MODELS_DIR
+from common import ARTIFACTS_DIR, DB_PATH
 
 WINDOW = 12  # weeks
 Z_THRESHOLD = 3.5
 REGION_GROUPS = ["United Kingdom", "Western Europe", "Ireland & Channel Is."]
+
+
+def overlaps_holiday_closure(week_start: pd.Timestamp) -> bool:
+    """True if any day of the Monday-start week falls between 19 Dec and 3 Jan."""
+    days = pd.date_range(week_start, periods=7)
+    return bool(((days.month == 12) & (days.day >= 19) | (days.month == 1) & (days.day <= 3)).any())
 
 
 def flag(series: pd.DataFrame, value_col: str, region: str, product: str, metric: str) -> list[dict]:
@@ -50,7 +56,7 @@ def flag(series: pd.DataFrame, value_col: str, region: str, product: str, metric
                     f"({raw_med[d]:,.0f}) by a robust z-score of {abs(zz):.1f}"
                     + (
                         "; week overlaps the Christmas/New Year closure"
-                        if (d.month == 12 and d.day >= 19) or (d.month == 1 and d.day <= 3)
+                        if overlaps_holiday_closure(d)
                         else ""
                     )
                 ),
@@ -97,7 +103,7 @@ def main() -> None:
         "anomalies": anomalies,
         "region_series": series_out,
     }
-    (MODELS_DIR / "anomalies.json").write_text(json.dumps(out))
+    (ARTIFACTS_DIR / "anomalies.json").write_text(json.dumps(out))
     print(f"[anomalies] {len(anomalies)} flagged points")
 
 

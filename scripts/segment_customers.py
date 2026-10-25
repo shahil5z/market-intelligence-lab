@@ -6,7 +6,7 @@ import duckdb
 import joblib
 import numpy as np
 import pandas as pd
-from common import DB_PATH, MODELS_DIR, SEED
+from common import ARTIFACTS_DIR, DB_PATH, MODELS_DIR, SEED
 from sklearn.cluster import AgglomerativeClustering, KMeans
 from sklearn.decomposition import PCA
 from sklearn.metrics import adjusted_rand_score, silhouette_score
@@ -22,7 +22,7 @@ def load_rfm(con) -> pd.DataFrame:
                DATE_DIFF('day', MAX(date), (SELECT d FROM snap)) AS recency_days,
                COUNT(DISTINCT invoice_id) AS frequency,
                SUM(revenue) AS monetary
-        FROM sales WHERE customer_id IS NOT NULL GROUP BY customer_id""").df()
+        FROM sales WHERE customer_id IS NOT NULL GROUP BY customer_id ORDER BY customer_id""").df()
 
 
 def name_segment(c: pd.Series, med: pd.Series) -> str:
@@ -120,7 +120,8 @@ def main() -> None:
         "segments": sorted(segments, key=lambda s: -s["revenue"]),
         "pca_points": points,
     }
-    (MODELS_DIR / "segments.json").write_text(json.dumps(out, indent=2))
+    (ARTIFACTS_DIR / "segments.json").write_text(json.dumps(out, indent=2))
+    MODELS_DIR.mkdir(exist_ok=True)
     joblib.dump({"scaler": scaler, "kmeans": km}, MODELS_DIR / "segmentation_kmeans.joblib")
     print(f"[segments] best k by silhouette={best_k}, chosen k={chosen_k}, ARI vs Ward={ari:.3f}")
     for s in out["segments"]:

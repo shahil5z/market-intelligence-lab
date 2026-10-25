@@ -16,7 +16,7 @@ export default function AnomaliesPage() {
   const [region, setRegion] = useState("");
   const [metric, setMetric] = useState("");
   const [severity, setSeverity] = useState("");
-  const { data, loading, error } = useApi<Row>("/api/anomalies", { region, metric, severity, limit: "100" });
+  const { data, loading, error, reload } = useApi<Row>("/api/anomalies", { region, metric, severity, limit: "100" });
 
   return (
     <>
@@ -27,7 +27,7 @@ export default function AnomaliesPage() {
         <Select label="Metric" value={metric} onChange={setMetric} allLabel="All" options={["revenue", "units"]} />
         <Select label="Severity" value={severity} onChange={setSeverity} allLabel="All" options={["high", "medium", "low"]} />
       </div>
-      <div className="mt-4"><Status loading={loading} error={error} /></div>
+      <div className="mt-4"><Status loading={loading} error={error} what="anomalies" onRetry={reload} rows={6} /></div>
       {data && (
         <>
           <div className="mt-4"><Note>{data.method} Expected range: {data.expected_range_rule}. Severity: {data.severity_rule}.</Note></div>

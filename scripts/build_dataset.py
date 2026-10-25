@@ -10,8 +10,20 @@ import json
 import duckdb
 import numpy as np
 import pandas as pd
-from common import DB_PATH, DOCS_DIR, MODELS_DIR, PROCESSED_DIR, RAW_PARQUET
-from generate_synthetic import UK_BANK_HOLIDAYS, assign_category, campaign_table, pack_sizes, region_table
+from common import (
+    ARTIFACTS_DIR,
+    DB_PATH,
+    DOCS_DIR,
+    PROCESSED_DIR,
+    RAW_PARQUET,
+)
+from generate_synthetic import (
+    UK_BANK_HOLIDAYS,
+    assign_category,
+    campaign_table,
+    pack_sizes,
+    region_table,
+)
 
 PRODUCT_CODE_PATTERN = r"^\d{5}[A-Za-z]*$"  # real merchandise codes; excludes POST, M, BANK CHARGES...
 MAX_LINE_QUANTITY = 10_000  # lines above this are treated as data-entry outliers and removed
@@ -160,6 +172,7 @@ def main() -> None:
     customers = first.assign(region_id=home).reset_index()
 
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
+    ARTIFACTS_DIR.mkdir(parents=True, exist_ok=True)
     if DB_PATH.exists():
         DB_PATH.unlink()
     con = duckdb.connect(str(DB_PATH))
@@ -209,8 +222,7 @@ def main() -> None:
         "date_max": str(sales["date"].max().date()),
     }
     out = {"raw": report, "cleaning_steps": steps, "clean": clean_report}
-    MODELS_DIR.mkdir(exist_ok=True)
-    (MODELS_DIR / "data_quality.json").write_text(json.dumps(out, indent=2))
+    (ARTIFACTS_DIR / "data_quality.json").write_text(json.dumps(out, indent=2))
     write_markdown_report(out)
     print(f"[build] {len(sales):,} clean sales lines, {len(customers):,} customers, {len(products):,} products")
 

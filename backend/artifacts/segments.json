@@ -1,0 +1,7610 @@
+{
+  "n_customers": 5846,
+  "features": [
+    "log1p(recency_days)",
+    "log1p(frequency)",
+    "log1p(monetary)"
+  ],
+  "silhouette_by_k": [
+    {
+      "k": 2,
+      "silhouette": 0.4388930529399656,
+      "inertia": 8536.420628169326
+    },
+    {
+      "k": 3,
+      "silhouette": 0.3493327261357384,
+      "inertia": 6305.756096696871
+    },
+    {
+      "k": 4,
+      "silhouette": 0.36764050464033393,
+      "inertia": 4868.42122680827
+    },
+    {
+      "k": 5,
+      "silhouette": 0.3446909389219963,
+      "inertia": 4046.012692044639
+    },
+    {
+      "k": 6,
+      "silhouette": 0.33580488935332276,
+      "inertia": 3516.4902412703304
+    },
+    {
+      "k": 7,
+      "silhouette": 0.31339851508325817,
+      "inertia": 3149.861731983353
+    },
+    {
+      "k": 8,
+      "silhouette": 0.2943651267588188,
+      "inertia": 2862.404044587219
+    }
+  ],
+  "best_k_silhouette": 2,
+  "chosen_k": 4,
+  "ward_adjusted_rand_index": 0.596,
+  "pca_explained_variance_pct": [
+    76.4,
+    18.8
+  ],
+  "medians": {
+    "recency_days": 96.0,
+    "frequency": 3.0,
+    "monetary": 855.86
+  },
+  "naming_rules": "High Value: median recency <= overall median AND frequency and spend >= 2x median; Loyal / Regular: recent and frequency >= median; New / Recent Low Frequency: recent only; At Risk: not recent but frequency >= median; Low Engagement: neither.",
+  "segments": [
+    {
+      "cluster": 1,
+      "name": "High Value",
+      "customers": 1191,
+      "customer_share_pct": 20.37,
+      "revenue": 12380944.86,
+      "revenue_share_pct": 73.66,
+      "avg_spend": 10395.42,
+      "median_spend": 4888.75,
+      "avg_frequency": 19.15,
+      "avg_recency_days": 28.5
+    },
+    {
+      "cluster": 0,
+      "name": "At Risk (Lapsed Regulars)",
+      "customers": 1444,
+      "customer_share_pct": 24.7,
+      "revenue": 2755515.68,
+      "revenue_share_pct": 16.39,
+      "avg_spend": 1908.25,
+      "median_spend": 1448.44,
+      "avg_frequency": 5.04,
+      "avg_recency_days": 229.5
+    },
+    {
+      "cluster": 2,
+      "name": "Loyal / Regular",
+      "customers": 1260,
+      "customer_share_pct": 21.55,
+      "revenue": 1055624.89,
+      "revenue_share_pct": 6.28,
+      "avg_spend": 837.8,
+      "median_spend": 716.46,
+      "avg_frequency": 3.02,
+      "avg_recency_days": 29.1
+    },
+    {
+      "cluster": 3,
+      "name": "Low Engagement / Lapsed",
+      "customers": 1951,
+      "customer_share_pct": 33.37,
+      "revenue": 615192.39,
+      "revenue_share_pct": 3.66,
+      "avg_spend": 315.32,
+      "median_spend": 273.26,
+      "avg_frequency": 1.38,
+      "avg_recency_days": 395.4
+    }
+  ],
+  "pca_points": [
+    {
+      "pc1": 2.452,
+      "pc2": 0.348,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 2.192,
+      "pc2": -0.005,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.769,
+      "pc2": -1.098,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.37,
+      "pc2": 0.712,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.12,
+      "pc2": 0.509,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.034,
+      "pc2": -0.073,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.502,
+      "pc2": -0.773,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.557,
+      "pc2": -0.444,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.087,
+      "pc2": 0.552,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 3.049,
+      "pc2": -0.567,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.306,
+      "pc2": -0.578,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.041,
+      "pc2": 0.351,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.506,
+      "pc2": 0.065,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.192,
+      "pc2": 0.436,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.564,
+      "pc2": 0.626,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.069,
+      "pc2": 0.593,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.876,
+      "pc2": -1.628,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.746,
+      "pc2": 0.572,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.103,
+      "pc2": 0.184,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.845,
+      "pc2": 0.099,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.76,
+      "pc2": 0.669,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.846,
+      "pc2": 0.302,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.111,
+      "pc2": -0.555,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.905,
+      "pc2": -0.138,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.322,
+      "pc2": 0.798,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.369,
+      "pc2": -0.455,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.945,
+      "pc2": -0.263,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.353,
+      "pc2": 1.411,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.887,
+      "pc2": 0.338,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.979,
+      "pc2": -0.868,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.256,
+      "pc2": 0.093,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.853,
+      "pc2": 0.419,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.293,
+      "pc2": 0.507,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 2.999,
+      "pc2": -0.762,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.691,
+      "pc2": 0.198,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 3.631,
+      "pc2": -0.215,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.653,
+      "pc2": -0.446,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.174,
+      "pc2": -0.974,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.005,
+      "pc2": -0.401,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.101,
+      "pc2": -0.264,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.299,
+      "pc2": -0.052,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.53,
+      "pc2": 1.129,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 3.64,
+      "pc2": -0.068,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.325,
+      "pc2": 0.284,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.609,
+      "pc2": 0.296,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.572,
+      "pc2": 0.561,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.339,
+      "pc2": 1.711,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.472,
+      "pc2": 0.321,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.137,
+      "pc2": -0.458,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.201,
+      "pc2": -0.959,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.548,
+      "pc2": -0.105,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.475,
+      "pc2": 0.815,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.235,
+      "pc2": 0.658,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.534,
+      "pc2": 0.871,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.516,
+      "pc2": 0.63,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.105,
+      "pc2": -1.649,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.804,
+      "pc2": 0.504,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.228,
+      "pc2": 0.247,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.015,
+      "pc2": -1.937,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.055,
+      "pc2": 0.632,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.799,
+      "pc2": -0.693,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.576,
+      "pc2": -0.155,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.763,
+      "pc2": -0.237,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.053,
+      "pc2": 0.225,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.17,
+      "pc2": -1.484,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.809,
+      "pc2": 0.487,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.425,
+      "pc2": 0.942,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.948,
+      "pc2": 0.21,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 2.293,
+      "pc2": 2.654,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.394,
+      "pc2": -0.757,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.36,
+      "pc2": -0.234,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.253,
+      "pc2": -0.076,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.556,
+      "pc2": -0.6,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.434,
+      "pc2": 0.94,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.178,
+      "pc2": -0.625,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.24,
+      "pc2": -1.755,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -2.177,
+      "pc2": -0.115,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.874,
+      "pc2": -1.474,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.336,
+      "pc2": -1.02,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.73,
+      "pc2": -0.963,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.4,
+      "pc2": 0.263,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.482,
+      "pc2": 0.467,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.119,
+      "pc2": 0.6,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.186,
+      "pc2": -0.164,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.804,
+      "pc2": -0.555,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.15,
+      "pc2": -0.097,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.115,
+      "pc2": -0.807,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 3.324,
+      "pc2": 0.455,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.714,
+      "pc2": 1.064,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.682,
+      "pc2": -2.041,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.996,
+      "pc2": 0.351,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.104,
+      "pc2": 0.185,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.088,
+      "pc2": 0.293,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.065,
+      "pc2": -0.087,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.891,
+      "pc2": 0.691,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.009,
+      "pc2": -0.557,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 3.949,
+      "pc2": 0.668,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 2.003,
+      "pc2": -0.418,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.805,
+      "pc2": -1.459,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.158,
+      "pc2": -0.121,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.506,
+      "pc2": -1.193,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.228,
+      "pc2": -0.976,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.874,
+      "pc2": 0.228,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.087,
+      "pc2": -0.926,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.596,
+      "pc2": 0.715,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.282,
+      "pc2": -0.03,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.923,
+      "pc2": 0.311,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.331,
+      "pc2": 0.129,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.41,
+      "pc2": -1.046,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.763,
+      "pc2": -0.429,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.214,
+      "pc2": 1.021,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.152,
+      "pc2": -0.712,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.388,
+      "pc2": -0.916,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.542,
+      "pc2": 0.231,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.415,
+      "pc2": -0.125,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.7,
+      "pc2": 0.471,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.352,
+      "pc2": 0.027,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.2,
+      "pc2": -0.255,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.699,
+      "pc2": -0.117,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.117,
+      "pc2": 0.132,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.19,
+      "pc2": -0.291,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.701,
+      "pc2": 0.312,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.17,
+      "pc2": -0.9,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.595,
+      "pc2": -0.852,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.972,
+      "pc2": 0.181,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.7,
+      "pc2": -0.773,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 3.603,
+      "pc2": -0.115,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 2.27,
+      "pc2": -0.869,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.126,
+      "pc2": 1.436,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.933,
+      "pc2": 0.346,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.429,
+      "pc2": 0.765,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.271,
+      "pc2": 0.077,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.001,
+      "pc2": -0.058,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.111,
+      "pc2": -1.57,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.196,
+      "pc2": 0.693,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 3.693,
+      "pc2": 0.209,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.493,
+      "pc2": 0.098,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.403,
+      "pc2": -0.937,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.729,
+      "pc2": 0.375,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.089,
+      "pc2": -0.712,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.858,
+      "pc2": -0.279,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.89,
+      "pc2": -0.219,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.493,
+      "pc2": -0.056,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.097,
+      "pc2": 0.351,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.999,
+      "pc2": -0.029,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.095,
+      "pc2": 0.328,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.625,
+      "pc2": 0.232,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.744,
+      "pc2": 0.537,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.851,
+      "pc2": -1.588,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.49,
+      "pc2": -1.095,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.17,
+      "pc2": 0.217,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.518,
+      "pc2": -1.1,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.552,
+      "pc2": -0.384,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.512,
+      "pc2": 0.272,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.205,
+      "pc2": 0.449,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.522,
+      "pc2": 0.387,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.939,
+      "pc2": 1.867,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.919,
+      "pc2": -0.889,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -2.056,
+      "pc2": 0.408,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.544,
+      "pc2": 1.168,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.987,
+      "pc2": -0.404,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.382,
+      "pc2": 0.524,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.415,
+      "pc2": -0.886,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.244,
+      "pc2": 0.45,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.784,
+      "pc2": 0.459,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.943,
+      "pc2": 0.128,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.093,
+      "pc2": 1.209,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.633,
+      "pc2": -0.615,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.936,
+      "pc2": 0.621,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.268,
+      "pc2": -0.13,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.069,
+      "pc2": 0.067,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.829,
+      "pc2": 0.098,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.97,
+      "pc2": -1.002,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.172,
+      "pc2": -0.29,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.799,
+      "pc2": 0.684,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.599,
+      "pc2": 0.164,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.97,
+      "pc2": 0.468,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.351,
+      "pc2": -0.103,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.623,
+      "pc2": 0.925,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.255,
+      "pc2": 0.351,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.329,
+      "pc2": -0.33,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.338,
+      "pc2": -0.073,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.882,
+      "pc2": -0.704,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.033,
+      "pc2": -1.395,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.821,
+      "pc2": -0.679,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.48,
+      "pc2": 1.162,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.108,
+      "pc2": 0.188,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.879,
+      "pc2": -0.298,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.705,
+      "pc2": 0.081,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.822,
+      "pc2": -0.691,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 4.208,
+      "pc2": -0.083,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.032,
+      "pc2": -1.29,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.729,
+      "pc2": -0.822,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.705,
+      "pc2": 0.388,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.379,
+      "pc2": -0.383,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.506,
+      "pc2": 0.409,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.168,
+      "pc2": 0.515,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.423,
+      "pc2": -0.982,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 6.013,
+      "pc2": 1.103,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 4.027,
+      "pc2": -0.286,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.462,
+      "pc2": 1.076,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.814,
+      "pc2": 0.555,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.464,
+      "pc2": 0.639,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.144,
+      "pc2": 1.364,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.327,
+      "pc2": -0.906,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.21,
+      "pc2": -0.004,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.63,
+      "pc2": 0.304,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.616,
+      "pc2": 0.585,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 4.382,
+      "pc2": 0.356,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.001,
+      "pc2": 0.451,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.364,
+      "pc2": 0.644,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.702,
+      "pc2": 0.565,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.123,
+      "pc2": -0.256,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.532,
+      "pc2": -0.842,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.769,
+      "pc2": 0.342,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.743,
+      "pc2": -1.93,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.439,
+      "pc2": 0.208,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.628,
+      "pc2": 1.232,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.031,
+      "pc2": -0.906,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.552,
+      "pc2": 0.679,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 3.11,
+      "pc2": 0.056,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.414,
+      "pc2": -0.483,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.274,
+      "pc2": 1.071,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.778,
+      "pc2": 0.61,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.128,
+      "pc2": -0.677,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.088,
+      "pc2": -0.104,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.07,
+      "pc2": -2.074,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.004,
+      "pc2": 0.317,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.117,
+      "pc2": 1.166,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.457,
+      "pc2": 1.132,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.223,
+      "pc2": -0.066,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.354,
+      "pc2": -0.175,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.338,
+      "pc2": 1.016,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.824,
+      "pc2": 0.123,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.492,
+      "pc2": -1.27,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.154,
+      "pc2": 0.594,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.257,
+      "pc2": -0.301,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.051,
+      "pc2": 1.032,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.19,
+      "pc2": -0.955,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.931,
+      "pc2": 0.063,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.207,
+      "pc2": -0.963,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.594,
+      "pc2": 0.257,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.79,
+      "pc2": 0.503,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.787,
+      "pc2": 0.347,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.406,
+      "pc2": 0.302,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.167,
+      "pc2": 0.765,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.531,
+      "pc2": 0.173,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.604,
+      "pc2": -0.973,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.371,
+      "pc2": 0.518,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.02,
+      "pc2": 1.344,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.333,
+      "pc2": 0.422,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.87,
+      "pc2": 0.665,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.532,
+      "pc2": 0.091,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.583,
+      "pc2": -0.212,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.283,
+      "pc2": -0.095,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 3.348,
+      "pc2": 0.417,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 2.277,
+      "pc2": -0.174,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.588,
+      "pc2": 0.428,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.725,
+      "pc2": -0.021,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.857,
+      "pc2": -1.615,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.594,
+      "pc2": 1.238,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.507,
+      "pc2": -1.305,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.619,
+      "pc2": -0.518,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.751,
+      "pc2": 0.108,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.408,
+      "pc2": 0.494,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.046,
+      "pc2": 1.0,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 4.995,
+      "pc2": 0.486,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.489,
+      "pc2": 0.911,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.417,
+      "pc2": -0.198,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.76,
+      "pc2": -0.54,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.979,
+      "pc2": 0.23,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.599,
+      "pc2": 0.406,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.639,
+      "pc2": 0.675,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.204,
+      "pc2": 0.569,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.772,
+      "pc2": 1.546,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.4,
+      "pc2": -0.306,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 2.908,
+      "pc2": 1.407,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 2.03,
+      "pc2": -0.981,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 3.76,
+      "pc2": -0.41,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.806,
+      "pc2": 0.062,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.557,
+      "pc2": 1.007,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.696,
+      "pc2": -1.385,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -2.297,
+      "pc2": -1.721,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.557,
+      "pc2": 0.337,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.016,
+      "pc2": -0.709,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.695,
+      "pc2": 0.519,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.205,
+      "pc2": -0.168,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.225,
+      "pc2": 0.542,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.503,
+      "pc2": -0.624,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 3.029,
+      "pc2": -0.412,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.521,
+      "pc2": -0.85,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.167,
+      "pc2": 0.42,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.126,
+      "pc2": -0.333,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 3.265,
+      "pc2": 0.491,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.82,
+      "pc2": 0.556,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.591,
+      "pc2": -1.106,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.595,
+      "pc2": -0.998,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.029,
+      "pc2": 1.267,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.811,
+      "pc2": -0.425,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.837,
+      "pc2": -0.246,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.094,
+      "pc2": 0.685,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.134,
+      "pc2": 0.146,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.07,
+      "pc2": 0.21,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.785,
+      "pc2": 0.428,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.427,
+      "pc2": 0.11,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.311,
+      "pc2": -1.223,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.684,
+      "pc2": -0.58,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.094,
+      "pc2": 1.706,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.136,
+      "pc2": -0.936,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.426,
+      "pc2": -1.076,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.234,
+      "pc2": -0.445,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.133,
+      "pc2": -1.281,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.127,
+      "pc2": 0.344,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.417,
+      "pc2": 0.572,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.22,
+      "pc2": 0.297,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.815,
+      "pc2": 0.14,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 2.154,
+      "pc2": -0.206,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.31,
+      "pc2": 0.34,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.415,
+      "pc2": 0.042,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.016,
+      "pc2": 0.241,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.175,
+      "pc2": -1.287,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.571,
+      "pc2": 0.934,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.356,
+      "pc2": -0.095,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.005,
+      "pc2": 0.345,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.064,
+      "pc2": -0.123,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.351,
+      "pc2": -1.185,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.375,
+      "pc2": 0.379,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.184,
+      "pc2": -1.074,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.496,
+      "pc2": 0.471,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.633,
+      "pc2": -0.483,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.415,
+      "pc2": -0.231,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.065,
+      "pc2": 1.225,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.618,
+      "pc2": -1.492,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.715,
+      "pc2": 0.503,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.141,
+      "pc2": 0.527,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.189,
+      "pc2": 1.056,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.117,
+      "pc2": 0.971,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.25,
+      "pc2": -0.838,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.667,
+      "pc2": 0.843,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.915,
+      "pc2": 0.069,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.447,
+      "pc2": 0.008,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.272,
+      "pc2": 0.353,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.803,
+      "pc2": 0.022,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.728,
+      "pc2": 0.758,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.152,
+      "pc2": 1.163,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.787,
+      "pc2": -0.878,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.387,
+      "pc2": -0.954,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -2.21,
+      "pc2": 0.21,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.801,
+      "pc2": -0.113,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.473,
+      "pc2": 0.046,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.158,
+      "pc2": -0.953,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.37,
+      "pc2": 0.586,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.341,
+      "pc2": 0.63,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.731,
+      "pc2": -0.422,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.287,
+      "pc2": -0.258,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.331,
+      "pc2": -0.09,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.185,
+      "pc2": 1.134,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.315,
+      "pc2": -0.007,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.977,
+      "pc2": -1.023,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.745,
+      "pc2": 0.378,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.604,
+      "pc2": -1.671,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.381,
+      "pc2": 0.985,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -2.149,
+      "pc2": -1.659,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.856,
+      "pc2": 1.02,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.329,
+      "pc2": 0.249,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.934,
+      "pc2": 0.223,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.909,
+      "pc2": 0.352,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.471,
+      "pc2": -0.006,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.784,
+      "pc2": -0.535,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.34,
+      "pc2": -0.293,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.299,
+      "pc2": 0.349,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.43,
+      "pc2": 0.315,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.403,
+      "pc2": -0.376,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.033,
+      "pc2": -0.069,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.068,
+      "pc2": -0.749,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.948,
+      "pc2": -0.433,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.771,
+      "pc2": -0.05,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.055,
+      "pc2": 1.02,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.197,
+      "pc2": 0.049,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.989,
+      "pc2": 0.544,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.054,
+      "pc2": 0.129,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.036,
+      "pc2": -0.019,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.121,
+      "pc2": 0.022,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 3.283,
+      "pc2": 0.486,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.549,
+      "pc2": 0.344,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.302,
+      "pc2": -0.444,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.105,
+      "pc2": -0.856,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.376,
+      "pc2": 0.568,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.191,
+      "pc2": 0.48,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.361,
+      "pc2": -0.252,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.532,
+      "pc2": 0.668,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.654,
+      "pc2": 1.072,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.117,
+      "pc2": 0.295,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.335,
+      "pc2": -0.719,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 3.815,
+      "pc2": 0.688,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.38,
+      "pc2": 0.298,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.24,
+      "pc2": 0.188,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.454,
+      "pc2": 0.105,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.076,
+      "pc2": -0.723,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 3.041,
+      "pc2": 0.185,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.405,
+      "pc2": -0.44,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.984,
+      "pc2": 0.534,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.549,
+      "pc2": -0.912,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.669,
+      "pc2": 0.798,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.452,
+      "pc2": 0.536,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.542,
+      "pc2": 0.243,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.742,
+      "pc2": 0.554,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.205,
+      "pc2": -0.238,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.673,
+      "pc2": -1.282,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.363,
+      "pc2": 0.605,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.801,
+      "pc2": -0.96,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.773,
+      "pc2": -1.163,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.518,
+      "pc2": -0.239,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.583,
+      "pc2": 0.851,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.966,
+      "pc2": 0.66,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.835,
+      "pc2": 0.281,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.738,
+      "pc2": 0.681,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.218,
+      "pc2": -0.266,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.107,
+      "pc2": -0.295,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.752,
+      "pc2": -1.261,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 3.717,
+      "pc2": -0.44,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.655,
+      "pc2": 0.34,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.171,
+      "pc2": 1.328,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.279,
+      "pc2": -1.244,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.524,
+      "pc2": 0.68,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.229,
+      "pc2": -0.15,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.06,
+      "pc2": -0.051,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.251,
+      "pc2": 1.242,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.688,
+      "pc2": 0.459,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.76,
+      "pc2": -2.013,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -2.037,
+      "pc2": 0.248,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.539,
+      "pc2": -1.066,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.83,
+      "pc2": -1.218,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.845,
+      "pc2": 1.026,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.378,
+      "pc2": -0.318,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.234,
+      "pc2": 0.486,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.05,
+      "pc2": -0.462,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -2.091,
+      "pc2": -0.08,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.386,
+      "pc2": 0.312,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.549,
+      "pc2": -0.121,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.889,
+      "pc2": -0.424,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.995,
+      "pc2": -0.171,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.492,
+      "pc2": 0.784,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.641,
+      "pc2": 0.59,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.244,
+      "pc2": -0.528,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.523,
+      "pc2": 0.239,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.815,
+      "pc2": 0.068,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.902,
+      "pc2": 0.307,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.058,
+      "pc2": 0.558,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.21,
+      "pc2": -0.476,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.034,
+      "pc2": 0.944,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.522,
+      "pc2": 0.708,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.193,
+      "pc2": 1.319,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.676,
+      "pc2": -0.243,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.457,
+      "pc2": -0.603,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -2.274,
+      "pc2": 0.26,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.699,
+      "pc2": 0.628,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.719,
+      "pc2": 0.753,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.215,
+      "pc2": 0.145,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.615,
+      "pc2": -1.764,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.784,
+      "pc2": -1.195,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.793,
+      "pc2": -1.543,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.011,
+      "pc2": 0.879,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.359,
+      "pc2": 0.467,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.469,
+      "pc2": -2.084,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.007,
+      "pc2": 1.304,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.995,
+      "pc2": -0.617,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.957,
+      "pc2": 0.116,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.367,
+      "pc2": 0.948,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.988,
+      "pc2": -1.264,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.237,
+      "pc2": 0.069,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.118,
+      "pc2": 0.519,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.02,
+      "pc2": -0.096,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.512,
+      "pc2": -1.569,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.719,
+      "pc2": -0.329,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 3.621,
+      "pc2": -0.081,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.815,
+      "pc2": -0.582,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.946,
+      "pc2": -1.82,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.258,
+      "pc2": -0.258,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 3.511,
+      "pc2": -0.341,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.74,
+      "pc2": 0.51,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.025,
+      "pc2": -1.013,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 3.092,
+      "pc2": 0.595,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.32,
+      "pc2": -1.821,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.935,
+      "pc2": 0.51,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.448,
+      "pc2": -0.657,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.45,
+      "pc2": -1.167,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.651,
+      "pc2": 0.643,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.965,
+      "pc2": 0.074,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.727,
+      "pc2": -1.29,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.323,
+      "pc2": 1.158,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.095,
+      "pc2": 0.374,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.872,
+      "pc2": -0.177,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.571,
+      "pc2": 0.034,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.354,
+      "pc2": -0.049,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.923,
+      "pc2": -1.168,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.388,
+      "pc2": 1.861,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.408,
+      "pc2": -1.153,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.382,
+      "pc2": 0.034,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.658,
+      "pc2": -1.989,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.313,
+      "pc2": -0.551,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.448,
+      "pc2": -0.692,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.16,
+      "pc2": -0.163,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.831,
+      "pc2": -0.077,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.448,
+      "pc2": -0.559,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.561,
+      "pc2": 0.041,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.089,
+      "pc2": -0.671,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.151,
+      "pc2": 0.705,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.308,
+      "pc2": 0.6,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.179,
+      "pc2": -0.358,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.782,
+      "pc2": 1.973,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.365,
+      "pc2": -0.855,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.975,
+      "pc2": 0.06,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.904,
+      "pc2": 0.981,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.166,
+      "pc2": -0.288,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.313,
+      "pc2": -0.553,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.443,
+      "pc2": 0.029,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.002,
+      "pc2": -0.762,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.341,
+      "pc2": 0.474,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.473,
+      "pc2": -0.507,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.564,
+      "pc2": 1.3,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.551,
+      "pc2": -0.101,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.983,
+      "pc2": 0.308,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.88,
+      "pc2": 0.389,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.207,
+      "pc2": 0.541,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.865,
+      "pc2": -0.729,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.286,
+      "pc2": -0.902,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.05,
+      "pc2": 0.632,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.148,
+      "pc2": 1.028,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.911,
+      "pc2": -0.587,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 3.406,
+      "pc2": 0.342,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.351,
+      "pc2": 0.476,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.134,
+      "pc2": -0.765,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 3.534,
+      "pc2": -0.513,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 2.748,
+      "pc2": -0.108,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.542,
+      "pc2": 0.564,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.352,
+      "pc2": -0.934,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.732,
+      "pc2": 0.377,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.795,
+      "pc2": 0.364,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.983,
+      "pc2": 0.012,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.929,
+      "pc2": -0.177,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.929,
+      "pc2": 1.164,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.021,
+      "pc2": 0.949,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.062,
+      "pc2": -1.905,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.628,
+      "pc2": -0.724,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.561,
+      "pc2": -1.67,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.824,
+      "pc2": 0.438,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.299,
+      "pc2": -0.815,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.293,
+      "pc2": -1.011,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.276,
+      "pc2": -1.215,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.391,
+      "pc2": -0.775,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.924,
+      "pc2": 0.435,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.793,
+      "pc2": 0.017,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.378,
+      "pc2": -0.762,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.108,
+      "pc2": -0.021,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.016,
+      "pc2": -0.206,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.609,
+      "pc2": 0.466,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -3.028,
+      "pc2": -0.787,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.139,
+      "pc2": 0.583,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.159,
+      "pc2": 0.708,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.548,
+      "pc2": -0.161,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.626,
+      "pc2": -1.112,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.473,
+      "pc2": -0.428,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.441,
+      "pc2": -0.252,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 3.271,
+      "pc2": -0.443,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.632,
+      "pc2": -0.332,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.318,
+      "pc2": -1.384,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.692,
+      "pc2": 0.788,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.59,
+      "pc2": 0.292,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.289,
+      "pc2": -0.047,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.459,
+      "pc2": -0.331,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.022,
+      "pc2": -1.592,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -2.398,
+      "pc2": 0.174,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.877,
+      "pc2": 0.591,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.929,
+      "pc2": -0.342,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.223,
+      "pc2": -2.031,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.918,
+      "pc2": -0.875,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.587,
+      "pc2": -0.828,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.753,
+      "pc2": -0.481,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.738,
+      "pc2": 0.437,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.016,
+      "pc2": -0.364,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.891,
+      "pc2": -0.449,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.075,
+      "pc2": 0.718,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.005,
+      "pc2": 0.88,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.589,
+      "pc2": -0.652,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.354,
+      "pc2": 0.629,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.304,
+      "pc2": 0.917,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.377,
+      "pc2": -0.402,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.26,
+      "pc2": 0.284,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.88,
+      "pc2": 0.709,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.167,
+      "pc2": 0.552,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.586,
+      "pc2": 0.661,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.081,
+      "pc2": 0.658,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.014,
+      "pc2": -1.084,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.827,
+      "pc2": -0.518,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.564,
+      "pc2": 0.843,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.436,
+      "pc2": -0.438,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 5.631,
+      "pc2": 1.089,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.439,
+      "pc2": -1.754,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.53,
+      "pc2": 0.333,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.153,
+      "pc2": -0.617,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.072,
+      "pc2": 0.016,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.036,
+      "pc2": 0.69,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.18,
+      "pc2": -0.096,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.537,
+      "pc2": -0.079,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.469,
+      "pc2": 0.294,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.801,
+      "pc2": 0.363,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.141,
+      "pc2": 0.901,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.181,
+      "pc2": 0.153,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.174,
+      "pc2": -0.428,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.452,
+      "pc2": 1.464,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.367,
+      "pc2": -0.237,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.955,
+      "pc2": 0.014,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.085,
+      "pc2": -1.31,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -2.103,
+      "pc2": -0.019,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.913,
+      "pc2": -0.475,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 5.445,
+      "pc2": 0.503,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.421,
+      "pc2": 0.466,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.588,
+      "pc2": -0.058,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.509,
+      "pc2": 0.101,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.849,
+      "pc2": -0.441,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.226,
+      "pc2": -0.431,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.272,
+      "pc2": 0.201,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 4.157,
+      "pc2": -0.454,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.612,
+      "pc2": -1.223,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.681,
+      "pc2": 0.484,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.206,
+      "pc2": 0.77,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.245,
+      "pc2": -1.47,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.991,
+      "pc2": 0.18,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.694,
+      "pc2": 0.966,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.306,
+      "pc2": -0.479,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.782,
+      "pc2": 1.212,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.66,
+      "pc2": 0.769,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.696,
+      "pc2": 0.177,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.797,
+      "pc2": -2.041,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.757,
+      "pc2": 0.432,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.892,
+      "pc2": 0.439,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.845,
+      "pc2": -0.996,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.02,
+      "pc2": 0.504,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.286,
+      "pc2": -0.16,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.02,
+      "pc2": -1.088,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -2.386,
+      "pc2": -0.353,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.504,
+      "pc2": 0.528,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.829,
+      "pc2": -0.35,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.035,
+      "pc2": -1.627,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.68,
+      "pc2": -0.312,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.596,
+      "pc2": 0.051,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.979,
+      "pc2": -0.317,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.182,
+      "pc2": -0.142,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.583,
+      "pc2": 0.425,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.69,
+      "pc2": 0.617,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.313,
+      "pc2": -0.632,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.421,
+      "pc2": -1.345,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.453,
+      "pc2": 0.662,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.638,
+      "pc2": 0.755,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.535,
+      "pc2": -0.019,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.755,
+      "pc2": 0.155,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.619,
+      "pc2": -1.493,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -2.527,
+      "pc2": 0.073,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 3.307,
+      "pc2": 0.373,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.035,
+      "pc2": -1.366,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.039,
+      "pc2": 0.62,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.93,
+      "pc2": 0.876,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.603,
+      "pc2": 0.261,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.213,
+      "pc2": 0.264,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.583,
+      "pc2": -1.053,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.349,
+      "pc2": -1.814,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.051,
+      "pc2": -0.92,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.897,
+      "pc2": 0.039,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.684,
+      "pc2": 0.023,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.993,
+      "pc2": 0.084,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -2.228,
+      "pc2": -0.133,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 3.223,
+      "pc2": -1.002,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.219,
+      "pc2": 0.894,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.56,
+      "pc2": -0.717,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 4.592,
+      "pc2": 0.106,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.223,
+      "pc2": 0.676,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.58,
+      "pc2": -0.43,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.994,
+      "pc2": 0.305,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.539,
+      "pc2": -0.093,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.132,
+      "pc2": -0.429,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.734,
+      "pc2": 1.564,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.76,
+      "pc2": 0.351,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 2.119,
+      "pc2": -0.137,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.409,
+      "pc2": -0.545,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -2.24,
+      "pc2": 0.163,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.216,
+      "pc2": 0.551,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.843,
+      "pc2": 0.363,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.299,
+      "pc2": 0.313,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.055,
+      "pc2": -0.308,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.515,
+      "pc2": 0.568,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.68,
+      "pc2": -0.388,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.78,
+      "pc2": -0.943,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.701,
+      "pc2": -0.802,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.226,
+      "pc2": 0.67,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.536,
+      "pc2": 0.498,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.045,
+      "pc2": 1.069,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.083,
+      "pc2": 0.193,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.816,
+      "pc2": -1.124,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.399,
+      "pc2": 0.679,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.615,
+      "pc2": 1.052,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.338,
+      "pc2": -0.957,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.2,
+      "pc2": -0.233,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.054,
+      "pc2": -0.46,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.603,
+      "pc2": 0.463,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.852,
+      "pc2": 0.939,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.777,
+      "pc2": 0.427,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.901,
+      "pc2": -1.686,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.016,
+      "pc2": 0.028,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.555,
+      "pc2": -0.882,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.343,
+      "pc2": -0.671,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.571,
+      "pc2": 0.204,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.712,
+      "pc2": -0.216,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.187,
+      "pc2": 0.012,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.89,
+      "pc2": -0.403,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.568,
+      "pc2": -1.085,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 3.973,
+      "pc2": -0.283,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.571,
+      "pc2": -0.43,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.193,
+      "pc2": -0.746,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.727,
+      "pc2": -0.714,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.631,
+      "pc2": 0.591,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.791,
+      "pc2": 0.357,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.081,
+      "pc2": 0.775,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.146,
+      "pc2": -1.319,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.112,
+      "pc2": 0.196,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.428,
+      "pc2": -0.04,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.599,
+      "pc2": 0.548,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.895,
+      "pc2": 0.213,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.806,
+      "pc2": -1.056,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.756,
+      "pc2": -0.918,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.97,
+      "pc2": -1.164,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -3.04,
+      "pc2": -0.534,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.922,
+      "pc2": 0.288,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.499,
+      "pc2": -0.002,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.127,
+      "pc2": -1.4,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.34,
+      "pc2": -0.654,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.003,
+      "pc2": 0.018,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.866,
+      "pc2": 0.702,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.477,
+      "pc2": -0.228,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.813,
+      "pc2": -0.982,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.608,
+      "pc2": -0.739,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.601,
+      "pc2": -0.721,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.302,
+      "pc2": -0.609,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.432,
+      "pc2": 0.651,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.301,
+      "pc2": -0.255,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.201,
+      "pc2": -0.188,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.46,
+      "pc2": 0.388,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.303,
+      "pc2": -1.928,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.893,
+      "pc2": -0.949,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.662,
+      "pc2": 0.332,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.07,
+      "pc2": -0.49,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.204,
+      "pc2": 0.779,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.62,
+      "pc2": -0.339,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 3.275,
+      "pc2": 0.449,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.768,
+      "pc2": 0.146,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.082,
+      "pc2": -0.387,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.497,
+      "pc2": -0.579,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.53,
+      "pc2": 0.607,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.126,
+      "pc2": 0.505,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.406,
+      "pc2": 0.107,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.28,
+      "pc2": -1.019,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.335,
+      "pc2": 0.716,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.704,
+      "pc2": 0.15,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.622,
+      "pc2": 0.774,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.127,
+      "pc2": 0.864,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.129,
+      "pc2": -0.437,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.371,
+      "pc2": -0.965,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -2.045,
+      "pc2": 0.04,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.504,
+      "pc2": 0.058,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.114,
+      "pc2": 1.267,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.635,
+      "pc2": 1.026,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.479,
+      "pc2": 0.168,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 3.077,
+      "pc2": 0.324,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.757,
+      "pc2": -0.014,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.174,
+      "pc2": -0.182,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.554,
+      "pc2": -0.285,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.639,
+      "pc2": -0.323,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.703,
+      "pc2": 0.575,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.406,
+      "pc2": -0.748,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.412,
+      "pc2": 0.273,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.656,
+      "pc2": 0.437,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.922,
+      "pc2": 0.844,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -2.393,
+      "pc2": -0.315,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.672,
+      "pc2": 0.667,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.726,
+      "pc2": 1.844,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 2.059,
+      "pc2": 0.645,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.723,
+      "pc2": -0.02,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.081,
+      "pc2": -0.39,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.487,
+      "pc2": 1.012,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.019,
+      "pc2": 0.038,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.945,
+      "pc2": 0.468,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.145,
+      "pc2": 0.35,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.247,
+      "pc2": 0.115,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.77,
+      "pc2": -0.473,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.831,
+      "pc2": 0.151,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.137,
+      "pc2": -0.177,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.074,
+      "pc2": -0.288,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.248,
+      "pc2": 0.548,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.809,
+      "pc2": 0.391,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.87,
+      "pc2": 0.711,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.718,
+      "pc2": -1.406,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.426,
+      "pc2": -0.701,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.776,
+      "pc2": -0.09,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.146,
+      "pc2": -0.755,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.397,
+      "pc2": 1.21,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.756,
+      "pc2": -0.642,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.363,
+      "pc2": -0.487,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -2.1,
+      "pc2": -0.11,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.617,
+      "pc2": 0.09,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.533,
+      "pc2": 0.129,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.231,
+      "pc2": 1.062,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.574,
+      "pc2": 0.254,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.598,
+      "pc2": 0.8,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.873,
+      "pc2": 0.043,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.563,
+      "pc2": 0.517,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.763,
+      "pc2": 0.517,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.314,
+      "pc2": -0.683,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.306,
+      "pc2": 1.37,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.209,
+      "pc2": 0.966,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.986,
+      "pc2": 0.583,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.173,
+      "pc2": 0.532,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.234,
+      "pc2": 0.451,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.622,
+      "pc2": -1.455,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.097,
+      "pc2": -0.844,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.443,
+      "pc2": 0.532,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.513,
+      "pc2": -0.177,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.056,
+      "pc2": -1.716,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.213,
+      "pc2": 0.588,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.994,
+      "pc2": 0.537,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.06,
+      "pc2": 0.524,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.766,
+      "pc2": 0.441,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.551,
+      "pc2": -2.355,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.374,
+      "pc2": 1.139,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.925,
+      "pc2": -0.224,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.524,
+      "pc2": -0.653,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.976,
+      "pc2": 1.521,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.836,
+      "pc2": -1.049,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.273,
+      "pc2": -0.259,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.207,
+      "pc2": -2.666,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.285,
+      "pc2": -2.316,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.393,
+      "pc2": -0.22,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.486,
+      "pc2": 0.308,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.493,
+      "pc2": -1.27,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.051,
+      "pc2": 0.55,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.441,
+      "pc2": 0.455,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.714,
+      "pc2": 0.349,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.89,
+      "pc2": -1.077,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.83,
+      "pc2": 0.017,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.014,
+      "pc2": 0.053,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.4,
+      "pc2": -1.365,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.651,
+      "pc2": -2.423,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.441,
+      "pc2": 0.308,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.024,
+      "pc2": 0.948,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.101,
+      "pc2": 1.149,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.438,
+      "pc2": 0.398,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.532,
+      "pc2": 1.307,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.861,
+      "pc2": 1.122,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.558,
+      "pc2": -0.339,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.449,
+      "pc2": 0.191,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.705,
+      "pc2": 0.127,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.613,
+      "pc2": 0.8,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.849,
+      "pc2": 0.648,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.03,
+      "pc2": -1.005,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 3.817,
+      "pc2": -0.382,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.934,
+      "pc2": 0.053,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.392,
+      "pc2": 0.14,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.49,
+      "pc2": -0.004,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.133,
+      "pc2": 0.568,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.176,
+      "pc2": 0.251,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.713,
+      "pc2": -0.427,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.469,
+      "pc2": -0.05,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.688,
+      "pc2": -0.417,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.073,
+      "pc2": 1.092,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.355,
+      "pc2": -0.62,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.225,
+      "pc2": -0.448,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.314,
+      "pc2": 0.532,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.937,
+      "pc2": -0.029,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.672,
+      "pc2": -1.927,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.435,
+      "pc2": -0.274,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.074,
+      "pc2": 1.116,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.478,
+      "pc2": -1.759,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.577,
+      "pc2": 0.79,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.651,
+      "pc2": 0.172,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.745,
+      "pc2": -0.143,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.112,
+      "pc2": 0.524,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.168,
+      "pc2": -1.289,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.048,
+      "pc2": 1.238,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.879,
+      "pc2": -0.902,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.661,
+      "pc2": 0.971,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.741,
+      "pc2": 0.326,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.301,
+      "pc2": 0.889,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.776,
+      "pc2": 0.136,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.291,
+      "pc2": 0.708,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.02,
+      "pc2": 0.575,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.275,
+      "pc2": 0.363,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.031,
+      "pc2": 0.124,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.052,
+      "pc2": -0.863,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.237,
+      "pc2": 0.047,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.482,
+      "pc2": -1.301,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.537,
+      "pc2": 0.494,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.366,
+      "pc2": 0.13,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.148,
+      "pc2": 0.514,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.157,
+      "pc2": -0.37,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.366,
+      "pc2": 0.352,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.017,
+      "pc2": 0.323,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.606,
+      "pc2": -0.278,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.294,
+      "pc2": 0.539,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.257,
+      "pc2": 1.077,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.107,
+      "pc2": 0.569,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.963,
+      "pc2": 0.445,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.416,
+      "pc2": 0.782,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 4.747,
+      "pc2": 1.563,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.945,
+      "pc2": 0.665,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.114,
+      "pc2": 0.562,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.358,
+      "pc2": 1.04,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 3.638,
+      "pc2": 0.815,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.132,
+      "pc2": 0.968,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.135,
+      "pc2": 0.592,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.06,
+      "pc2": 0.256,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.139,
+      "pc2": 0.008,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.962,
+      "pc2": 0.103,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.821,
+      "pc2": 1.386,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.172,
+      "pc2": 1.456,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.441,
+      "pc2": -0.478,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.9,
+      "pc2": -0.635,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.615,
+      "pc2": -0.183,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.367,
+      "pc2": -1.322,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.317,
+      "pc2": -1.102,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -2.596,
+      "pc2": -0.376,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.831,
+      "pc2": -0.168,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.409,
+      "pc2": 0.342,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.597,
+      "pc2": -0.904,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.136,
+      "pc2": 0.698,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.232,
+      "pc2": 1.367,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.156,
+      "pc2": -0.263,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.348,
+      "pc2": -1.022,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.202,
+      "pc2": -0.683,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.584,
+      "pc2": -0.902,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.095,
+      "pc2": 0.516,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.123,
+      "pc2": -0.076,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.48,
+      "pc2": 0.234,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.432,
+      "pc2": 0.816,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.497,
+      "pc2": 0.346,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.016,
+      "pc2": 0.266,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -2.256,
+      "pc2": 0.198,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.309,
+      "pc2": -1.513,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.461,
+      "pc2": 0.608,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.864,
+      "pc2": -1.016,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.037,
+      "pc2": -0.379,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.507,
+      "pc2": -0.16,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 2.621,
+      "pc2": 0.318,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.634,
+      "pc2": 0.83,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.714,
+      "pc2": 0.552,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.355,
+      "pc2": -1.395,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.356,
+      "pc2": -0.477,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.053,
+      "pc2": -1.169,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.1,
+      "pc2": 1.157,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.38,
+      "pc2": -0.435,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.4,
+      "pc2": -1.409,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.572,
+      "pc2": -0.844,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.645,
+      "pc2": -0.729,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.79,
+      "pc2": -0.163,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 3.118,
+      "pc2": 0.575,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.343,
+      "pc2": 0.178,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.808,
+      "pc2": -0.433,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.409,
+      "pc2": 1.058,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.976,
+      "pc2": -0.482,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.695,
+      "pc2": 1.392,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.951,
+      "pc2": -0.308,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.149,
+      "pc2": -1.302,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.501,
+      "pc2": -0.762,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.4,
+      "pc2": 0.52,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.347,
+      "pc2": 0.157,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.64,
+      "pc2": 0.313,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.713,
+      "pc2": 0.697,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.375,
+      "pc2": 0.179,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.643,
+      "pc2": -0.841,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.792,
+      "pc2": 0.199,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.002,
+      "pc2": 0.715,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.312,
+      "pc2": 0.945,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.364,
+      "pc2": -1.021,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.686,
+      "pc2": -0.479,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.784,
+      "pc2": -0.222,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.016,
+      "pc2": 0.454,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.3,
+      "pc2": 0.85,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.233,
+      "pc2": -1.635,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.132,
+      "pc2": -0.116,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.828,
+      "pc2": 0.894,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.993,
+      "pc2": -0.017,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.233,
+      "pc2": 0.41,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.091,
+      "pc2": -0.689,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 5.273,
+      "pc2": 0.782,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.061,
+      "pc2": 0.674,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.839,
+      "pc2": 0.54,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.627,
+      "pc2": -0.739,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.549,
+      "pc2": 0.141,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.911,
+      "pc2": -0.279,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.151,
+      "pc2": -2.225,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.406,
+      "pc2": 0.395,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.628,
+      "pc2": -1.755,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.382,
+      "pc2": -0.723,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.654,
+      "pc2": -0.121,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.423,
+      "pc2": 0.518,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.497,
+      "pc2": 0.934,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.292,
+      "pc2": -1.386,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.693,
+      "pc2": -0.064,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 2.054,
+      "pc2": 2.161,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.736,
+      "pc2": -0.423,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.362,
+      "pc2": 0.973,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.734,
+      "pc2": -0.099,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.009,
+      "pc2": 0.761,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.957,
+      "pc2": 0.286,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.828,
+      "pc2": -0.119,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.353,
+      "pc2": -0.313,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.065,
+      "pc2": 1.08,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.348,
+      "pc2": 1.208,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.535,
+      "pc2": -1.197,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.083,
+      "pc2": 0.114,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.946,
+      "pc2": -0.584,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.11,
+      "pc2": 0.617,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.037,
+      "pc2": 0.526,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.421,
+      "pc2": 0.342,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.976,
+      "pc2": 1.075,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.408,
+      "pc2": 0.674,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 3.019,
+      "pc2": 0.095,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.321,
+      "pc2": 0.564,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.413,
+      "pc2": -0.446,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.319,
+      "pc2": 0.914,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.696,
+      "pc2": -1.521,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.662,
+      "pc2": 0.616,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.203,
+      "pc2": 0.195,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.887,
+      "pc2": 1.369,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.08,
+      "pc2": -0.171,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.126,
+      "pc2": -1.377,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.269,
+      "pc2": 1.339,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.607,
+      "pc2": -1.049,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.587,
+      "pc2": -0.882,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.41,
+      "pc2": 0.819,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.863,
+      "pc2": 0.843,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.479,
+      "pc2": -1.149,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.315,
+      "pc2": -0.246,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.672,
+      "pc2": -0.03,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.899,
+      "pc2": 0.294,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.865,
+      "pc2": 0.723,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.198,
+      "pc2": -1.612,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.46,
+      "pc2": -0.874,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -2.048,
+      "pc2": 0.314,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 3.833,
+      "pc2": -0.36,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.952,
+      "pc2": 0.469,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.816,
+      "pc2": -1.846,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.135,
+      "pc2": 0.365,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.566,
+      "pc2": 0.354,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 3.104,
+      "pc2": -0.537,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.437,
+      "pc2": -0.869,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.924,
+      "pc2": 0.763,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.458,
+      "pc2": 0.022,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.842,
+      "pc2": 0.605,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.241,
+      "pc2": -0.862,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.186,
+      "pc2": -2.105,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.397,
+      "pc2": 0.486,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.768,
+      "pc2": 0.452,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.452,
+      "pc2": 0.378,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.773,
+      "pc2": 0.557,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.951,
+      "pc2": -0.077,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.536,
+      "pc2": -2.478,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -2.193,
+      "pc2": 0.113,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.604,
+      "pc2": 0.772,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.704,
+      "pc2": -2.051,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.294,
+      "pc2": -0.227,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.0,
+      "pc2": 0.643,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.941,
+      "pc2": -0.457,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 2.014,
+      "pc2": 1.727,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -2.36,
+      "pc2": 0.107,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.035,
+      "pc2": -0.546,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.393,
+      "pc2": -1.25,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.244,
+      "pc2": -0.658,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.457,
+      "pc2": 0.304,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.293,
+      "pc2": 0.365,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.071,
+      "pc2": 1.058,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.966,
+      "pc2": 0.243,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.564,
+      "pc2": -0.662,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.391,
+      "pc2": 0.483,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.407,
+      "pc2": 0.964,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.455,
+      "pc2": -0.231,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.886,
+      "pc2": -0.646,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.296,
+      "pc2": 0.803,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.498,
+      "pc2": 0.319,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.638,
+      "pc2": 0.195,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.509,
+      "pc2": -0.002,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.233,
+      "pc2": 0.349,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.68,
+      "pc2": -0.838,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.117,
+      "pc2": 0.418,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.785,
+      "pc2": -0.121,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.771,
+      "pc2": 0.082,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.318,
+      "pc2": 0.379,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.882,
+      "pc2": 0.293,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.104,
+      "pc2": -0.078,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.536,
+      "pc2": 0.372,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.171,
+      "pc2": 0.52,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.192,
+      "pc2": 0.45,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.707,
+      "pc2": 0.082,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.861,
+      "pc2": 0.755,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.199,
+      "pc2": 0.076,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.485,
+      "pc2": 0.255,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.796,
+      "pc2": 0.266,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.549,
+      "pc2": 0.193,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.803,
+      "pc2": 0.602,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.572,
+      "pc2": -0.13,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.228,
+      "pc2": -0.123,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.009,
+      "pc2": 0.276,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.787,
+      "pc2": -0.362,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.412,
+      "pc2": 0.285,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.248,
+      "pc2": 0.388,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.823,
+      "pc2": 0.515,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.175,
+      "pc2": -0.972,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -2.142,
+      "pc2": 0.216,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.667,
+      "pc2": 0.915,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.991,
+      "pc2": -0.49,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.551,
+      "pc2": 0.58,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.178,
+      "pc2": -1.485,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.206,
+      "pc2": 0.574,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.467,
+      "pc2": -0.114,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.088,
+      "pc2": -0.118,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.753,
+      "pc2": 0.102,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.048,
+      "pc2": -0.805,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.883,
+      "pc2": 0.337,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.566,
+      "pc2": -1.084,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.231,
+      "pc2": -1.034,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.025,
+      "pc2": -0.463,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.68,
+      "pc2": 0.517,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.714,
+      "pc2": -0.049,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.339,
+      "pc2": -0.515,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.062,
+      "pc2": 1.306,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 4.403,
+      "pc2": 0.953,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.3,
+      "pc2": -0.394,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.501,
+      "pc2": -2.244,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 4.535,
+      "pc2": 0.03,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 2.216,
+      "pc2": -1.24,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.003,
+      "pc2": 0.262,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.577,
+      "pc2": 0.494,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.676,
+      "pc2": -1.076,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.915,
+      "pc2": -0.49,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.39,
+      "pc2": -0.674,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.0,
+      "pc2": 0.59,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.351,
+      "pc2": -0.579,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.067,
+      "pc2": -0.241,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.913,
+      "pc2": 0.717,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.504,
+      "pc2": -0.467,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.372,
+      "pc2": 0.307,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.055,
+      "pc2": 0.345,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.124,
+      "pc2": 0.749,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.918,
+      "pc2": -0.464,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.849,
+      "pc2": 0.105,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.277,
+      "pc2": 0.737,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.213,
+      "pc2": -1.258,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.751,
+      "pc2": 0.408,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.119,
+      "pc2": -1.173,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.275,
+      "pc2": 0.434,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.526,
+      "pc2": 0.21,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.119,
+      "pc2": -0.25,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.226,
+      "pc2": -0.363,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.777,
+      "pc2": -0.548,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.872,
+      "pc2": 0.638,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.144,
+      "pc2": 0.837,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 3.297,
+      "pc2": -0.028,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.703,
+      "pc2": 0.396,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.206,
+      "pc2": 0.084,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.116,
+      "pc2": 0.078,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.394,
+      "pc2": 0.035,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.388,
+      "pc2": -1.385,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.47,
+      "pc2": 0.133,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.217,
+      "pc2": 0.567,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.541,
+      "pc2": 0.061,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.223,
+      "pc2": -0.671,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 3.71,
+      "pc2": 0.132,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 2.056,
+      "pc2": 1.077,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 3.965,
+      "pc2": 3.319,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.133,
+      "pc2": 1.294,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.398,
+      "pc2": 0.592,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.184,
+      "pc2": -0.479,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.315,
+      "pc2": 0.194,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.632,
+      "pc2": 0.163,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.601,
+      "pc2": -0.637,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.352,
+      "pc2": 0.61,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.81,
+      "pc2": -1.623,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.215,
+      "pc2": 0.353,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 2.065,
+      "pc2": 0.49,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.752,
+      "pc2": -0.334,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.248,
+      "pc2": -0.472,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.726,
+      "pc2": 0.117,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.568,
+      "pc2": -1.148,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.084,
+      "pc2": 0.955,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.812,
+      "pc2": -0.911,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.043,
+      "pc2": -0.9,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.331,
+      "pc2": -0.112,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.839,
+      "pc2": -0.518,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.175,
+      "pc2": 0.598,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.545,
+      "pc2": 0.23,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.52,
+      "pc2": 0.467,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.771,
+      "pc2": -0.972,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.799,
+      "pc2": -1.139,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -2.1,
+      "pc2": 0.257,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.942,
+      "pc2": -0.328,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.227,
+      "pc2": -1.247,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.697,
+      "pc2": 0.938,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.593,
+      "pc2": 0.302,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.309,
+      "pc2": 0.049,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.08,
+      "pc2": -1.561,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.558,
+      "pc2": 0.86,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.435,
+      "pc2": 0.699,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.595,
+      "pc2": 0.13,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.084,
+      "pc2": -0.903,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.771,
+      "pc2": 0.573,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.913,
+      "pc2": -0.376,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.285,
+      "pc2": 0.252,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.428,
+      "pc2": -0.749,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.04,
+      "pc2": -2.068,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.022,
+      "pc2": -0.675,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.86,
+      "pc2": -0.078,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.431,
+      "pc2": 0.521,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.593,
+      "pc2": -0.981,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.223,
+      "pc2": 0.816,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.288,
+      "pc2": 0.958,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.01,
+      "pc2": 0.768,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.473,
+      "pc2": -0.235,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.474,
+      "pc2": 0.381,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.767,
+      "pc2": -0.576,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.777,
+      "pc2": 0.522,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.999,
+      "pc2": 0.118,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.237,
+      "pc2": -0.523,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.153,
+      "pc2": 0.046,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.63,
+      "pc2": -2.2,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.402,
+      "pc2": 0.214,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.79,
+      "pc2": 0.516,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.111,
+      "pc2": -0.429,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.505,
+      "pc2": -0.752,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.606,
+      "pc2": 0.697,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.013,
+      "pc2": -0.28,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.289,
+      "pc2": 0.961,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.322,
+      "pc2": -1.535,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -2.073,
+      "pc2": -0.112,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.625,
+      "pc2": 0.748,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 2.472,
+      "pc2": 0.234,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.383,
+      "pc2": -0.701,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.744,
+      "pc2": 0.36,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.81,
+      "pc2": 0.784,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.207,
+      "pc2": 0.307,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.343,
+      "pc2": -0.118,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.925,
+      "pc2": 0.057,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.146,
+      "pc2": 1.803,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.153,
+      "pc2": -0.039,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.308,
+      "pc2": -0.383,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.747,
+      "pc2": 0.447,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.631,
+      "pc2": 0.288,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.654,
+      "pc2": -1.438,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.28,
+      "pc2": 0.685,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.625,
+      "pc2": -0.497,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.477,
+      "pc2": 0.038,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.201,
+      "pc2": 0.13,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.647,
+      "pc2": 0.871,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.699,
+      "pc2": 0.673,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.226,
+      "pc2": -0.318,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.594,
+      "pc2": 0.239,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.917,
+      "pc2": -0.11,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.665,
+      "pc2": 0.851,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.526,
+      "pc2": 0.924,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.184,
+      "pc2": 0.415,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.91,
+      "pc2": 0.397,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.745,
+      "pc2": 0.689,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.656,
+      "pc2": -0.819,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.246,
+      "pc2": -0.524,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.927,
+      "pc2": 0.836,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.386,
+      "pc2": -0.109,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.763,
+      "pc2": 0.104,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.179,
+      "pc2": 0.268,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.191,
+      "pc2": 0.3,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.393,
+      "pc2": -0.374,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.441,
+      "pc2": 0.272,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.666,
+      "pc2": -1.629,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.079,
+      "pc2": -0.013,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.149,
+      "pc2": 0.195,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.288,
+      "pc2": 0.291,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.86,
+      "pc2": -1.051,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.014,
+      "pc2": 0.886,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.179,
+      "pc2": 0.58,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.029,
+      "pc2": -0.678,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.156,
+      "pc2": 0.9,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 3.28,
+      "pc2": 0.261,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.967,
+      "pc2": 0.948,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.711,
+      "pc2": 0.347,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.896,
+      "pc2": -0.082,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.169,
+      "pc2": -1.61,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.638,
+      "pc2": -1.233,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.869,
+      "pc2": 1.644,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.335,
+      "pc2": -0.989,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.708,
+      "pc2": 0.473,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.565,
+      "pc2": -0.73,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.747,
+      "pc2": -1.303,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.896,
+      "pc2": -0.107,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.771,
+      "pc2": 0.901,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.325,
+      "pc2": 0.986,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.911,
+      "pc2": 0.655,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.839,
+      "pc2": 0.254,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -2.106,
+      "pc2": 0.195,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.963,
+      "pc2": 1.549,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.324,
+      "pc2": -0.254,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.58,
+      "pc2": 0.453,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.241,
+      "pc2": -2.422,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.146,
+      "pc2": -0.566,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.009,
+      "pc2": 0.228,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.073,
+      "pc2": 0.039,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.407,
+      "pc2": -0.096,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.098,
+      "pc2": 0.09,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.078,
+      "pc2": 0.195,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.694,
+      "pc2": -0.755,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.76,
+      "pc2": -0.138,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.948,
+      "pc2": 0.18,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.109,
+      "pc2": -0.035,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.077,
+      "pc2": 0.661,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.962,
+      "pc2": 0.109,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.414,
+      "pc2": -0.47,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.254,
+      "pc2": 0.478,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.434,
+      "pc2": 0.754,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.709,
+      "pc2": -0.521,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.16,
+      "pc2": 0.708,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.529,
+      "pc2": 0.528,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.993,
+      "pc2": 0.699,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.517,
+      "pc2": 0.768,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.386,
+      "pc2": -0.745,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.026,
+      "pc2": -1.071,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.54,
+      "pc2": -0.447,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.331,
+      "pc2": 0.267,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 4.364,
+      "pc2": 0.387,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.242,
+      "pc2": -1.617,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.177,
+      "pc2": -1.31,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.565,
+      "pc2": -0.932,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.037,
+      "pc2": 1.057,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.54,
+      "pc2": 0.745,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.813,
+      "pc2": 2.785,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.405,
+      "pc2": -1.361,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.176,
+      "pc2": -0.699,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.572,
+      "pc2": 0.831,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.887,
+      "pc2": 0.437,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.567,
+      "pc2": 0.236,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.949,
+      "pc2": -0.643,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.1,
+      "pc2": -0.231,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.532,
+      "pc2": 0.506,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.141,
+      "pc2": 1.178,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.676,
+      "pc2": -0.66,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.124,
+      "pc2": 0.431,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.952,
+      "pc2": 0.235,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.132,
+      "pc2": 0.186,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.175,
+      "pc2": -1.019,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.45,
+      "pc2": -0.379,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.017,
+      "pc2": -0.397,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.51,
+      "pc2": -0.735,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.942,
+      "pc2": 0.388,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.306,
+      "pc2": 0.38,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.403,
+      "pc2": -1.221,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.569,
+      "pc2": 0.789,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.798,
+      "pc2": -0.214,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.871,
+      "pc2": 0.364,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.623,
+      "pc2": -0.196,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.504,
+      "pc2": -0.472,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.082,
+      "pc2": -1.082,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.366,
+      "pc2": -0.136,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 4.149,
+      "pc2": 0.46,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.628,
+      "pc2": -1.798,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.282,
+      "pc2": 0.899,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.648,
+      "pc2": 0.619,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.218,
+      "pc2": 1.521,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.209,
+      "pc2": -0.322,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.693,
+      "pc2": 0.167,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.021,
+      "pc2": 0.263,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.128,
+      "pc2": -0.86,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.618,
+      "pc2": -1.854,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.122,
+      "pc2": 0.772,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.549,
+      "pc2": 0.576,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.285,
+      "pc2": -0.983,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.449,
+      "pc2": 0.287,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.02,
+      "pc2": 0.604,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.666,
+      "pc2": -0.219,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -2.594,
+      "pc2": -0.089,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.884,
+      "pc2": 0.07,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -2.024,
+      "pc2": -0.398,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.755,
+      "pc2": -0.422,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.425,
+      "pc2": 0.691,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.005,
+      "pc2": 1.116,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.651,
+      "pc2": -0.714,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.277,
+      "pc2": -1.063,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.376,
+      "pc2": -0.25,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.875,
+      "pc2": -0.911,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.367,
+      "pc2": 0.703,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.967,
+      "pc2": 0.836,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.507,
+      "pc2": -0.527,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.024,
+      "pc2": 1.676,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.736,
+      "pc2": 0.8,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.285,
+      "pc2": -0.676,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.41,
+      "pc2": -1.066,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.44,
+      "pc2": 0.467,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.515,
+      "pc2": 0.247,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.19,
+      "pc2": 0.982,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.529,
+      "pc2": 0.062,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.043,
+      "pc2": -1.187,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.087,
+      "pc2": 0.581,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.869,
+      "pc2": 0.031,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.863,
+      "pc2": 0.366,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.046,
+      "pc2": 0.23,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.308,
+      "pc2": -1.579,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.748,
+      "pc2": -0.238,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 2.002,
+      "pc2": 0.791,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.787,
+      "pc2": -0.147,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.427,
+      "pc2": 1.809,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 2.381,
+      "pc2": -1.184,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.278,
+      "pc2": -0.341,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.313,
+      "pc2": 0.368,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.41,
+      "pc2": 0.702,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.588,
+      "pc2": -0.561,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.614,
+      "pc2": 0.216,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.076,
+      "pc2": 0.219,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.134,
+      "pc2": 0.478,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.389,
+      "pc2": 0.605,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.929,
+      "pc2": 0.011,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.383,
+      "pc2": -0.696,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 2.29,
+      "pc2": 0.715,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -1.602,
+      "pc2": 0.553,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 2.486,
+      "pc2": 0.662,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.07,
+      "pc2": -1.542,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.822,
+      "pc2": -0.179,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.398,
+      "pc2": -0.862,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.486,
+      "pc2": -0.052,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.95,
+      "pc2": 0.581,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.295,
+      "pc2": 0.114,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 1.085,
+      "pc2": 0.944,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.752,
+      "pc2": -0.057,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.149,
+      "pc2": -0.097,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.693,
+      "pc2": -0.831,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.727,
+      "pc2": -1.023,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.769,
+      "pc2": 0.876,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.123,
+      "pc2": 0.01,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.768,
+      "pc2": 0.604,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.356,
+      "pc2": 0.97,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.536,
+      "pc2": 0.567,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.425,
+      "pc2": 0.851,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.513,
+      "pc2": -0.328,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.402,
+      "pc2": 0.115,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.272,
+      "pc2": -0.439,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.904,
+      "pc2": 0.598,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.822,
+      "pc2": -0.622,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.801,
+      "pc2": 0.531,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.012,
+      "pc2": 0.551,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.42,
+      "pc2": -0.144,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.615,
+      "pc2": 0.047,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 1.36,
+      "pc2": 0.254,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.213,
+      "pc2": 0.819,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.553,
+      "pc2": -1.138,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.718,
+      "pc2": -0.225,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.754,
+      "pc2": 0.853,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.837,
+      "pc2": -0.316,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.441,
+      "pc2": 0.941,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -3.011,
+      "pc2": -0.52,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.647,
+      "pc2": -0.266,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.812,
+      "pc2": -1.1,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 3.13,
+      "pc2": 0.183,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -0.711,
+      "pc2": 0.466,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.064,
+      "pc2": -1.997,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.039,
+      "pc2": 0.882,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.234,
+      "pc2": -0.845,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.75,
+      "pc2": 0.782,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.0,
+      "pc2": -0.719,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 3.821,
+      "pc2": 0.498,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.809,
+      "pc2": -1.675,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.052,
+      "pc2": 0.842,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -0.366,
+      "pc2": -0.165,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -2.233,
+      "pc2": -0.015,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.034,
+      "pc2": -0.36,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.489,
+      "pc2": 0.561,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.906,
+      "pc2": -0.837,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.458,
+      "pc2": 0.734,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -2.042,
+      "pc2": 0.318,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.629,
+      "pc2": 0.228,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.663,
+      "pc2": 0.423,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 1.292,
+      "pc2": -0.162,
+      "segment": "High Value"
+    },
+    {
+      "pc1": -2.109,
+      "pc2": 0.358,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.113,
+      "pc2": -0.419,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.974,
+      "pc2": -2.324,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 0.401,
+      "pc2": -1.201,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": 1.136,
+      "pc2": 0.413,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.099,
+      "pc2": 1.313,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 0.028,
+      "pc2": 0.659,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -1.442,
+      "pc2": 0.515,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.722,
+      "pc2": 0.48,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": -0.594,
+      "pc2": 0.749,
+      "segment": "At Risk (Lapsed Regulars)"
+    },
+    {
+      "pc1": 2.579,
+      "pc2": 0.844,
+      "segment": "High Value"
+    },
+    {
+      "pc1": 0.456,
+      "pc2": -0.682,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.606,
+      "pc2": 0.266,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": -1.583,
+      "pc2": -1.233,
+      "segment": "Low Engagement / Lapsed"
+    },
+    {
+      "pc1": 0.028,
+      "pc2": -0.941,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -0.592,
+      "pc2": -0.761,
+      "segment": "Loyal / Regular"
+    },
+    {
+      "pc1": -1.886,
+      "pc2": 0.184,
+      "segment": "Low Engagement / Lapsed"
+    }
+  ]
+}

@@ -39,7 +39,7 @@ export default function Sidebar() {
       </div>
       <nav
         aria-label="Main"
-        className={`${open ? "block" : "hidden"} border-b border-slate-200 bg-white lg:sticky lg:top-0 lg:block lg:h-screen lg:w-60 lg:shrink-0 lg:border-b-0 lg:border-r`}
+        className={`${open ? "block" : "hidden"} border-b border-slate-200 bg-white lg:sticky lg:top-0 lg:block lg:h-screen lg:overflow-y-auto lg:w-60 lg:shrink-0 lg:border-b-0 lg:border-r`}
       >
         <div className="hidden px-5 py-5 lg:block">
           <p className="text-base font-semibold text-slate-900">Market Intelligence Lab</p>
