@@ -1,0 +1,20 @@
+# secrets / private notes
+.env
+.env.*
+!.env.example
+forblog.md
+# environments & builds
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+frontend/node_modules/
+frontend/.next/
+frontend/next-env.d.ts
+# data (rebuilt by scripts/run_pipeline.py)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*.duckdb
+data/processed/*.duckdb.wal
+# binary models (rebuilt by the pipeline; small JSON results are committed)
+models/*.joblib
