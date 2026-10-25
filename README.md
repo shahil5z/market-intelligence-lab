@@ -102,6 +102,8 @@ The Statistics Lab runs on real order-level data:
 The wording ("significant at 5%") is generated from the p-value, and effect sizes are always shown next to it.
 
 ## AI Data Analyst
+Live check (2026-10-26): the deployed API answered sample questions with grounded gpt-4o-mini explanations; an injection prompt was routed to a normal tool and its fake number ignored.
+
 1. A keyword router maps the question to one of 8 fixed Python tools: quarter change, region growth, segments, forecast, campaigns, anomalies, top products, overview. The model never writes SQL or picks tools.
 2. The tool computes a JSON result.
 3. `gpt-4o-mini` is asked to explain **only** that JSON. The question is passed as untrusted, delimited text.
