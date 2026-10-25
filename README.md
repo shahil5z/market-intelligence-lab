@@ -5,6 +5,7 @@ A student data science portfolio project. It looks at sales, demand, customers a
 ## Demo
 - **Live app:** https://market-intelligence-lab.vercel.app
 - **API:** https://mil-api-shahils-projects-e75357dc.vercel.app (`GET /health` returns `{"status":"ok"}`)
+- **Source:** https://github.com/shahil5z/market-intelligence-lab. Both Vercel projects (`frontend/` and `backend/`) deploy automatically from `main` through Vercel Git integration.
 
 | Overview | Sales |
 |---|---|
