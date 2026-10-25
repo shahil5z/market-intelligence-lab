@@ -262,5 +262,7 @@ Designed and developed by **Shohrab Haque Shahil**
 
 [LinkedIn](https://www.linkedin.com/in/shohrab-haque) | [Website](https://shahil-personal.vercel.app)
 
-## Licence
-Code: MIT (see `LICENSE`). Data: UCI Online Retail II, CC BY 4.0, with attribution as above; derived data in this repo carries the same licence.
+## License
+This project is licensed under the [MIT License](LICENSE).
+
+Data: UCI Online Retail II, CC BY 4.0, with attribution as above; derived data in this repo carries the same license.
