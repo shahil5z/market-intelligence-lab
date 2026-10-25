@@ -1,0 +1,13 @@
+campaign_id,campaign_name,channel,campaign_type,start_date,end_date,budget,target_region_group,target_category
+1,Campaign 01,Trade Partner,Awareness,2010-07-23,2010-08-09,4300.0,United Kingdom,Toys & Kids
+2,Campaign 02,Catalogue,Price Promotion,2010-08-05,2010-09-07,10300.0,Western Europe,Stationery & Gifts
+3,Campaign 03,Search Ads,Price Promotion,2010-10-11,2010-11-09,13600.0,Northern Europe,Garden & Outdoor
+4,Campaign 04,Catalogue,Product Launch,2010-10-13,2010-11-09,8100.0,United Kingdom,Toys & Kids
+5,Campaign 05,Trade Partner,Awareness,2010-10-13,2010-11-15,10200.0,Ireland & Channel Is.,Lighting & Candles
+6,Campaign 06,Search Ads,Product Launch,2010-11-05,2010-12-09,13700.0,Ireland & Channel Is.,Kitchen & Dining
+7,Campaign 07,Trade Partner,Awareness,2011-01-06,2011-01-22,2200.0,Southern Europe,Christmas & Seasonal
+8,Campaign 08,Email,Awareness,2011-02-11,2011-03-13,9600.0,Northern Europe,Kitchen & Dining
+9,Campaign 09,Trade Partner,Price Promotion,2011-03-31,2011-04-15,11300.0,Western Europe,Home Decor
+10,Campaign 10,Social Media,Awareness,2011-04-30,2011-05-28,11100.0,Northern Europe,Garden & Outdoor
+11,Campaign 11,Catalogue,Awareness,2011-10-10,2011-10-26,11100.0,United Kingdom,Bags & Storage
+12,Campaign 12,Social Media,Price Promotion,2011-10-24,2011-11-10,13700.0,Rest of World,Toys & Kids

@@ -1,0 +1,43 @@
+region_id,country,region_group,market_type
+1,Australia,Rest of World,Mature
+2,Austria,Western Europe,Developing
+3,Bahrain,Rest of World,Developing
+4,Belgium,Western Europe,Mature
+5,Bermuda,Rest of World,Mature
+6,Brazil,Rest of World,Developing
+7,Canada,Rest of World,Mature
+8,Channel Islands,Ireland & Channel Is.,Developing
+9,Cyprus,Southern Europe,Mature
+10,Czech Republic,Northern Europe,Mature
+11,Denmark,Northern Europe,Developing
+12,EIRE,Ireland & Channel Is.,Developing
+13,European Community,Rest of World,Developing
+14,Finland,Northern Europe,Developing
+15,France,Western Europe,Developing
+16,Germany,Western Europe,Developing
+17,Greece,Southern Europe,Developing
+18,Hong Kong,Rest of World,Mature
+19,Iceland,Northern Europe,Developing
+20,Israel,Rest of World,Mature
+21,Italy,Southern Europe,Developing
+22,Japan,Rest of World,Mature
+23,Korea,Rest of World,Mature
+24,Lebanon,Rest of World,Developing
+25,Lithuania,Northern Europe,Developing
+26,Malta,Southern Europe,Developing
+27,Netherlands,Western Europe,Mature
+28,Nigeria,Rest of World,Developing
+29,Norway,Northern Europe,Developing
+30,Poland,Northern Europe,Mature
+31,Portugal,Southern Europe,Mature
+32,RSA,Rest of World,Mature
+33,Saudi Arabia,Rest of World,Mature
+34,Singapore,Rest of World,Developing
+35,Spain,Southern Europe,Developing
+36,Sweden,Northern Europe,Mature
+37,Switzerland,Western Europe,Developing
+38,Thailand,Rest of World,Developing
+39,USA,Rest of World,Mature
+40,United Arab Emirates,Rest of World,Developing
+41,United Kingdom,United Kingdom,Domestic
+42,West Indies,Rest of World,Mature

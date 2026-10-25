@@ -1,0 +1,3539 @@
+{
+  "label": "OBSERVATIONAL analysis of SYNTHETIC campaigns laid over real public sales data. No causal claims.",
+  "assumptions": [
+    "Campaign windows, budgets, channels and targets are synthetic (seeded); real customers never saw these campaigns.",
+    "Pre-period of equal length is used as the baseline; seasonality between the two windows is not removed.",
+    "Difference-in-differences assumes parallel trends between the target region group and the control groups.",
+    "Daily observations are treated as independent in the t-test, which ignores autocorrelation.",
+    "ROI uses revenue, not margin, and treats all observed change as incremental (an upper-bound style simplification)."
+  ],
+  "campaigns": [
+    {
+      "campaign_id": 1,
+      "campaign_name": "Campaign 01",
+      "channel": "Trade Partner",
+      "campaign_type": "Awareness",
+      "start_date": "2010-07-23",
+      "end_date": "2010-08-09",
+      "duration_days": 18,
+      "budget": 4300.0,
+      "target_region_group": "United Kingdom",
+      "target_category": "Toys & Kids",
+      "pre_period": {
+        "start": "2010-07-05",
+        "end": "2010-07-22"
+      },
+      "attributed_lines": 310,
+      "orders": 154,
+      "units": 3239,
+      "revenue": 4672.74,
+      "aov": 30.34,
+      "trading_days_pre": 16,
+      "trading_days_during": 15,
+      "active_days_pre": 16,
+      "active_days_during": 15,
+      "daily": [
+        {
+          "date": "2010-07-05",
+          "treated": 1012.21,
+          "control": 51.55,
+          "post": 0
+        },
+        {
+          "date": "2010-07-06",
+          "treated": 652.5,
+          "control": 0.0,
+          "post": 0
+        },
+        {
+          "date": "2010-07-07",
+          "treated": 506.86,
+          "control": 141.12,
+          "post": 0
+        },
+        {
+          "date": "2010-07-08",
+          "treated": 177.11,
+          "control": 164.31,
+          "post": 0
+        },
+        {
+          "date": "2010-07-09",
+          "treated": 177.26,
+          "control": 1644.75,
+          "post": 0
+        },
+        {
+          "date": "2010-07-11",
+          "treated": 99.39,
+          "control": 0.0,
+          "post": 0
+        },
+        {
+          "date": "2010-07-12",
+          "treated": 356.74,
+          "control": 40.6,
+          "post": 0
+        },
+        {
+          "date": "2010-07-13",
+          "treated": 102.52,
+          "control": 41.1,
+          "post": 0
+        },
+        {
+          "date": "2010-07-14",
+          "treated": 155.56,
+          "control": 250.66,
+          "post": 0
+        },
+        {
+          "date": "2010-07-15",
+          "treated": 378.57,
+          "control": 0.0,
+          "post": 0
+        },
+        {
+          "date": "2010-07-16",
+          "treated": 153.2,
+          "control": 119.38,
+          "post": 0
+        },
+        {
+          "date": "2010-07-18",
+          "treated": 167.16,
+          "control": 80.12,
+          "post": 0
+        },
+        {
+          "date": "2010-07-19",
+          "treated": 211.95,
+          "control": 170.9,
+          "post": 0
+        },
+        {
+          "date": "2010-07-20",
+          "treated": 337.9,
+          "control": 69.6,
+          "post": 0
+        },
+        {
+          "date": "2010-07-21",
+          "treated": 287.76,
+          "control": 132.22,
+          "post": 0
+        },
+        {
+          "date": "2010-07-22",
+          "treated": 521.74,
+          "control": 18.12,
+          "post": 0
+        },
+        {
+          "date": "2010-07-23",
+          "treated": 233.5,
+          "control": 180.12,
+          "post": 1
+        },
+        {
+          "date": "2010-07-25",
+          "treated": 184.02,
+          "control": 35.1,
+          "post": 1
+        },
+        {
+          "date": "2010-07-26",
+          "treated": 285.29,
+          "control": 54.8,
+          "post": 1
+        },
+        {
+          "date": "2010-07-27",
+          "treated": 333.78,
+          "control": 57.33,
+          "post": 1
+        },
+        {
+          "date": "2010-07-28",
+          "treated": 192.18,
+          "control": 93.6,
+          "post": 1
+        },
+        {
+          "date": "2010-07-29",
+          "treated": 510.21,
+          "control": 0.0,
+          "post": 1
+        },
+        {
+          "date": "2010-07-30",
+          "treated": 350.05,
+          "control": 47.1,
+          "post": 1
+        },
+        {
+          "date": "2010-08-01",
+          "treated": 128.18,
+          "control": 0.0,
+          "post": 1
+        },
+        {
+          "date": "2010-08-02",
+          "treated": 154.64,
+          "control": 15.6,
+          "post": 1
+        },
+        {
+          "date": "2010-08-03",
+          "treated": 1034.43,
+          "control": 152.48,
+          "post": 1
+        },
+        {
+          "date": "2010-08-04",
+          "treated": 57.84,
+          "control": 0.0,
+          "post": 1
+        },
+        {
+          "date": "2010-08-05",
+          "treated": 449.03,
+          "control": 81.15,
+          "post": 1
+        },
+        {
+          "date": "2010-08-06",
+          "treated": 136.76,
+          "control": 66.0,
+          "post": 1
+        },
+        {
+          "date": "2010-08-08",
+          "treated": 183.2,
+          "control": 0.0,
+          "post": 1
+        },
+        {
+          "date": "2010-08-09",
+          "treated": 439.63,
+          "control": 14.85,
+          "post": 1
+        }
+      ],
+      "sufficient_data": true,
+      "pre_mean_daily_revenue": 331.15,
+      "during_mean_daily_revenue": 311.52,
+      "observed_uplift_pct": -5.9,
+      "difference_mean_daily": -19.64,
+      "difference_ci95": [
+        -197.64,
+        158.37
+      ],
+      "welch_p_value": 0.8231,
+      "observed_incremental_revenue": -294.54,
+      "naive_roi_pct": -106.8,
+      "did_estimate_daily": 109.93,
+      "did_ci95": [
+        -150.29,
+        370.15
+      ],
+      "did_p_value": 0.4077,
+      "control_definition": "Toys & Kids in all region groups except United Kingdom"
+    },
+    {
+      "campaign_id": 2,
+      "campaign_name": "Campaign 02",
+      "channel": "Catalogue",
+      "campaign_type": "Price Promotion",
+      "start_date": "2010-08-05",
+      "end_date": "2010-09-07",
+      "duration_days": 34,
+      "budget": 10300.0,
+      "target_region_group": "Western Europe",
+      "target_category": "Stationery & Gifts",
+      "pre_period": {
+        "start": "2010-07-02",
+        "end": "2010-08-04"
+      },
+      "attributed_lines": 143,
+      "orders": 40,
+      "units": 6467,
+      "revenue": 2846.63,
+      "aov": 71.17,
+      "trading_days_pre": 29,
+      "trading_days_during": 28,
+      "active_days_pre": 19,
+      "active_days_during": 21,
+      "daily": [
+        {
+          "date": "2010-07-02",
+          "treated": 122.28,
+          "control": 296.2,
+          "post": 0
+        },
+        {
+          "date": "2010-07-04",
+          "treated": 0.0,
+          "control": 620.01,
+          "post": 0
+        },
+        {
+          "date": "2010-07-05",
+          "treated": 90.82,
+          "control": 850.84,
+          "post": 0
+        },
+        {
+          "date": "2010-07-06",
+          "treated": 0.0,
+          "control": 1304.1,
+          "post": 0
+        },
+        {
+          "date": "2010-07-07",
+          "treated": 130.38,
+          "control": 1409.36,
+          "post": 0
+        },
+        {
+          "date": "2010-07-08",
+          "treated": 117.6,
+          "control": 948.89,
+          "post": 0
+        },
+        {
+          "date": "2010-07-09",
+          "treated": 19.8,
+          "control": 925.22,
+          "post": 0
+        },
+        {
+          "date": "2010-07-11",
+          "treated": 0.0,
+          "control": 395.91,
+          "post": 0
+        },
+        {
+          "date": "2010-07-12",
+          "treated": 0.0,
+          "control": 764.5,
+          "post": 0
+        },
+        {
+          "date": "2010-07-13",
+          "treated": 0.0,
+          "control": 630.36,
+          "post": 0
+        },
+        {
+          "date": "2010-07-14",
+          "treated": 0.0,
+          "control": 1121.76,
+          "post": 0
+        },
+        {
+          "date": "2010-07-15",
+          "treated": 7.8,
+          "control": 915.66,
+          "post": 0
+        },
+        {
+          "date": "2010-07-16",
+          "treated": 154.7,
+          "control": 993.91,
+          "post": 0
+        },
+        {
+          "date": "2010-07-18",
+          "treated": 193.5,
+          "control": 368.42,
+          "post": 0
+        },
+        {
+          "date": "2010-07-19",
+          "treated": 138.88,
+          "control": 987.89,
+          "post": 0
+        },
+        {
+          "date": "2010-07-20",
+          "treated": 0.0,
+          "control": 782.73,
+          "post": 0
+        },
+        {
+          "date": "2010-07-21",
+          "treated": 121.5,
+          "control": 490.21,
+          "post": 0
+        },
+        {
+          "date": "2010-07-22",
+          "treated": 0.0,
+          "control": 904.45,
+          "post": 0
+        },
+        {
+          "date": "2010-07-23",
+          "treated": 70.62,
+          "control": 906.32,
+          "post": 0
+        },
+        {
+          "date": "2010-07-25",
+          "treated": 20.7,
+          "control": 965.57,
+          "post": 0
+        },
+        {
+          "date": "2010-07-26",
+          "treated": 72.5,
+          "control": 846.27,
+          "post": 0
+        },
+        {
+          "date": "2010-07-27",
+          "treated": 30.73,
+          "control": 701.33,
+          "post": 0
+        },
+        {
+          "date": "2010-07-28",
+          "treated": 35.4,
+          "control": 745.84,
+          "post": 0
+        },
+        {
+          "date": "2010-07-29",
+          "treated": 60.3,
+          "control": 2284.15,
+          "post": 0
+        },
+        {
+          "date": "2010-07-30",
+          "treated": 0.0,
+          "control": 543.73,
+          "post": 0
+        },
+        {
+          "date": "2010-08-01",
+          "treated": 0.0,
+          "control": 555.4,
+          "post": 0
+        },
+        {
+          "date": "2010-08-02",
+          "treated": 47.7,
+          "control": 470.92,
+          "post": 0
+        },
+        {
+          "date": "2010-08-03",
+          "treated": 15.6,
+          "control": 1213.42,
+          "post": 0
+        },
+        {
+          "date": "2010-08-04",
+          "treated": 25.2,
+          "control": 835.88,
+          "post": 0
+        },
+        {
+          "date": "2010-08-05",
+          "treated": 0.0,
+          "control": 784.46,
+          "post": 1
+        },
+        {
+          "date": "2010-08-06",
+          "treated": 20.4,
+          "control": 762.08,
+          "post": 1
+        },
+        {
+          "date": "2010-08-08",
+          "treated": 0.0,
+          "control": 769.04,
+          "post": 1
+        },
+        {
+          "date": "2010-08-09",
+          "treated": 389.16,
+          "control": 622.82,
+          "post": 1
+        },
+        {
+          "date": "2010-08-10",
+          "treated": 874.88,
+          "control": 943.51,
+          "post": 1
+        },
+        {
+          "date": "2010-08-11",
+          "treated": 3.36,
+          "control": 739.81,
+          "post": 1
+        },
+        {
+          "date": "2010-08-12",
+          "treated": 0.0,
+          "control": 1742.4,
+          "post": 1
+        },
+        {
+          "date": "2010-08-13",
+          "treated": 0.0,
+          "control": 876.9,
+          "post": 1
+        },
+        {
+          "date": "2010-08-15",
+          "treated": 40.4,
+          "control": 809.24,
+          "post": 1
+        },
+        {
+          "date": "2010-08-16",
+          "treated": 5.04,
+          "control": 607.67,
+          "post": 1
+        },
+        {
+          "date": "2010-08-17",
+          "treated": 92.76,
+          "control": 1677.24,
+          "post": 1
+        },
+        {
+          "date": "2010-08-18",
+          "treated": 35.4,
+          "control": 1426.72,
+          "post": 1
+        },
+        {
+          "date": "2010-08-19",
+          "treated": 69.6,
+          "control": 1452.16,
+          "post": 1
+        },
+        {
+          "date": "2010-08-20",
+          "treated": 190.39,
+          "control": 1126.23,
+          "post": 1
+        },
+        {
+          "date": "2010-08-22",
+          "treated": 131.1,
+          "control": 1063.28,
+          "post": 1
+        },
+        {
+          "date": "2010-08-23",
+          "treated": 0.0,
+          "control": 1291.71,
+          "post": 1
+        },
+        {
+          "date": "2010-08-24",
+          "treated": 180.54,
+          "control": 1220.89,
+          "post": 1
+        },
+        {
+          "date": "2010-08-25",
+          "treated": 78.12,
+          "control": 867.93,
+          "post": 1
+        },
+        {
+          "date": "2010-08-26",
+          "treated": 158.23,
+          "control": 555.82,
+          "post": 1
+        },
+        {
+          "date": "2010-08-27",
+          "treated": 0.0,
+          "control": 483.85,
+          "post": 1
+        },
+        {
+          "date": "2010-08-29",
+          "treated": 0.0,
+          "control": 361.3,
+          "post": 1
+        },
+        {
+          "date": "2010-08-31",
+          "treated": 182.25,
+          "control": 1246.61,
+          "post": 1
+        },
+        {
+          "date": "2010-09-01",
+          "treated": 102.94,
+          "control": 513.94,
+          "post": 1
+        },
+        {
+          "date": "2010-09-02",
+          "treated": 163.08,
+          "control": 1320.71,
+          "post": 1
+        },
+        {
+          "date": "2010-09-03",
+          "treated": 10.08,
+          "control": 734.58,
+          "post": 1
+        },
+        {
+          "date": "2010-09-05",
+          "treated": 35.1,
+          "control": 163.41,
+          "post": 1
+        },
+        {
+          "date": "2010-09-06",
+          "treated": 38.0,
+          "control": 857.37,
+          "post": 1
+        },
+        {
+          "date": "2010-09-07",
+          "treated": 45.8,
+          "control": 1063.91,
+          "post": 1
+        }
+      ],
+      "sufficient_data": true,
+      "pre_mean_daily_revenue": 50.9,
+      "during_mean_daily_revenue": 101.67,
+      "observed_uplift_pct": 99.7,
+      "difference_mean_daily": 50.77,
+      "difference_ci95": [
+        -20.41,
+        121.95
+      ],
+      "welch_p_value": 0.1561,
+      "observed_incremental_revenue": 1421.52,
+      "naive_roi_pct": -86.2,
+      "did_estimate_daily": -26.4,
+      "did_ci95": [
+        -239.26,
+        186.46
+      ],
+      "did_p_value": 0.8079,
+      "control_definition": "Stationery & Gifts in all region groups except Western Europe"
+    },
+    {
+      "campaign_id": 3,
+      "campaign_name": "Campaign 03",
+      "channel": "Search Ads",
+      "campaign_type": "Price Promotion",
+      "start_date": "2010-10-11",
+      "end_date": "2010-11-09",
+      "duration_days": 30,
+      "budget": 13600.0,
+      "target_region_group": "Northern Europe",
+      "target_category": "Garden & Outdoor",
+      "pre_period": {
+        "start": "2010-09-11",
+        "end": "2010-10-10"
+      },
+      "attributed_lines": 11,
+      "orders": 4,
+      "units": 123,
+      "revenue": 388.35,
+      "aov": 97.09,
+      "trading_days_pre": 25,
+      "trading_days_during": 26,
+      "active_days_pre": 4,
+      "active_days_during": 4,
+      "daily": [
+        {
+          "date": "2010-09-12",
+          "treated": 0.0,
+          "control": 353.57,
+          "post": 0
+        },
+        {
+          "date": "2010-09-13",
+          "treated": 0.0,
+          "control": 728.5,
+          "post": 0
+        },
+        {
+          "date": "2010-09-14",
+          "treated": 0.0,
+          "control": 526.65,
+          "post": 0
+        },
+        {
+          "date": "2010-09-15",
+          "treated": 0.0,
+          "control": 1174.41,
+          "post": 0
+        },
+        {
+          "date": "2010-09-16",
+          "treated": 178.5,
+          "control": 719.92,
+          "post": 0
+        },
+        {
+          "date": "2010-09-17",
+          "treated": 0.0,
+          "control": 601.16,
+          "post": 0
+        },
+        {
+          "date": "2010-09-19",
+          "treated": 0.0,
+          "control": 717.76,
+          "post": 0
+        },
+        {
+          "date": "2010-09-20",
+          "treated": 0.0,
+          "control": 755.28,
+          "post": 0
+        },
+        {
+          "date": "2010-09-21",
+          "treated": 0.0,
+          "control": 3012.64,
+          "post": 0
+        },
+        {
+          "date": "2010-09-22",
+          "treated": 0.0,
+          "control": 1071.11,
+          "post": 0
+        },
+        {
+          "date": "2010-09-23",
+          "treated": 0.0,
+          "control": 1404.35,
+          "post": 0
+        },
+        {
+          "date": "2010-09-24",
+          "treated": 55.8,
+          "control": 1281.66,
+          "post": 0
+        },
+        {
+          "date": "2010-09-26",
+          "treated": 0.0,
+          "control": 412.45,
+          "post": 0
+        },
+        {
+          "date": "2010-09-27",
+          "treated": 0.0,
+          "control": 1118.22,
+          "post": 0
+        },
+        {
+          "date": "2010-09-28",
+          "treated": 0.0,
+          "control": 1070.51,
+          "post": 0
+        },
+        {
+          "date": "2010-09-29",
+          "treated": 0.0,
+          "control": 792.16,
+          "post": 0
+        },
+        {
+          "date": "2010-09-30",
+          "treated": 0.0,
+          "control": 736.08,
+          "post": 0
+        },
+        {
+          "date": "2010-10-01",
+          "treated": 20.4,
+          "control": 646.48,
+          "post": 0
+        },
+        {
+          "date": "2010-10-03",
+          "treated": 0.0,
+          "control": 788.65,
+          "post": 0
+        },
+        {
+          "date": "2010-10-04",
+          "treated": 39.0,
+          "control": 857.96,
+          "post": 0
+        },
+        {
+          "date": "2010-10-05",
+          "treated": 0.0,
+          "control": 1609.75,
+          "post": 0
+        },
+        {
+          "date": "2010-10-06",
+          "treated": 0.0,
+          "control": 275.55,
+          "post": 0
+        },
+        {
+          "date": "2010-10-07",
+          "treated": 0.0,
+          "control": 1127.91,
+          "post": 0
+        },
+        {
+          "date": "2010-10-08",
+          "treated": 0.0,
+          "control": 772.71,
+          "post": 0
+        },
+        {
+          "date": "2010-10-10",
+          "treated": 0.0,
+          "control": 551.3,
+          "post": 0
+        },
+        {
+          "date": "2010-10-11",
+          "treated": 0.0,
+          "control": 887.37,
+          "post": 1
+        },
+        {
+          "date": "2010-10-12",
+          "treated": 0.0,
+          "control": 1996.3,
+          "post": 1
+        },
+        {
+          "date": "2010-10-13",
+          "treated": 0.0,
+          "control": 1194.63,
+          "post": 1
+        },
+        {
+          "date": "2010-10-14",
+          "treated": 0.0,
+          "control": 1517.64,
+          "post": 1
+        },
+        {
+          "date": "2010-10-15",
+          "treated": 0.0,
+          "control": 1306.4,
+          "post": 1
+        },
+        {
+          "date": "2010-10-17",
+          "treated": 0.0,
+          "control": 985.21,
+          "post": 1
+        },
+        {
+          "date": "2010-10-18",
+          "treated": 0.0,
+          "control": 736.39,
+          "post": 1
+        },
+        {
+          "date": "2010-10-19",
+          "treated": 0.0,
+          "control": 5665.54,
+          "post": 1
+        },
+        {
+          "date": "2010-10-20",
+          "treated": 0.0,
+          "control": 1142.17,
+          "post": 1
+        },
+        {
+          "date": "2010-10-21",
+          "treated": 0.0,
+          "control": 458.14,
+          "post": 1
+        },
+        {
+          "date": "2010-10-22",
+          "treated": 0.0,
+          "control": 2439.12,
+          "post": 1
+        },
+        {
+          "date": "2010-10-24",
+          "treated": 0.0,
+          "control": 555.68,
+          "post": 1
+        },
+        {
+          "date": "2010-10-25",
+          "treated": 0.0,
+          "control": 1618.81,
+          "post": 1
+        },
+        {
+          "date": "2010-10-26",
+          "treated": 0.0,
+          "control": 1006.05,
+          "post": 1
+        },
+        {
+          "date": "2010-10-27",
+          "treated": 17.4,
+          "control": 288.03,
+          "post": 1
+        },
+        {
+          "date": "2010-10-28",
+          "treated": 0.0,
+          "control": 757.59,
+          "post": 1
+        },
+        {
+          "date": "2010-10-29",
+          "treated": 0.0,
+          "control": 1063.05,
+          "post": 1
+        },
+        {
+          "date": "2010-10-31",
+          "treated": 33.6,
+          "control": 624.02,
+          "post": 1
+        },
+        {
+          "date": "2010-11-01",
+          "treated": 0.0,
+          "control": 316.59,
+          "post": 1
+        },
+        {
+          "date": "2010-11-02",
+          "treated": 0.0,
+          "control": 1119.31,
+          "post": 1
+        },
+        {
+          "date": "2010-11-03",
+          "treated": 0.0,
+          "control": 1601.61,
+          "post": 1
+        },
+        {
+          "date": "2010-11-04",
+          "treated": 290.55,
+          "control": 2912.83,
+          "post": 1
+        },
+        {
+          "date": "2010-11-05",
+          "treated": 0.0,
+          "control": 762.48,
+          "post": 1
+        },
+        {
+          "date": "2010-11-07",
+          "treated": 0.0,
+          "control": 636.09,
+          "post": 1
+        },
+        {
+          "date": "2010-11-08",
+          "treated": 46.8,
+          "control": 541.71,
+          "post": 1
+        },
+        {
+          "date": "2010-11-09",
+          "treated": 0.0,
+          "control": 2074.45,
+          "post": 1
+        }
+      ],
+      "sufficient_data": false,
+      "note": "Fewer than 5 days with sales in the pre or during window; no statistics computed."
+    },
+    {
+      "campaign_id": 4,
+      "campaign_name": "Campaign 04",
+      "channel": "Catalogue",
+      "campaign_type": "Product Launch",
+      "start_date": "2010-10-13",
+      "end_date": "2010-11-09",
+      "duration_days": 28,
+      "budget": 8100.0,
+      "target_region_group": "United Kingdom",
+      "target_category": "Toys & Kids",
+      "pre_period": {
+        "start": "2010-09-15",
+        "end": "2010-10-12"
+      },
+      "attributed_lines": 1382,
+      "orders": 521,
+      "units": 8430,
+      "revenue": 18725.86,
+      "aov": 35.94,
+      "trading_days_pre": 24,
+      "trading_days_during": 24,
+      "active_days_pre": 24,
+      "active_days_during": 24,
+      "daily": [
+        {
+          "date": "2010-09-15",
+          "treated": 162.57,
+          "control": 277.47,
+          "post": 0
+        },
+        {
+          "date": "2010-09-16",
+          "treated": 580.38,
+          "control": 45.6,
+          "post": 0
+        },
+        {
+          "date": "2010-09-17",
+          "treated": 335.27,
+          "control": 54.3,
+          "post": 0
+        },
+        {
+          "date": "2010-09-19",
+          "treated": 282.19,
+          "control": 0.0,
+          "post": 0
+        },
+        {
+          "date": "2010-09-20",
+          "treated": 899.36,
+          "control": 75.3,
+          "post": 0
+        },
+        {
+          "date": "2010-09-21",
+          "treated": 1310.69,
+          "control": 218.76,
+          "post": 0
+        },
+        {
+          "date": "2010-09-22",
+          "treated": 356.86,
+          "control": 70.5,
+          "post": 0
+        },
+        {
+          "date": "2010-09-23",
+          "treated": 558.47,
+          "control": 125.94,
+          "post": 0
+        },
+        {
+          "date": "2010-09-24",
+          "treated": 455.57,
+          "control": 3513.89,
+          "post": 0
+        },
+        {
+          "date": "2010-09-26",
+          "treated": 785.34,
+          "control": 27.6,
+          "post": 0
+        },
+        {
+          "date": "2010-09-27",
+          "treated": 1200.53,
+          "control": 66.6,
+          "post": 0
+        },
+        {
+          "date": "2010-09-28",
+          "treated": 974.6,
+          "control": 49.88,
+          "post": 0
+        },
+        {
+          "date": "2010-09-29",
+          "treated": 641.98,
+          "control": 240.56,
+          "post": 0
+        },
+        {
+          "date": "2010-09-30",
+          "treated": 541.39,
+          "control": 160.58,
+          "post": 0
+        },
+        {
+          "date": "2010-10-01",
+          "treated": 397.55,
+          "control": 439.8,
+          "post": 0
+        },
+        {
+          "date": "2010-10-03",
+          "treated": 516.72,
+          "control": 444.88,
+          "post": 0
+        },
+        {
+          "date": "2010-10-04",
+          "treated": 883.42,
+          "control": 160.14,
+          "post": 0
+        },
+        {
+          "date": "2010-10-05",
+          "treated": 1190.45,
+          "control": 80.49,
+          "post": 0
+        },
+        {
+          "date": "2010-10-06",
+          "treated": 530.8,
+          "control": 39.8,
+          "post": 0
+        },
+        {
+          "date": "2010-10-07",
+          "treated": 1849.47,
+          "control": 152.0,
+          "post": 0
+        },
+        {
+          "date": "2010-10-08",
+          "treated": 1495.42,
+          "control": 415.41,
+          "post": 0
+        },
+        {
+          "date": "2010-10-10",
+          "treated": 340.23,
+          "control": 105.66,
+          "post": 0
+        },
+        {
+          "date": "2010-10-11",
+          "treated": 1091.17,
+          "control": 267.61,
+          "post": 0
+        },
+        {
+          "date": "2010-10-12",
+          "treated": 1001.84,
+          "control": 92.93,
+          "post": 0
+        },
+        {
+          "date": "2010-10-13",
+          "treated": 609.17,
+          "control": 531.7,
+          "post": 1
+        },
+        {
+          "date": "2010-10-14",
+          "treated": 1092.7,
+          "control": 868.94,
+          "post": 1
+        },
+        {
+          "date": "2010-10-15",
+          "treated": 777.53,
+          "control": 25.0,
+          "post": 1
+        },
+        {
+          "date": "2010-10-17",
+          "treated": 643.17,
+          "control": 0.0,
+          "post": 1
+        },
+        {
+          "date": "2010-10-18",
+          "treated": 341.39,
+          "control": 0.0,
+          "post": 1
+        },
+        {
+          "date": "2010-10-19",
+          "treated": 699.35,
+          "control": 521.7,
+          "post": 1
+        },
+        {
+          "date": "2010-10-20",
+          "treated": 803.26,
+          "control": 27.48,
+          "post": 1
+        },
+        {
+          "date": "2010-10-21",
+          "treated": 460.89,
+          "control": 115.65,
+          "post": 1
+        },
+        {
+          "date": "2010-10-22",
+          "treated": 542.57,
+          "control": 224.76,
+          "post": 1
+        },
+        {
+          "date": "2010-10-24",
+          "treated": 543.27,
+          "control": 36.14,
+          "post": 1
+        },
+        {
+          "date": "2010-10-25",
+          "treated": 160.14,
+          "control": 59.96,
+          "post": 1
+        },
+        {
+          "date": "2010-10-26",
+          "treated": 543.61,
+          "control": 380.92,
+          "post": 1
+        },
+        {
+          "date": "2010-10-27",
+          "treated": 311.09,
+          "control": 195.2,
+          "post": 1
+        },
+        {
+          "date": "2010-10-28",
+          "treated": 625.27,
+          "control": 35.01,
+          "post": 1
+        },
+        {
+          "date": "2010-10-29",
+          "treated": 607.05,
+          "control": 83.71,
+          "post": 1
+        },
+        {
+          "date": "2010-10-31",
+          "treated": 970.59,
+          "control": 50.76,
+          "post": 1
+        },
+        {
+          "date": "2010-11-01",
+          "treated": 567.87,
+          "control": 0.0,
+          "post": 1
+        },
+        {
+          "date": "2010-11-02",
+          "treated": 679.26,
+          "control": 79.46,
+          "post": 1
+        },
+        {
+          "date": "2010-11-03",
+          "treated": 437.02,
+          "control": 530.12,
+          "post": 1
+        },
+        {
+          "date": "2010-11-04",
+          "treated": 1760.33,
+          "control": 205.8,
+          "post": 1
+        },
+        {
+          "date": "2010-11-05",
+          "treated": 339.67,
+          "control": 114.96,
+          "post": 1
+        },
+        {
+          "date": "2010-11-07",
+          "treated": 688.69,
+          "control": 80.95,
+          "post": 1
+        },
+        {
+          "date": "2010-11-08",
+          "treated": 3987.2,
+          "control": 76.56,
+          "post": 1
+        },
+        {
+          "date": "2010-11-09",
+          "treated": 534.77,
+          "control": 524.26,
+          "post": 1
+        }
+      ],
+      "sufficient_data": true,
+      "pre_mean_daily_revenue": 765.93,
+      "during_mean_daily_revenue": 780.24,
+      "observed_uplift_pct": 1.9,
+      "difference_mean_daily": 14.32,
+      "difference_ci95": [
+        -343.76,
+        372.4
+      ],
+      "welch_p_value": 0.9359,
+      "observed_incremental_revenue": 343.59,
+      "naive_roi_pct": -95.8,
+      "did_estimate_daily": 112.51,
+      "did_ci95": [
+        -341.92,
+        566.94
+      ],
+      "did_p_value": 0.6275,
+      "control_definition": "Toys & Kids in all region groups except United Kingdom"
+    },
+    {
+      "campaign_id": 5,
+      "campaign_name": "Campaign 05",
+      "channel": "Trade Partner",
+      "campaign_type": "Awareness",
+      "start_date": "2010-10-13",
+      "end_date": "2010-11-15",
+      "duration_days": 34,
+      "budget": 10200.0,
+      "target_region_group": "Ireland & Channel Is.",
+      "target_category": "Lighting & Candles",
+      "pre_period": {
+        "start": "2010-09-09",
+        "end": "2010-10-12"
+      },
+      "attributed_lines": 110,
+      "orders": 37,
+      "units": 1839,
+      "revenue": 3624.29,
+      "aov": 97.95,
+      "trading_days_pre": 29,
+      "trading_days_during": 29,
+      "active_days_pre": 16,
+      "active_days_during": 21,
+      "daily": [
+        {
+          "date": "2010-09-09",
+          "treated": 0.0,
+          "control": 1973.87,
+          "post": 0
+        },
+        {
+          "date": "2010-09-10",
+          "treated": 0.0,
+          "control": 1484.68,
+          "post": 0
+        },
+        {
+          "date": "2010-09-12",
+          "treated": 25.5,
+          "control": 1560.93,
+          "post": 0
+        },
+        {
+          "date": "2010-09-13",
+          "treated": 29.7,
+          "control": 4119.59,
+          "post": 0
+        },
+        {
+          "date": "2010-09-14",
+          "treated": 0.0,
+          "control": 2092.38,
+          "post": 0
+        },
+        {
+          "date": "2010-09-15",
+          "treated": 0.0,
+          "control": 2801.94,
+          "post": 0
+        },
+        {
+          "date": "2010-09-16",
+          "treated": 507.3,
+          "control": 1362.34,
+          "post": 0
+        },
+        {
+          "date": "2010-09-17",
+          "treated": 0.0,
+          "control": 1899.22,
+          "post": 0
+        },
+        {
+          "date": "2010-09-19",
+          "treated": 0.0,
+          "control": 1980.41,
+          "post": 0
+        },
+        {
+          "date": "2010-09-20",
+          "treated": 237.6,
+          "control": 2847.92,
+          "post": 0
+        },
+        {
+          "date": "2010-09-21",
+          "treated": 53.1,
+          "control": 6053.45,
+          "post": 0
+        },
+        {
+          "date": "2010-09-22",
+          "treated": 0.0,
+          "control": 3466.75,
+          "post": 0
+        },
+        {
+          "date": "2010-09-23",
+          "treated": 86.0,
+          "control": 3509.41,
+          "post": 0
+        },
+        {
+          "date": "2010-09-24",
+          "treated": 10.4,
+          "control": 3135.31,
+          "post": 0
+        },
+        {
+          "date": "2010-09-26",
+          "treated": 0.0,
+          "control": 1833.75,
+          "post": 0
+        },
+        {
+          "date": "2010-09-27",
+          "treated": 131.4,
+          "control": 4197.78,
+          "post": 0
+        },
+        {
+          "date": "2010-09-28",
+          "treated": 254.18,
+          "control": 4125.55,
+          "post": 0
+        },
+        {
+          "date": "2010-09-29",
+          "treated": 35.4,
+          "control": 3358.41,
+          "post": 0
+        },
+        {
+          "date": "2010-09-30",
+          "treated": 200.78,
+          "control": 3812.27,
+          "post": 0
+        },
+        {
+          "date": "2010-10-01",
+          "treated": 0.0,
+          "control": 2757.02,
+          "post": 0
+        },
+        {
+          "date": "2010-10-03",
+          "treated": 889.4,
+          "control": 1486.24,
+          "post": 0
+        },
+        {
+          "date": "2010-10-04",
+          "treated": 0.0,
+          "control": 3894.44,
+          "post": 0
+        },
+        {
+          "date": "2010-10-05",
+          "treated": 136.68,
+          "control": 6334.28,
+          "post": 0
+        },
+        {
+          "date": "2010-10-06",
+          "treated": 9.9,
+          "control": 1286.24,
+          "post": 0
+        },
+        {
+          "date": "2010-10-07",
+          "treated": 0.0,
+          "control": 4179.69,
+          "post": 0
+        },
+        {
+          "date": "2010-10-08",
+          "treated": 28.3,
+          "control": 6267.59,
+          "post": 0
+        },
+        {
+          "date": "2010-10-10",
+          "treated": 0.0,
+          "control": 2268.87,
+          "post": 0
+        },
+        {
+          "date": "2010-10-11",
+          "treated": 91.8,
+          "control": 3945.5,
+          "post": 0
+        },
+        {
+          "date": "2010-10-12",
+          "treated": 0.0,
+          "control": 3203.89,
+          "post": 0
+        },
+        {
+          "date": "2010-10-13",
+          "treated": 112.2,
+          "control": 3141.05,
+          "post": 1
+        },
+        {
+          "date": "2010-10-14",
+          "treated": 178.7,
+          "control": 7689.94,
+          "post": 1
+        },
+        {
+          "date": "2010-10-15",
+          "treated": 0.0,
+          "control": 3619.82,
+          "post": 1
+        },
+        {
+          "date": "2010-10-17",
+          "treated": 132.0,
+          "control": 1744.77,
+          "post": 1
+        },
+        {
+          "date": "2010-10-18",
+          "treated": 115.95,
+          "control": 2738.92,
+          "post": 1
+        },
+        {
+          "date": "2010-10-19",
+          "treated": 17.7,
+          "control": 3060.26,
+          "post": 1
+        },
+        {
+          "date": "2010-10-20",
+          "treated": 42.0,
+          "control": 2811.64,
+          "post": 1
+        },
+        {
+          "date": "2010-10-21",
+          "treated": 492.3,
+          "control": 2621.55,
+          "post": 1
+        },
+        {
+          "date": "2010-10-22",
+          "treated": 166.1,
+          "control": 2763.94,
+          "post": 1
+        },
+        {
+          "date": "2010-10-24",
+          "treated": 0.0,
+          "control": 2650.21,
+          "post": 1
+        },
+        {
+          "date": "2010-10-25",
+          "treated": 87.9,
+          "control": 5275.51,
+          "post": 1
+        },
+        {
+          "date": "2010-10-26",
+          "treated": 117.6,
+          "control": 2588.69,
+          "post": 1
+        },
+        {
+          "date": "2010-10-27",
+          "treated": 607.7,
+          "control": 2322.53,
+          "post": 1
+        },
+        {
+          "date": "2010-10-28",
+          "treated": 90.0,
+          "control": 7381.15,
+          "post": 1
+        },
+        {
+          "date": "2010-10-29",
+          "treated": 0.0,
+          "control": 4753.97,
+          "post": 1
+        },
+        {
+          "date": "2010-10-31",
+          "treated": 0.0,
+          "control": 2757.02,
+          "post": 1
+        },
+        {
+          "date": "2010-11-01",
+          "treated": 230.3,
+          "control": 2839.43,
+          "post": 1
+        },
+        {
+          "date": "2010-11-02",
+          "treated": 0.0,
+          "control": 3472.17,
+          "post": 1
+        },
+        {
+          "date": "2010-11-03",
+          "treated": 156.68,
+          "control": 3415.11,
+          "post": 1
+        },
+        {
+          "date": "2010-11-04",
+          "treated": 335.16,
+          "control": 4465.61,
+          "post": 1
+        },
+        {
+          "date": "2010-11-05",
+          "treated": 392.2,
+          "control": 2754.62,
+          "post": 1
+        },
+        {
+          "date": "2010-11-07",
+          "treated": 19.8,
+          "control": 2094.6,
+          "post": 1
+        },
+        {
+          "date": "2010-11-08",
+          "treated": 55.5,
+          "control": 5844.7,
+          "post": 1
+        },
+        {
+          "date": "2010-11-09",
+          "treated": 90.6,
+          "control": 6712.61,
+          "post": 1
+        },
+        {
+          "date": "2010-11-10",
+          "treated": 0.0,
+          "control": 11230.71,
+          "post": 1
+        },
+        {
+          "date": "2010-11-11",
+          "treated": 0.0,
+          "control": 4766.07,
+          "post": 1
+        },
+        {
+          "date": "2010-11-12",
+          "treated": 60.0,
+          "control": 4864.45,
+          "post": 1
+        },
+        {
+          "date": "2010-11-14",
+          "treated": 0.0,
+          "control": 2550.7,
+          "post": 1
+        },
+        {
+          "date": "2010-11-15",
+          "treated": 123.9,
+          "control": 5827.58,
+          "post": 1
+        }
+      ],
+      "sufficient_data": true,
+      "pre_mean_daily_revenue": 94.05,
+      "during_mean_daily_revenue": 124.98,
+      "observed_uplift_pct": 32.9,
+      "difference_mean_daily": 30.93,
+      "difference_ci95": [
+        -60.26,
+        122.11
+      ],
+      "welch_p_value": 0.4994,
+      "observed_incremental_revenue": 896.85,
+      "naive_roi_pct": -91.2,
+      "did_estimate_daily": -918.03,
+      "did_ci95": [
+        -1852.5,
+        16.45
+      ],
+      "did_p_value": 0.0542,
+      "control_definition": "Lighting & Candles in all region groups except Ireland & Channel Is."
+    },
+    {
+      "campaign_id": 6,
+      "campaign_name": "Campaign 06",
+      "channel": "Search Ads",
+      "campaign_type": "Product Launch",
+      "start_date": "2010-11-05",
+      "end_date": "2010-12-09",
+      "duration_days": 35,
+      "budget": 13700.0,
+      "target_region_group": "Ireland & Channel Is.",
+      "target_category": "Kitchen & Dining",
+      "pre_period": {
+        "start": "2010-10-01",
+        "end": "2010-11-04"
+      },
+      "attributed_lines": 160,
+      "orders": 34,
+      "units": 1781,
+      "revenue": 4744.71,
+      "aov": 139.55,
+      "trading_days_pre": 30,
+      "trading_days_during": 30,
+      "active_days_pre": 21,
+      "active_days_during": 18,
+      "daily": [
+        {
+          "date": "2010-10-01",
+          "treated": 157.38,
+          "control": 4307.0,
+          "post": 0
+        },
+        {
+          "date": "2010-10-03",
+          "treated": 1594.93,
+          "control": 4473.84,
+          "post": 0
+        },
+        {
+          "date": "2010-10-04",
+          "treated": 351.0,
+          "control": 4244.04,
+          "post": 0
+        },
+        {
+          "date": "2010-10-05",
+          "treated": 0.0,
+          "control": 6398.72,
+          "post": 0
+        },
+        {
+          "date": "2010-10-06",
+          "treated": 140.9,
+          "control": 4455.39,
+          "post": 0
+        },
+        {
+          "date": "2010-10-07",
+          "treated": 0.0,
+          "control": 6725.27,
+          "post": 0
+        },
+        {
+          "date": "2010-10-08",
+          "treated": 30.45,
+          "control": 5604.32,
+          "post": 0
+        },
+        {
+          "date": "2010-10-10",
+          "treated": 0.0,
+          "control": 3466.93,
+          "post": 0
+        },
+        {
+          "date": "2010-10-11",
+          "treated": 97.55,
+          "control": 4247.09,
+          "post": 0
+        },
+        {
+          "date": "2010-10-12",
+          "treated": 0.0,
+          "control": 6320.47,
+          "post": 0
+        },
+        {
+          "date": "2010-10-13",
+          "treated": 363.7,
+          "control": 5387.31,
+          "post": 0
+        },
+        {
+          "date": "2010-10-14",
+          "treated": 603.6,
+          "control": 9612.21,
+          "post": 0
+        },
+        {
+          "date": "2010-10-15",
+          "treated": 0.0,
+          "control": 6641.55,
+          "post": 0
+        },
+        {
+          "date": "2010-10-17",
+          "treated": 617.8,
+          "control": 3418.62,
+          "post": 0
+        },
+        {
+          "date": "2010-10-18",
+          "treated": 324.4,
+          "control": 5126.57,
+          "post": 0
+        },
+        {
+          "date": "2010-10-19",
+          "treated": 599.15,
+          "control": 6850.52,
+          "post": 0
+        },
+        {
+          "date": "2010-10-20",
+          "treated": 17.7,
+          "control": 5658.19,
+          "post": 0
+        },
+        {
+          "date": "2010-10-21",
+          "treated": 1280.65,
+          "control": 3708.66,
+          "post": 0
+        },
+        {
+          "date": "2010-10-22",
+          "treated": 173.05,
+          "control": 3953.05,
+          "post": 0
+        },
+        {
+          "date": "2010-10-24",
+          "treated": 0.0,
+          "control": 3404.77,
+          "post": 0
+        },
+        {
+          "date": "2010-10-25",
+          "treated": 294.85,
+          "control": 3412.84,
+          "post": 0
+        },
+        {
+          "date": "2010-10-26",
+          "treated": 558.38,
+          "control": 4019.28,
+          "post": 0
+        },
+        {
+          "date": "2010-10-27",
+          "treated": 1210.78,
+          "control": 2650.91,
+          "post": 0
+        },
+        {
+          "date": "2010-10-28",
+          "treated": 171.95,
+          "control": 2354.1,
+          "post": 0
+        },
+        {
+          "date": "2010-10-29",
+          "treated": 0.0,
+          "control": 10450.99,
+          "post": 0
+        },
+        {
+          "date": "2010-10-31",
+          "treated": 0.0,
+          "control": 3056.03,
+          "post": 0
+        },
+        {
+          "date": "2010-11-01",
+          "treated": 397.35,
+          "control": 3191.91,
+          "post": 0
+        },
+        {
+          "date": "2010-11-02",
+          "treated": 0.0,
+          "control": 5288.96,
+          "post": 0
+        },
+        {
+          "date": "2010-11-03",
+          "treated": 156.14,
+          "control": 4084.47,
+          "post": 0
+        },
+        {
+          "date": "2010-11-04",
+          "treated": 54.1,
+          "control": 6389.66,
+          "post": 0
+        },
+        {
+          "date": "2010-11-05",
+          "treated": 410.55,
+          "control": 4430.85,
+          "post": 1
+        },
+        {
+          "date": "2010-11-07",
+          "treated": 80.1,
+          "control": 2675.21,
+          "post": 1
+        },
+        {
+          "date": "2010-11-08",
+          "treated": 149.2,
+          "control": 6948.06,
+          "post": 1
+        },
+        {
+          "date": "2010-11-09",
+          "treated": 0.0,
+          "control": 6871.52,
+          "post": 1
+        },
+        {
+          "date": "2010-11-10",
+          "treated": 183.94,
+          "control": 5491.39,
+          "post": 1
+        },
+        {
+          "date": "2010-11-11",
+          "treated": 0.0,
+          "control": 6808.63,
+          "post": 1
+        },
+        {
+          "date": "2010-11-12",
+          "treated": 217.6,
+          "control": 7637.65,
+          "post": 1
+        },
+        {
+          "date": "2010-11-14",
+          "treated": 255.5,
+          "control": 2905.47,
+          "post": 1
+        },
+        {
+          "date": "2010-11-15",
+          "treated": 827.26,
+          "control": 6995.52,
+          "post": 1
+        },
+        {
+          "date": "2010-11-16",
+          "treated": 827.61,
+          "control": 8246.58,
+          "post": 1
+        },
+        {
+          "date": "2010-11-17",
+          "treated": 0.0,
+          "control": 5280.37,
+          "post": 1
+        },
+        {
+          "date": "2010-11-18",
+          "treated": 128.55,
+          "control": 5344.61,
+          "post": 1
+        },
+        {
+          "date": "2010-11-19",
+          "treated": 60.6,
+          "control": 6375.36,
+          "post": 1
+        },
+        {
+          "date": "2010-11-21",
+          "treated": 66.4,
+          "control": 3244.02,
+          "post": 1
+        },
+        {
+          "date": "2010-11-22",
+          "treated": 29.7,
+          "control": 4033.37,
+          "post": 1
+        },
+        {
+          "date": "2010-11-23",
+          "treated": 270.95,
+          "control": 6938.86,
+          "post": 1
+        },
+        {
+          "date": "2010-11-24",
+          "treated": 0.0,
+          "control": 8323.0,
+          "post": 1
+        },
+        {
+          "date": "2010-11-25",
+          "treated": 0.0,
+          "control": 8377.28,
+          "post": 1
+        },
+        {
+          "date": "2010-11-26",
+          "treated": 152.2,
+          "control": 4223.5,
+          "post": 1
+        },
+        {
+          "date": "2010-11-28",
+          "treated": 0.0,
+          "control": 3357.65,
+          "post": 1
+        },
+        {
+          "date": "2010-11-29",
+          "treated": 195.15,
+          "control": 10199.67,
+          "post": 1
+        },
+        {
+          "date": "2010-11-30",
+          "treated": 0.0,
+          "control": 7446.58,
+          "post": 1
+        },
+        {
+          "date": "2010-12-01",
+          "treated": 0.0,
+          "control": 6032.95,
+          "post": 1
+        },
+        {
+          "date": "2010-12-02",
+          "treated": 0.0,
+          "control": 6205.01,
+          "post": 1
+        },
+        {
+          "date": "2010-12-03",
+          "treated": 216.7,
+          "control": 7261.16,
+          "post": 1
+        },
+        {
+          "date": "2010-12-05",
+          "treated": 0.0,
+          "control": 3912.1,
+          "post": 1
+        },
+        {
+          "date": "2010-12-06",
+          "treated": 294.7,
+          "control": 6661.52,
+          "post": 1
+        },
+        {
+          "date": "2010-12-07",
+          "treated": 0.0,
+          "control": 7937.48,
+          "post": 1
+        },
+        {
+          "date": "2010-12-08",
+          "treated": 0.0,
+          "control": 6735.58,
+          "post": 1
+        },
+        {
+          "date": "2010-12-09",
+          "treated": 378.0,
+          "control": 6456.61,
+          "post": 1
+        }
+      ],
+      "sufficient_data": true,
+      "pre_mean_daily_revenue": 306.53,
+      "during_mean_daily_revenue": 158.16,
+      "observed_uplift_pct": -48.4,
+      "difference_mean_daily": -148.37,
+      "difference_ci95": [
+        -321.15,
+        24.41
+      ],
+      "welch_p_value": 0.0905,
+      "observed_incremental_revenue": -4451.1,
+      "naive_roi_pct": -132.5,
+      "did_estimate_daily": -1296.83,
+      "did_ci95": [
+        -2256.66,
+        -337.01
+      ],
+      "did_p_value": 0.0081,
+      "control_definition": "Kitchen & Dining in all region groups except Ireland & Channel Is."
+    },
+    {
+      "campaign_id": 7,
+      "campaign_name": "Campaign 07",
+      "channel": "Trade Partner",
+      "campaign_type": "Awareness",
+      "start_date": "2011-01-06",
+      "end_date": "2011-01-22",
+      "duration_days": 17,
+      "budget": 2200.0,
+      "target_region_group": "Southern Europe",
+      "target_category": "Christmas & Seasonal",
+      "pre_period": {
+        "start": "2010-12-20",
+        "end": "2011-01-05"
+      },
+      "attributed_lines": 1,
+      "orders": 1,
+      "units": 4,
+      "revenue": 7.8,
+      "aov": 7.8,
+      "trading_days_pre": 6,
+      "trading_days_during": 14,
+      "active_days_pre": 0,
+      "active_days_during": 1,
+      "daily": [
+        {
+          "date": "2010-12-20",
+          "treated": 0.0,
+          "control": 955.72,
+          "post": 0
+        },
+        {
+          "date": "2010-12-21",
+          "treated": 0.0,
+          "control": 1873.23,
+          "post": 0
+        },
+        {
+          "date": "2010-12-22",
+          "treated": 0.0,
+          "control": 4.65,
+          "post": 0
+        },
+        {
+          "date": "2010-12-23",
+          "treated": 0.0,
+          "control": 163.93,
+          "post": 0
+        },
+        {
+          "date": "2011-01-04",
+          "treated": 0.0,
+          "control": 226.86,
+          "post": 0
+        },
+        {
+          "date": "2011-01-05",
+          "treated": 0.0,
+          "control": 233.81,
+          "post": 0
+        },
+        {
+          "date": "2011-01-06",
+          "treated": 0.0,
+          "control": 814.28,
+          "post": 1
+        },
+        {
+          "date": "2011-01-07",
+          "treated": 7.8,
+          "control": 223.08,
+          "post": 1
+        },
+        {
+          "date": "2011-01-09",
+          "treated": 0.0,
+          "control": 248.85,
+          "post": 1
+        },
+        {
+          "date": "2011-01-10",
+          "treated": 0.0,
+          "control": 335.52,
+          "post": 1
+        },
+        {
+          "date": "2011-01-11",
+          "treated": 0.0,
+          "control": 138.75,
+          "post": 1
+        },
+        {
+          "date": "2011-01-12",
+          "treated": 0.0,
+          "control": 417.33,
+          "post": 1
+        },
+        {
+          "date": "2011-01-13",
+          "treated": 0.0,
+          "control": 156.89,
+          "post": 1
+        },
+        {
+          "date": "2011-01-14",
+          "treated": 0.0,
+          "control": 879.94,
+          "post": 1
+        },
+        {
+          "date": "2011-01-16",
+          "treated": 0.0,
+          "control": 99.83,
+          "post": 1
+        },
+        {
+          "date": "2011-01-17",
+          "treated": 0.0,
+          "control": 451.1,
+          "post": 1
+        },
+        {
+          "date": "2011-01-18",
+          "treated": 0.0,
+          "control": 143.0,
+          "post": 1
+        },
+        {
+          "date": "2011-01-19",
+          "treated": 0.0,
+          "control": 241.74,
+          "post": 1
+        },
+        {
+          "date": "2011-01-20",
+          "treated": 0.0,
+          "control": 119.07,
+          "post": 1
+        },
+        {
+          "date": "2011-01-21",
+          "treated": 0.0,
+          "control": 367.53,
+          "post": 1
+        }
+      ],
+      "sufficient_data": false,
+      "note": "Fewer than 5 days with sales in the pre or during window; no statistics computed."
+    },
+    {
+      "campaign_id": 8,
+      "campaign_name": "Campaign 08",
+      "channel": "Email",
+      "campaign_type": "Awareness",
+      "start_date": "2011-02-11",
+      "end_date": "2011-03-13",
+      "duration_days": 31,
+      "budget": 9600.0,
+      "target_region_group": "Northern Europe",
+      "target_category": "Kitchen & Dining",
+      "pre_period": {
+        "start": "2011-01-11",
+        "end": "2011-02-10"
+      },
+      "attributed_lines": 37,
+      "orders": 6,
+      "units": 415,
+      "revenue": 730.62,
+      "aov": 121.77,
+      "trading_days_pre": 27,
+      "trading_days_during": 26,
+      "active_days_pre": 5,
+      "active_days_during": 4,
+      "daily": [
+        {
+          "date": "2011-01-11",
+          "treated": 0.0,
+          "control": 18103.82,
+          "post": 0
+        },
+        {
+          "date": "2011-01-12",
+          "treated": 0.0,
+          "control": 4263.71,
+          "post": 0
+        },
+        {
+          "date": "2011-01-13",
+          "treated": 0.0,
+          "control": 3570.83,
+          "post": 0
+        },
+        {
+          "date": "2011-01-14",
+          "treated": 0.0,
+          "control": 7704.48,
+          "post": 0
+        },
+        {
+          "date": "2011-01-16",
+          "treated": 0.0,
+          "control": 744.42,
+          "post": 0
+        },
+        {
+          "date": "2011-01-17",
+          "treated": 161.8,
+          "control": 4345.94,
+          "post": 0
+        },
+        {
+          "date": "2011-01-18",
+          "treated": 0.0,
+          "control": 3013.23,
+          "post": 0
+        },
+        {
+          "date": "2011-01-19",
+          "treated": 0.0,
+          "control": 2796.19,
+          "post": 0
+        },
+        {
+          "date": "2011-01-20",
+          "treated": 0.0,
+          "control": 2133.21,
+          "post": 0
+        },
+        {
+          "date": "2011-01-21",
+          "treated": 0.0,
+          "control": 4824.38,
+          "post": 0
+        },
+        {
+          "date": "2011-01-23",
+          "treated": 0.0,
+          "control": 2301.97,
+          "post": 0
+        },
+        {
+          "date": "2011-01-24",
+          "treated": 0.0,
+          "control": 4031.27,
+          "post": 0
+        },
+        {
+          "date": "2011-01-25",
+          "treated": 0.0,
+          "control": 4129.64,
+          "post": 0
+        },
+        {
+          "date": "2011-01-26",
+          "treated": 78.65,
+          "control": 2829.47,
+          "post": 0
+        },
+        {
+          "date": "2011-01-27",
+          "treated": 0.0,
+          "control": 3065.27,
+          "post": 0
+        },
+        {
+          "date": "2011-01-28",
+          "treated": 0.0,
+          "control": 2497.06,
+          "post": 0
+        },
+        {
+          "date": "2011-01-30",
+          "treated": 0.0,
+          "control": 719.87,
+          "post": 0
+        },
+        {
+          "date": "2011-01-31",
+          "treated": 0.0,
+          "control": 3869.88,
+          "post": 0
+        },
+        {
+          "date": "2011-02-01",
+          "treated": 23.4,
+          "control": 3112.93,
+          "post": 0
+        },
+        {
+          "date": "2011-02-02",
+          "treated": 0.0,
+          "control": 2369.63,
+          "post": 0
+        },
+        {
+          "date": "2011-02-03",
+          "treated": 0.0,
+          "control": 4670.21,
+          "post": 0
+        },
+        {
+          "date": "2011-02-04",
+          "treated": 62.6,
+          "control": 3073.88,
+          "post": 0
+        },
+        {
+          "date": "2011-02-06",
+          "treated": 0.0,
+          "control": 418.49,
+          "post": 0
+        },
+        {
+          "date": "2011-02-07",
+          "treated": 0.0,
+          "control": 2575.83,
+          "post": 0
+        },
+        {
+          "date": "2011-02-08",
+          "treated": 36.6,
+          "control": 2603.95,
+          "post": 0
+        },
+        {
+          "date": "2011-02-09",
+          "treated": 0.0,
+          "control": 2295.22,
+          "post": 0
+        },
+        {
+          "date": "2011-02-10",
+          "treated": 0.0,
+          "control": 2271.27,
+          "post": 0
+        },
+        {
+          "date": "2011-02-11",
+          "treated": 0.0,
+          "control": 2259.55,
+          "post": 1
+        },
+        {
+          "date": "2011-02-13",
+          "treated": 0.0,
+          "control": 927.15,
+          "post": 1
+        },
+        {
+          "date": "2011-02-14",
+          "treated": 0.0,
+          "control": 4057.74,
+          "post": 1
+        },
+        {
+          "date": "2011-02-15",
+          "treated": 0.0,
+          "control": 8229.03,
+          "post": 1
+        },
+        {
+          "date": "2011-02-16",
+          "treated": 75.15,
+          "control": 2684.64,
+          "post": 1
+        },
+        {
+          "date": "2011-02-17",
+          "treated": 0.0,
+          "control": 3811.55,
+          "post": 1
+        },
+        {
+          "date": "2011-02-18",
+          "treated": 0.0,
+          "control": 2247.8,
+          "post": 1
+        },
+        {
+          "date": "2011-02-20",
+          "treated": 0.0,
+          "control": 1842.76,
+          "post": 1
+        },
+        {
+          "date": "2011-02-21",
+          "treated": 0.0,
+          "control": 6991.64,
+          "post": 1
+        },
+        {
+          "date": "2011-02-22",
+          "treated": 0.0,
+          "control": 4559.57,
+          "post": 1
+        },
+        {
+          "date": "2011-02-23",
+          "treated": 0.0,
+          "control": 3547.44,
+          "post": 1
+        },
+        {
+          "date": "2011-02-24",
+          "treated": 121.36,
+          "control": 3813.48,
+          "post": 1
+        },
+        {
+          "date": "2011-02-25",
+          "treated": 0.0,
+          "control": 2654.04,
+          "post": 1
+        },
+        {
+          "date": "2011-02-27",
+          "treated": 0.0,
+          "control": 831.54,
+          "post": 1
+        },
+        {
+          "date": "2011-02-28",
+          "treated": 45.9,
+          "control": 2360.68,
+          "post": 1
+        },
+        {
+          "date": "2011-03-01",
+          "treated": 488.21,
+          "control": 2595.85,
+          "post": 1
+        },
+        {
+          "date": "2011-03-02",
+          "treated": 0.0,
+          "control": 4409.63,
+          "post": 1
+        },
+        {
+          "date": "2011-03-03",
+          "treated": 0.0,
+          "control": 6204.1,
+          "post": 1
+        },
+        {
+          "date": "2011-03-04",
+          "treated": 0.0,
+          "control": 2767.28,
+          "post": 1
+        },
+        {
+          "date": "2011-03-06",
+          "treated": 0.0,
+          "control": 1679.52,
+          "post": 1
+        },
+        {
+          "date": "2011-03-07",
+          "treated": 0.0,
+          "control": 4242.11,
+          "post": 1
+        },
+        {
+          "date": "2011-03-08",
+          "treated": 0.0,
+          "control": 3544.77,
+          "post": 1
+        },
+        {
+          "date": "2011-03-09",
+          "treated": 0.0,
+          "control": 3072.54,
+          "post": 1
+        },
+        {
+          "date": "2011-03-10",
+          "treated": 0.0,
+          "control": 2623.35,
+          "post": 1
+        },
+        {
+          "date": "2011-03-11",
+          "treated": 0.0,
+          "control": 2673.38,
+          "post": 1
+        },
+        {
+          "date": "2011-03-13",
+          "treated": 0.0,
+          "control": 421.66,
+          "post": 1
+        }
+      ],
+      "sufficient_data": false,
+      "note": "Fewer than 5 days with sales in the pre or during window; no statistics computed."
+    },
+    {
+      "campaign_id": 9,
+      "campaign_name": "Campaign 09",
+      "channel": "Trade Partner",
+      "campaign_type": "Price Promotion",
+      "start_date": "2011-03-31",
+      "end_date": "2011-04-15",
+      "duration_days": 16,
+      "budget": 11300.0,
+      "target_region_group": "Western Europe",
+      "target_category": "Home Decor",
+      "pre_period": {
+        "start": "2011-03-15",
+        "end": "2011-03-30"
+      },
+      "attributed_lines": 48,
+      "orders": 19,
+      "units": 878,
+      "revenue": 1589.98,
+      "aov": 83.68,
+      "trading_days_pre": 14,
+      "trading_days_during": 14,
+      "active_days_pre": 14,
+      "active_days_during": 10,
+      "daily": [
+        {
+          "date": "2011-03-15",
+          "treated": 118.1,
+          "control": 3183.84,
+          "post": 0
+        },
+        {
+          "date": "2011-03-16",
+          "treated": 44.79,
+          "control": 3191.58,
+          "post": 0
+        },
+        {
+          "date": "2011-03-17",
+          "treated": 57.0,
+          "control": 3812.78,
+          "post": 0
+        },
+        {
+          "date": "2011-03-18",
+          "treated": 94.48,
+          "control": 4161.51,
+          "post": 0
+        },
+        {
+          "date": "2011-03-20",
+          "treated": 40.8,
+          "control": 3563.36,
+          "post": 0
+        },
+        {
+          "date": "2011-03-21",
+          "treated": 47.32,
+          "control": 2281.12,
+          "post": 0
+        },
+        {
+          "date": "2011-03-22",
+          "treated": 60.3,
+          "control": 5338.71,
+          "post": 0
+        },
+        {
+          "date": "2011-03-23",
+          "treated": 192.7,
+          "control": 2915.24,
+          "post": 0
+        },
+        {
+          "date": "2011-03-24",
+          "treated": 210.0,
+          "control": 6894.48,
+          "post": 0
+        },
+        {
+          "date": "2011-03-25",
+          "treated": 36.66,
+          "control": 6732.8,
+          "post": 0
+        },
+        {
+          "date": "2011-03-27",
+          "treated": 17.7,
+          "control": 1914.93,
+          "post": 0
+        },
+        {
+          "date": "2011-03-28",
+          "treated": 214.92,
+          "control": 3053.35,
+          "post": 0
+        },
+        {
+          "date": "2011-03-29",
+          "treated": 1458.9,
+          "control": 5978.74,
+          "post": 0
+        },
+        {
+          "date": "2011-03-30",
+          "treated": 632.4,
+          "control": 4402.96,
+          "post": 0
+        },
+        {
+          "date": "2011-03-31",
+          "treated": 361.6,
+          "control": 4268.01,
+          "post": 1
+        },
+        {
+          "date": "2011-04-01",
+          "treated": 123.0,
+          "control": 4328.83,
+          "post": 1
+        },
+        {
+          "date": "2011-04-03",
+          "treated": 0.0,
+          "control": 1494.98,
+          "post": 1
+        },
+        {
+          "date": "2011-04-04",
+          "treated": 55.2,
+          "control": 4593.92,
+          "post": 1
+        },
+        {
+          "date": "2011-04-05",
+          "treated": 102.0,
+          "control": 8163.44,
+          "post": 1
+        },
+        {
+          "date": "2011-04-06",
+          "treated": 0.0,
+          "control": 2204.43,
+          "post": 1
+        },
+        {
+          "date": "2011-04-07",
+          "treated": 17.0,
+          "control": 2347.69,
+          "post": 1
+        },
+        {
+          "date": "2011-04-08",
+          "treated": 90.0,
+          "control": 3514.5,
+          "post": 1
+        },
+        {
+          "date": "2011-04-10",
+          "treated": 0.0,
+          "control": 1713.53,
+          "post": 1
+        },
+        {
+          "date": "2011-04-11",
+          "treated": 10.5,
+          "control": 3386.99,
+          "post": 1
+        },
+        {
+          "date": "2011-04-12",
+          "treated": 15.0,
+          "control": 3991.05,
+          "post": 1
+        },
+        {
+          "date": "2011-04-13",
+          "treated": 0.0,
+          "control": 3405.77,
+          "post": 1
+        },
+        {
+          "date": "2011-04-14",
+          "treated": 790.74,
+          "control": 5568.63,
+          "post": 1
+        },
+        {
+          "date": "2011-04-15",
+          "treated": 24.94,
+          "control": 4769.28,
+          "post": 1
+        }
+      ],
+      "sufficient_data": true,
+      "pre_mean_daily_revenue": 230.43,
+      "during_mean_daily_revenue": 113.57,
+      "observed_uplift_pct": -50.7,
+      "difference_mean_daily": -116.86,
+      "difference_ci95": [
+        -364.06,
+        130.34
+      ],
+      "welch_p_value": 0.3362,
+      "observed_incremental_revenue": -1636.09,
+      "naive_roi_pct": -114.5,
+      "did_estimate_daily": 145.59,
+      "did_ci95": [
+        -1104.68,
+        1395.86
+      ],
+      "did_p_value": 0.8195,
+      "control_definition": "Home Decor in all region groups except Western Europe"
+    },
+    {
+      "campaign_id": 10,
+      "campaign_name": "Campaign 10",
+      "channel": "Social Media",
+      "campaign_type": "Awareness",
+      "start_date": "2011-04-30",
+      "end_date": "2011-05-28",
+      "duration_days": 29,
+      "budget": 11100.0,
+      "target_region_group": "Northern Europe",
+      "target_category": "Garden & Outdoor",
+      "pre_period": {
+        "start": "2011-04-01",
+        "end": "2011-04-29"
+      },
+      "attributed_lines": 3,
+      "orders": 2,
+      "units": 16,
+      "revenue": 48.2,
+      "aov": 24.1,
+      "trading_days_pre": 21,
+      "trading_days_during": 23,
+      "active_days_pre": 1,
+      "active_days_during": 2,
+      "daily": [
+        {
+          "date": "2011-04-01",
+          "treated": 0.0,
+          "control": 909.9,
+          "post": 0
+        },
+        {
+          "date": "2011-04-03",
+          "treated": 0.0,
+          "control": 158.25,
+          "post": 0
+        },
+        {
+          "date": "2011-04-04",
+          "treated": 0.0,
+          "control": 580.56,
+          "post": 0
+        },
+        {
+          "date": "2011-04-05",
+          "treated": 0.0,
+          "control": 1541.47,
+          "post": 0
+        },
+        {
+          "date": "2011-04-06",
+          "treated": 0.0,
+          "control": 624.15,
+          "post": 0
+        },
+        {
+          "date": "2011-04-07",
+          "treated": 0.0,
+          "control": 578.18,
+          "post": 0
+        },
+        {
+          "date": "2011-04-08",
+          "treated": 0.0,
+          "control": 1000.76,
+          "post": 0
+        },
+        {
+          "date": "2011-04-10",
+          "treated": 0.0,
+          "control": 304.58,
+          "post": 0
+        },
+        {
+          "date": "2011-04-11",
+          "treated": 0.0,
+          "control": 252.53,
+          "post": 0
+        },
+        {
+          "date": "2011-04-12",
+          "treated": 0.0,
+          "control": 789.32,
+          "post": 0
+        },
+        {
+          "date": "2011-04-13",
+          "treated": 0.0,
+          "control": 749.39,
+          "post": 0
+        },
+        {
+          "date": "2011-04-14",
+          "treated": 0.0,
+          "control": 1568.8,
+          "post": 0
+        },
+        {
+          "date": "2011-04-15",
+          "treated": 30.85,
+          "control": 1532.51,
+          "post": 0
+        },
+        {
+          "date": "2011-04-17",
+          "treated": 0.0,
+          "control": 574.31,
+          "post": 0
+        },
+        {
+          "date": "2011-04-18",
+          "treated": 0.0,
+          "control": 852.27,
+          "post": 0
+        },
+        {
+          "date": "2011-04-19",
+          "treated": 0.0,
+          "control": 1105.02,
+          "post": 0
+        },
+        {
+          "date": "2011-04-20",
+          "treated": 0.0,
+          "control": 2216.36,
+          "post": 0
+        },
+        {
+          "date": "2011-04-21",
+          "treated": 0.0,
+          "control": 1502.98,
+          "post": 0
+        },
+        {
+          "date": "2011-04-26",
+          "treated": 0.0,
+          "control": 774.11,
+          "post": 0
+        },
+        {
+          "date": "2011-04-27",
+          "treated": 0.0,
+          "control": 937.01,
+          "post": 0
+        },
+        {
+          "date": "2011-04-28",
+          "treated": 0.0,
+          "control": 1016.13,
+          "post": 0
+        },
+        {
+          "date": "2011-05-01",
+          "treated": 0.0,
+          "control": 91.49,
+          "post": 1
+        },
+        {
+          "date": "2011-05-03",
+          "treated": 0.0,
+          "control": 978.71,
+          "post": 1
+        },
+        {
+          "date": "2011-05-04",
+          "treated": 0.0,
+          "control": 994.79,
+          "post": 1
+        },
+        {
+          "date": "2011-05-05",
+          "treated": 12.5,
+          "control": 743.31,
+          "post": 1
+        },
+        {
+          "date": "2011-05-06",
+          "treated": 0.0,
+          "control": 2110.78,
+          "post": 1
+        },
+        {
+          "date": "2011-05-08",
+          "treated": 0.0,
+          "control": 727.96,
+          "post": 1
+        },
+        {
+          "date": "2011-05-09",
+          "treated": 0.0,
+          "control": 1599.51,
+          "post": 1
+        },
+        {
+          "date": "2011-05-10",
+          "treated": 0.0,
+          "control": 1311.26,
+          "post": 1
+        },
+        {
+          "date": "2011-05-11",
+          "treated": 0.0,
+          "control": 1117.45,
+          "post": 1
+        },
+        {
+          "date": "2011-05-12",
+          "treated": 0.0,
+          "control": 3786.05,
+          "post": 1
+        },
+        {
+          "date": "2011-05-13",
+          "treated": 0.0,
+          "control": 622.75,
+          "post": 1
+        },
+        {
+          "date": "2011-05-15",
+          "treated": 0.0,
+          "control": 558.19,
+          "post": 1
+        },
+        {
+          "date": "2011-05-16",
+          "treated": 0.0,
+          "control": 764.37,
+          "post": 1
+        },
+        {
+          "date": "2011-05-17",
+          "treated": 0.0,
+          "control": 1475.01,
+          "post": 1
+        },
+        {
+          "date": "2011-05-18",
+          "treated": 0.0,
+          "control": 1219.82,
+          "post": 1
+        },
+        {
+          "date": "2011-05-19",
+          "treated": 0.0,
+          "control": 902.54,
+          "post": 1
+        },
+        {
+          "date": "2011-05-20",
+          "treated": 0.0,
+          "control": 687.57,
+          "post": 1
+        },
+        {
+          "date": "2011-05-22",
+          "treated": 0.0,
+          "control": 693.6,
+          "post": 1
+        },
+        {
+          "date": "2011-05-23",
+          "treated": 0.0,
+          "control": 962.16,
+          "post": 1
+        },
+        {
+          "date": "2011-05-24",
+          "treated": 0.0,
+          "control": 1074.95,
+          "post": 1
+        },
+        {
+          "date": "2011-05-25",
+          "treated": 35.7,
+          "control": 464.52,
+          "post": 1
+        },
+        {
+          "date": "2011-05-26",
+          "treated": 0.0,
+          "control": 756.26,
+          "post": 1
+        },
+        {
+          "date": "2011-05-27",
+          "treated": 0.0,
+          "control": 663.17,
+          "post": 1
+        }
+      ],
+      "sufficient_data": false,
+      "note": "Fewer than 5 days with sales in the pre or during window; no statistics computed."
+    },
+    {
+      "campaign_id": 11,
+      "campaign_name": "Campaign 11",
+      "channel": "Catalogue",
+      "campaign_type": "Awareness",
+      "start_date": "2011-10-10",
+      "end_date": "2011-10-26",
+      "duration_days": 17,
+      "budget": 11100.0,
+      "target_region_group": "United Kingdom",
+      "target_category": "Bags & Storage",
+      "pre_period": {
+        "start": "2011-09-23",
+        "end": "2011-10-09"
+      },
+      "attributed_lines": 5912,
+      "orders": 762,
+      "units": 51625,
+      "revenue": 102448.49,
+      "aov": 134.45,
+      "trading_days_pre": 14,
+      "trading_days_during": 15,
+      "active_days_pre": 14,
+      "active_days_during": 15,
+      "daily": [
+        {
+          "date": "2011-09-23",
+          "treated": 7977.47,
+          "control": 1629.2,
+          "post": 0
+        },
+        {
+          "date": "2011-09-25",
+          "treated": 6076.0,
+          "control": 567.63,
+          "post": 0
+        },
+        {
+          "date": "2011-09-26",
+          "treated": 5631.68,
+          "control": 178.27,
+          "post": 0
+        },
+        {
+          "date": "2011-09-27",
+          "treated": 9147.63,
+          "control": 456.6,
+          "post": 0
+        },
+        {
+          "date": "2011-09-28",
+          "treated": 8645.17,
+          "control": 1735.99,
+          "post": 0
+        },
+        {
+          "date": "2011-09-29",
+          "treated": 10432.65,
+          "control": 1221.55,
+          "post": 0
+        },
+        {
+          "date": "2011-09-30",
+          "treated": 5961.73,
+          "control": 2324.29,
+          "post": 0
+        },
+        {
+          "date": "2011-10-02",
+          "treated": 1429.28,
+          "control": 0.0,
+          "post": 0
+        },
+        {
+          "date": "2011-10-03",
+          "treated": 6880.71,
+          "control": 168.07,
+          "post": 0
+        },
+        {
+          "date": "2011-10-04",
+          "treated": 10548.84,
+          "control": 223.99,
+          "post": 0
+        },
+        {
+          "date": "2011-10-05",
+          "treated": 11242.35,
+          "control": 5330.86,
+          "post": 0
+        },
+        {
+          "date": "2011-10-06",
+          "treated": 18839.37,
+          "control": 2967.69,
+          "post": 0
+        },
+        {
+          "date": "2011-10-07",
+          "treated": 13238.61,
+          "control": 2112.54,
+          "post": 0
+        },
+        {
+          "date": "2011-10-09",
+          "treated": 1982.76,
+          "control": 0.0,
+          "post": 0
+        },
+        {
+          "date": "2011-10-10",
+          "treated": 9077.47,
+          "control": 948.84,
+          "post": 1
+        },
+        {
+          "date": "2011-10-11",
+          "treated": 11318.78,
+          "control": 2651.45,
+          "post": 1
+        },
+        {
+          "date": "2011-10-12",
+          "treated": 4627.63,
+          "control": 1836.56,
+          "post": 1
+        },
+        {
+          "date": "2011-10-13",
+          "treated": 6032.09,
+          "control": 3099.84,
+          "post": 1
+        },
+        {
+          "date": "2011-10-14",
+          "treated": 6291.12,
+          "control": 2361.84,
+          "post": 1
+        },
+        {
+          "date": "2011-10-16",
+          "treated": 2829.09,
+          "control": 0.0,
+          "post": 1
+        },
+        {
+          "date": "2011-10-17",
+          "treated": 8381.12,
+          "control": 4063.86,
+          "post": 1
+        },
+        {
+          "date": "2011-10-18",
+          "treated": 8223.09,
+          "control": 1919.31,
+          "post": 1
+        },
+        {
+          "date": "2011-10-19",
+          "treated": 4971.31,
+          "control": 1081.76,
+          "post": 1
+        },
+        {
+          "date": "2011-10-20",
+          "treated": 5410.48,
+          "control": 6990.99,
+          "post": 1
+        },
+        {
+          "date": "2011-10-21",
+          "treated": 8253.87,
+          "control": 1705.59,
+          "post": 1
+        },
+        {
+          "date": "2011-10-23",
+          "treated": 2164.44,
+          "control": 0.0,
+          "post": 1
+        },
+        {
+          "date": "2011-10-24",
+          "treated": 9654.85,
+          "control": 513.5,
+          "post": 1
+        },
+        {
+          "date": "2011-10-25",
+          "treated": 8035.66,
+          "control": 828.74,
+          "post": 1
+        },
+        {
+          "date": "2011-10-26",
+          "treated": 7177.49,
+          "control": 551.98,
+          "post": 1
+        }
+      ],
+      "sufficient_data": true,
+      "pre_mean_daily_revenue": 8431.02,
+      "during_mean_daily_revenue": 6829.9,
+      "observed_uplift_pct": -19.0,
+      "difference_mean_daily": -1601.12,
+      "difference_ci95": [
+        -4446.62,
+        1244.38
+      ],
+      "welch_p_value": 0.2545,
+      "observed_incremental_revenue": -24016.78,
+      "naive_roi_pct": -316.4,
+      "did_estimate_daily": -2153.54,
+      "did_ci95": [
+        -5089.6,
+        782.51
+      ],
+      "did_p_value": 0.1505,
+      "control_definition": "Bags & Storage in all region groups except United Kingdom"
+    },
+    {
+      "campaign_id": 12,
+      "campaign_name": "Campaign 12",
+      "channel": "Social Media",
+      "campaign_type": "Price Promotion",
+      "start_date": "2011-10-24",
+      "end_date": "2011-11-10",
+      "duration_days": 18,
+      "budget": 13700.0,
+      "target_region_group": "Rest of World",
+      "target_category": "Toys & Kids",
+      "pre_period": {
+        "start": "2011-10-06",
+        "end": "2011-10-23"
+      },
+      "attributed_lines": 0,
+      "orders": 0,
+      "units": 0,
+      "revenue": 0.0,
+      "aov": null,
+      "trading_days_pre": 15,
+      "trading_days_during": 16,
+      "active_days_pre": 5,
+      "active_days_during": 0,
+      "daily": [
+        {
+          "date": "2011-10-06",
+          "treated": 29.08,
+          "control": 2039.82,
+          "post": 0
+        },
+        {
+          "date": "2011-10-07",
+          "treated": 0.0,
+          "control": 5199.69,
+          "post": 0
+        },
+        {
+          "date": "2011-10-09",
+          "treated": 0.0,
+          "control": 175.23,
+          "post": 0
+        },
+        {
+          "date": "2011-10-10",
+          "treated": 67.2,
+          "control": 1130.05,
+          "post": 0
+        },
+        {
+          "date": "2011-10-11",
+          "treated": 0.0,
+          "control": 2537.99,
+          "post": 0
+        },
+        {
+          "date": "2011-10-12",
+          "treated": 0.0,
+          "control": 1500.24,
+          "post": 0
+        },
+        {
+          "date": "2011-10-13",
+          "treated": 123.28,
+          "control": 1040.38,
+          "post": 0
+        },
+        {
+          "date": "2011-10-14",
+          "treated": 88.8,
+          "control": 926.8,
+          "post": 0
+        },
+        {
+          "date": "2011-10-16",
+          "treated": 0.0,
+          "control": 321.09,
+          "post": 0
+        },
+        {
+          "date": "2011-10-17",
+          "treated": 0.0,
+          "control": 696.76,
+          "post": 0
+        },
+        {
+          "date": "2011-10-18",
+          "treated": 12.48,
+          "control": 868.81,
+          "post": 0
+        },
+        {
+          "date": "2011-10-19",
+          "treated": 0.0,
+          "control": 459.74,
+          "post": 0
+        },
+        {
+          "date": "2011-10-20",
+          "treated": 0.0,
+          "control": 2484.89,
+          "post": 0
+        },
+        {
+          "date": "2011-10-21",
+          "treated": 0.0,
+          "control": 783.05,
+          "post": 0
+        },
+        {
+          "date": "2011-10-23",
+          "treated": 0.0,
+          "control": 273.53,
+          "post": 0
+        },
+        {
+          "date": "2011-10-24",
+          "treated": 0.0,
+          "control": 943.31,
+          "post": 1
+        },
+        {
+          "date": "2011-10-25",
+          "treated": 0.0,
+          "control": 698.52,
+          "post": 1
+        },
+        {
+          "date": "2011-10-26",
+          "treated": 0.0,
+          "control": 511.79,
+          "post": 1
+        },
+        {
+          "date": "2011-10-27",
+          "treated": 0.0,
+          "control": 1131.09,
+          "post": 1
+        },
+        {
+          "date": "2011-10-28",
+          "treated": 0.0,
+          "control": 1069.18,
+          "post": 1
+        },
+        {
+          "date": "2011-10-30",
+          "treated": 0.0,
+          "control": 448.0,
+          "post": 1
+        },
+        {
+          "date": "2011-10-31",
+          "treated": 0.0,
+          "control": 821.95,
+          "post": 1
+        },
+        {
+          "date": "2011-11-01",
+          "treated": 0.0,
+          "control": 435.07,
+          "post": 1
+        },
+        {
+          "date": "2011-11-02",
+          "treated": 0.0,
+          "control": 681.6,
+          "post": 1
+        },
+        {
+          "date": "2011-11-03",
+          "treated": 0.0,
+          "control": 624.31,
+          "post": 1
+        },
+        {
+          "date": "2011-11-04",
+          "treated": 0.0,
+          "control": 1764.82,
+          "post": 1
+        },
+        {
+          "date": "2011-11-06",
+          "treated": 0.0,
+          "control": 609.14,
+          "post": 1
+        },
+        {
+          "date": "2011-11-07",
+          "treated": 0.0,
+          "control": 1806.47,
+          "post": 1
+        },
+        {
+          "date": "2011-11-08",
+          "treated": 0.0,
+          "control": 1335.16,
+          "post": 1
+        },
+        {
+          "date": "2011-11-09",
+          "treated": 0.0,
+          "control": 831.71,
+          "post": 1
+        },
+        {
+          "date": "2011-11-10",
+          "treated": 0.0,
+          "control": 2932.26,
+          "post": 1
+        }
+      ],
+      "sufficient_data": false,
+      "note": "Fewer than 5 days with sales in the pre or during window; no statistics computed."
+    }
+  ]
+}

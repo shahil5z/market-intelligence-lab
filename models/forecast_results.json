@@ -1,0 +1,3414 @@
+{
+  "All regions": {
+    "series": "All regions",
+    "target": "units per week",
+    "n_weeks": 105,
+    "periods": {
+      "train": {
+        "start": "2009-11-30",
+        "end": "2011-06-13",
+        "weeks": 81
+      },
+      "validation": {
+        "start": "2011-06-20",
+        "end": "2011-09-05",
+        "weeks": 12
+      },
+      "test": {
+        "start": "2011-09-12",
+        "end": "2011-11-28",
+        "weeks": 12
+      }
+    },
+    "horizon_weeks": 8,
+    "features": [
+      "lag_1",
+      "lag_2",
+      "lag_3",
+      "lag_4",
+      "roll_mean_4",
+      "week_sin",
+      "week_cos",
+      "holiday_days",
+      "is_pre_christmas"
+    ],
+    "validation_metrics": {
+      "Naive": {
+        "mae": 12496.5,
+        "rmse": 16655.835974216363,
+        "mape": 13.604878973462132,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Seasonal Naive": {
+        "mae": 24541.25,
+        "rmse": 32117.682008254167,
+        "mape": 25.453288070532963,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Linear Regression": {
+        "mae": 15936.077462615385,
+        "rmse": 18348.594747070958,
+        "mape": 18.34952276685846,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Random Forest": {
+        "mae": 10566.503252545293,
+        "rmse": 13151.366842907653,
+        "mape": 11.840092845783529,
+        "mape_excluded_zero_weeks": 0
+      },
+      "XGBoost": {
+        "mae": 16911.370442708332,
+        "rmse": 20203.431726222872,
+        "mape": 18.32868195762361,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Exponential Smoothing": {
+        "mae": 10457.823540926142,
+        "rmse": 12963.929731347738,
+        "mape": 11.39040138839687,
+        "mape_excluded_zero_weeks": 0
+      }
+    },
+    "test_metrics": {
+      "Naive": {
+        "mae": 26578.333333333332,
+        "rmse": 33097.64770090668,
+        "mape": 18.345364600137202,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Seasonal Naive": {
+        "mae": 26775.833333333332,
+        "rmse": 41174.39163687384,
+        "mape": 20.118531832374742,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Linear Regression": {
+        "mae": 25282.59176020895,
+        "rmse": 29482.54487098856,
+        "mape": 15.75862875582639,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Random Forest": {
+        "mae": 24543.21544293134,
+        "rmse": 28803.295092601293,
+        "mape": 16.54685152200649,
+        "mape_excluded_zero_weeks": 0
+      },
+      "XGBoost": {
+        "mae": 24932.735677083332,
+        "rmse": 32914.89028869066,
+        "mape": 17.566822541479677,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Exponential Smoothing": {
+        "mae": 24037.925057583798,
+        "rmse": 28702.925142786964,
+        "mape": 15.481437008278448,
+        "mape_excluded_zero_weeks": 0
+      }
+    },
+    "selected_model": "Exponential Smoothing",
+    "lowest_test_mae_model": "Exponential Smoothing",
+    "history": [
+      {
+        "week_start": "2009-11-30",
+        "actual": 144919.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2009-12-07",
+        "actual": 116246.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2009-12-14",
+        "actual": 136238.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2009-12-21",
+        "actual": 27786.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2009-12-28",
+        "actual": 0.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-01-04",
+        "actual": 96054.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-01-11",
+        "actual": 76111.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-01-18",
+        "actual": 135256.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-01-25",
+        "actual": 82605.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-02-01",
+        "actual": 64894.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-02-08",
+        "actual": 50764.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-02-15",
+        "actual": 156955.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-02-22",
+        "actual": 89854.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-03-01",
+        "actual": 101350.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-03-08",
+        "actual": 75924.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-03-15",
+        "actual": 104714.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-03-22",
+        "actual": 133890.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-03-29",
+        "actual": 75189.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-04-05",
+        "actual": 83805.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-04-12",
+        "actual": 82072.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-04-19",
+        "actual": 86137.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-04-26",
+        "actual": 103002.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-05-03",
+        "actual": 92765.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-05-10",
+        "actual": 107589.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-05-17",
+        "actual": 85401.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-05-24",
+        "actual": 103387.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-05-31",
+        "actual": 59884.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-06-07",
+        "actual": 122795.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-06-14",
+        "actual": 81759.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-06-21",
+        "actual": 65337.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-06-28",
+        "actual": 106881.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-07-05",
+        "actual": 74850.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-07-12",
+        "actual": 83595.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-07-19",
+        "actual": 82519.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-07-26",
+        "actual": 74522.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-08-02",
+        "actual": 74759.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-08-09",
+        "actual": 182127.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-08-16",
+        "actual": 107663.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-08-23",
+        "actual": 83551.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-08-30",
+        "actual": 87189.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-09-06",
+        "actual": 73953.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-09-13",
+        "actual": 101110.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-09-20",
+        "actual": 139384.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-09-27",
+        "actual": 237160.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-10-04",
+        "actual": 164070.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-10-11",
+        "actual": 172857.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-10-18",
+        "actual": 127249.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-10-25",
+        "actual": 112783.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-11-01",
+        "actual": 162837.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-11-08",
+        "actual": 177738.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-11-15",
+        "actual": 170244.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-11-22",
+        "actual": 146888.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-11-29",
+        "actual": 156521.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-12-06",
+        "actual": 121081.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-12-13",
+        "actual": 106800.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-12-20",
+        "actual": 39273.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-12-27",
+        "actual": 0.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-01-03",
+        "actual": 76739.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-01-10",
+        "actual": 89207.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-01-17",
+        "actual": 70349.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-01-24",
+        "actual": 62847.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-01-31",
+        "actual": 69283.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-02-07",
+        "actual": 51441.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-02-14",
+        "actual": 81070.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-02-21",
+        "actual": 84371.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-02-28",
+        "actual": 69204.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-03-07",
+        "actual": 69142.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-03-14",
+        "actual": 87407.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-03-21",
+        "actual": 77815.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-03-28",
+        "actual": 106513.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-04-04",
+        "actual": 67768.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-04-11",
+        "actual": 87059.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-04-18",
+        "actual": 80783.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-04-25",
+        "actual": 51460.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-05-02",
+        "actual": 77745.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-05-09",
+        "actual": 109175.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-05-16",
+        "actual": 107680.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-05-23",
+        "actual": 83730.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-05-30",
+        "actual": 58272.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-06-06",
+        "actual": 97722.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-06-13",
+        "actual": 103279.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-06-20",
+        "actual": 74840.0,
+        "split": "validation",
+        "Naive": 103279.0,
+        "Seasonal Naive": 65337.0,
+        "Linear Regression": 108319.5,
+        "Random Forest": 87885.7,
+        "XGBoost": 88940.3,
+        "Exponential Smoothing": 91798.0
+      },
+      {
+        "week_start": "2011-06-27",
+        "actual": 76356.0,
+        "split": "validation",
+        "Naive": 74840.0,
+        "Seasonal Naive": 106881.0,
+        "Linear Regression": 100289.7,
+        "Random Forest": 94989.1,
+        "XGBoost": 100681.5,
+        "Exponential Smoothing": 85841.2
+      },
+      {
+        "week_start": "2011-07-04",
+        "actual": 92450.0,
+        "split": "validation",
+        "Naive": 76356.0,
+        "Seasonal Naive": 74850.0,
+        "Linear Regression": 101175.1,
+        "Random Forest": 93081.5,
+        "XGBoost": 94148.4,
+        "Exponential Smoothing": 82387.7
+      },
+      {
+        "week_start": "2011-07-11",
+        "actual": 80803.0,
+        "split": "validation",
+        "Naive": 92450.0,
+        "Seasonal Naive": 83595.0,
+        "Linear Regression": 108894.7,
+        "Random Forest": 86277.4,
+        "XGBoost": 80438.9,
+        "Exponential Smoothing": 86080.0
+      },
+      {
+        "week_start": "2011-07-18",
+        "actual": 109686.0,
+        "split": "validation",
+        "Naive": 80803.0,
+        "Seasonal Naive": 82519.0,
+        "Linear Regression": 107816.7,
+        "Random Forest": 86863.1,
+        "XGBoost": 82646.6,
+        "Exponential Smoothing": 84138.0
+      },
+      {
+        "week_start": "2011-07-25",
+        "actual": 104554.0,
+        "split": "validation",
+        "Naive": 109686.0,
+        "Seasonal Naive": 74522.0,
+        "Linear Regression": 115193.3,
+        "Random Forest": 89265.5,
+        "XGBoost": 85043.4,
+        "Exponential Smoothing": 93036.1
+      },
+      {
+        "week_start": "2011-08-01",
+        "actual": 102875.0,
+        "split": "validation",
+        "Naive": 104554.0,
+        "Seasonal Naive": 74759.0,
+        "Linear Regression": 117286.6,
+        "Random Forest": 100411.6,
+        "XGBoost": 86230.0,
+        "Exponential Smoothing": 97094.9
+      },
+      {
+        "week_start": "2011-08-08",
+        "actual": 98333.0,
+        "split": "validation",
+        "Naive": 102875.0,
+        "Seasonal Naive": 182127.0,
+        "Linear Regression": 115863.2,
+        "Random Forest": 103487.7,
+        "XGBoost": 108146.2,
+        "Exponential Smoothing": 99145.5
+      },
+      {
+        "week_start": "2011-08-15",
+        "actual": 99703.0,
+        "split": "validation",
+        "Naive": 98333.0,
+        "Seasonal Naive": 107663.0,
+        "Linear Regression": 116176.5,
+        "Random Forest": 107742.5,
+        "XGBoost": 101954.1,
+        "Exponential Smoothing": 98856.5
+      },
+      {
+        "week_start": "2011-08-22",
+        "actual": 96955.0,
+        "split": "validation",
+        "Naive": 99703.0,
+        "Seasonal Naive": 83551.0,
+        "Linear Regression": 117201.7,
+        "Random Forest": 106764.5,
+        "XGBoost": 126450.9,
+        "Exponential Smoothing": 99156.1
+      },
+      {
+        "week_start": "2011-08-29",
+        "actual": 79413.0,
+        "split": "validation",
+        "Naive": 96955.0,
+        "Seasonal Naive": 87189.0,
+        "Linear Regression": 91952.8,
+        "Random Forest": 103447.7,
+        "XGBoost": 114588.6,
+        "Exponential Smoothing": 98382.9
+      },
+      {
+        "week_start": "2011-09-05",
+        "actual": 109779.0,
+        "split": "validation",
+        "Naive": 79413.0,
+        "Seasonal Naive": 73953.0,
+        "Linear Regression": 113071.6,
+        "Random Forest": 108379.0,
+        "XGBoost": 132296.5,
+        "Exponential Smoothing": 91743.7
+      },
+      {
+        "week_start": "2011-09-12",
+        "actual": 120748.0,
+        "split": "test",
+        "Naive": 109779.0,
+        "Seasonal Naive": 101110.0,
+        "Linear Regression": 115436.5,
+        "Random Forest": 110423.4,
+        "XGBoost": 124032.2,
+        "Exponential Smoothing": 98031.8
+      },
+      {
+        "week_start": "2011-09-19",
+        "actual": 169377.0,
+        "split": "test",
+        "Naive": 120748.0,
+        "Seasonal Naive": 139384.0,
+        "Linear Regression": 120698.6,
+        "Random Forest": 123916.9,
+        "XGBoost": 145031.6,
+        "Exponential Smoothing": 105961.0
+      },
+      {
+        "week_start": "2011-09-26",
+        "actual": 120094.0,
+        "split": "test",
+        "Naive": 169377.0,
+        "Seasonal Naive": 237160.0,
+        "Linear Regression": 132725.2,
+        "Random Forest": 158474.9,
+        "XGBoost": 202670.8,
+        "Exponential Smoothing": 129391.5
+      },
+      {
+        "week_start": "2011-10-03",
+        "actual": 170875.0,
+        "split": "test",
+        "Naive": 120094.0,
+        "Seasonal Naive": 164070.0,
+        "Linear Regression": 121161.0,
+        "Random Forest": 131192.2,
+        "XGBoost": 130699.0,
+        "Exponential Smoothing": 126257.2
+      },
+      {
+        "week_start": "2011-10-10",
+        "actual": 117536.0,
+        "split": "test",
+        "Naive": 170875.0,
+        "Seasonal Naive": 172857.0,
+        "Linear Regression": 130505.8,
+        "Random Forest": 164862.2,
+        "XGBoost": 164995.1,
+        "Exponential Smoothing": 143118.0
+      },
+      {
+        "week_start": "2011-10-17",
+        "actual": 152266.0,
+        "split": "test",
+        "Naive": 117536.0,
+        "Seasonal Naive": 127249.0,
+        "Linear Regression": 120731.1,
+        "Random Forest": 133725.0,
+        "XGBoost": 138886.9,
+        "Exponential Smoothing": 133205.7
+      },
+      {
+        "week_start": "2011-10-24",
+        "actual": 149053.0,
+        "split": "test",
+        "Naive": 152266.0,
+        "Seasonal Naive": 112783.0,
+        "Linear Regression": 124177.4,
+        "Random Forest": 158150.1,
+        "XGBoost": 161806.6,
+        "Exponential Smoothing": 140530.8
+      },
+      {
+        "week_start": "2011-10-31",
+        "actual": 158183.0,
+        "split": "test",
+        "Naive": 149053.0,
+        "Seasonal Naive": 162837.0,
+        "Linear Regression": 142581.9,
+        "Random Forest": 158031.4,
+        "XGBoost": 170447.2,
+        "Exponential Smoothing": 143772.0
+      },
+      {
+        "week_start": "2011-11-07",
+        "actual": 182194.0,
+        "split": "test",
+        "Naive": 158183.0,
+        "Seasonal Naive": 177738.0,
+        "Linear Regression": 141543.9,
+        "Random Forest": 155268.7,
+        "XGBoost": 161438.7,
+        "Exponential Smoothing": 148954.1
+      },
+      {
+        "week_start": "2011-11-14",
+        "actual": 184700.0,
+        "split": "test",
+        "Naive": 182194.0,
+        "Seasonal Naive": 170244.0,
+        "Linear Regression": 148101.4,
+        "Random Forest": 153835.3,
+        "XGBoost": 159265.8,
+        "Exponential Smoothing": 161664.7
+      },
+      {
+        "week_start": "2011-11-21",
+        "actual": 154350.0,
+        "split": "test",
+        "Naive": 184700.0,
+        "Seasonal Naive": 146888.0,
+        "Linear Regression": 148138.4,
+        "Random Forest": 142076.4,
+        "XGBoost": 145095.9,
+        "Exponential Smoothing": 170895.0
+      },
+      {
+        "week_start": "2011-11-28",
+        "actual": 156349.0,
+        "split": "test",
+        "Naive": 154350.0,
+        "Seasonal Naive": 156521.0,
+        "Linear Regression": 137734.6,
+        "Random Forest": 140858.3,
+        "XGBoost": 148838.2,
+        "Exponential Smoothing": 164360.9
+      }
+    ],
+    "future": [
+      {
+        "week_start": "2011-12-05",
+        "forecast": 161315.1,
+        "step": 1,
+        "lower": 110171.2,
+        "upper": 212459.0
+      },
+      {
+        "week_start": "2011-12-12",
+        "forecast": 161314.9,
+        "step": 2,
+        "lower": 88986.4,
+        "upper": 233643.4
+      },
+      {
+        "week_start": "2011-12-19",
+        "forecast": 161314.8,
+        "step": 3,
+        "lower": 72730.9,
+        "upper": 249898.7
+      },
+      {
+        "week_start": "2011-12-26",
+        "forecast": 161315.0,
+        "step": 4,
+        "lower": 59027.1,
+        "upper": 263602.9
+      },
+      {
+        "week_start": "2012-01-02",
+        "forecast": 161315.0,
+        "step": 5,
+        "lower": 46953.7,
+        "upper": 275676.3
+      },
+      {
+        "week_start": "2012-01-09",
+        "forecast": 161315.0,
+        "step": 6,
+        "lower": 36038.4,
+        "upper": 286591.6
+      },
+      {
+        "week_start": "2012-01-16",
+        "forecast": 161315.0,
+        "step": 7,
+        "lower": 26000.8,
+        "upper": 296629.2
+      },
+      {
+        "week_start": "2012-01-23",
+        "forecast": 161315.0,
+        "step": 8,
+        "lower": 16658.1,
+        "upper": 305971.9
+      }
+    ],
+    "rf_feature_importance": {
+      "lag_1": 0.2688,
+      "week_sin": 0.1753,
+      "roll_mean_4": 0.1637,
+      "holiday_days": 0.1091,
+      "week_cos": 0.0936,
+      "lag_2": 0.0644,
+      "lag_4": 0.0636,
+      "lag_3": 0.0539,
+      "is_pre_christmas": 0.0076
+    },
+    "interval_note": "Approximate 95% band = forecast +/- 1.96 x test residual SD x sqrt(step). Not a calibrated interval."
+  },
+  "United Kingdom": {
+    "series": "United Kingdom",
+    "target": "units per week",
+    "n_weeks": 105,
+    "periods": {
+      "train": {
+        "start": "2009-11-30",
+        "end": "2011-06-13",
+        "weeks": 81
+      },
+      "validation": {
+        "start": "2011-06-20",
+        "end": "2011-09-05",
+        "weeks": 12
+      },
+      "test": {
+        "start": "2011-09-12",
+        "end": "2011-11-28",
+        "weeks": 12
+      }
+    },
+    "horizon_weeks": 8,
+    "features": [
+      "lag_1",
+      "lag_2",
+      "lag_3",
+      "lag_4",
+      "roll_mean_4",
+      "week_sin",
+      "week_cos",
+      "holiday_days",
+      "is_pre_christmas"
+    ],
+    "validation_metrics": {
+      "Naive": {
+        "mae": 13866.916666666666,
+        "rmse": 15868.742921752393,
+        "mape": 18.1881789270998,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Seasonal Naive": {
+        "mae": 14180.166666666666,
+        "rmse": 16569.189323359587,
+        "mape": 18.45811006384411,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Linear Regression": {
+        "mae": 12703.594192388997,
+        "rmse": 15214.390366112542,
+        "mape": 18.41804391089487,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Random Forest": {
+        "mae": 9214.512515873022,
+        "rmse": 10341.454768414385,
+        "mape": 12.64651751815698,
+        "mape_excluded_zero_weeks": 0
+      },
+      "XGBoost": {
+        "mae": 9892.387369791666,
+        "rmse": 11314.576188375124,
+        "mape": 13.199084084835214,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Exponential Smoothing": {
+        "mae": 10943.268796942473,
+        "rmse": 13042.565413855544,
+        "mape": 14.513563462418533,
+        "mape_excluded_zero_weeks": 0
+      }
+    },
+    "test_metrics": {
+      "Naive": {
+        "mae": 21405.5,
+        "rmse": 25297.761455643988,
+        "mape": 17.58435129846339,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Seasonal Naive": {
+        "mae": 22003.666666666668,
+        "rmse": 34736.100800655986,
+        "mape": 19.309485439568853,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Linear Regression": {
+        "mae": 20939.67320083146,
+        "rmse": 24412.220150202887,
+        "mape": 15.763683174085399,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Random Forest": {
+        "mae": 22334.294730008405,
+        "rmse": 25397.412228608882,
+        "mape": 17.9630237258464,
+        "mape_excluded_zero_weeks": 0
+      },
+      "XGBoost": {
+        "mae": 25751.629557291668,
+        "rmse": 32118.29917097678,
+        "mape": 21.521130825206676,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Exponential Smoothing": {
+        "mae": 21688.38980159731,
+        "rmse": 24619.727536954,
+        "mape": 17.199600974722305,
+        "mape_excluded_zero_weeks": 0
+      }
+    },
+    "selected_model": "Random Forest",
+    "lowest_test_mae_model": "Linear Regression",
+    "history": [
+      {
+        "week_start": "2009-11-30",
+        "actual": 133934.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2009-12-07",
+        "actual": 110578.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2009-12-14",
+        "actual": 121246.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2009-12-21",
+        "actual": 20451.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2009-12-28",
+        "actual": 0.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-01-04",
+        "actual": 65527.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-01-11",
+        "actual": 71020.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-01-18",
+        "actual": 56278.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-01-25",
+        "actual": 63787.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-02-01",
+        "actual": 54438.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-02-08",
+        "actual": 41751.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-02-15",
+        "actual": 69558.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-02-22",
+        "actual": 76862.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-03-01",
+        "actual": 83504.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-03-08",
+        "actual": 63960.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-03-15",
+        "actual": 81785.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-03-22",
+        "actual": 118466.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-03-29",
+        "actual": 69192.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-04-05",
+        "actual": 69416.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-04-12",
+        "actual": 59742.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-04-19",
+        "actual": 72867.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-04-26",
+        "actual": 93246.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-05-03",
+        "actual": 66135.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-05-10",
+        "actual": 92853.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-05-17",
+        "actual": 76385.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-05-24",
+        "actual": 96335.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-05-31",
+        "actual": 52390.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-06-07",
+        "actual": 115116.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-06-14",
+        "actual": 64213.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-06-21",
+        "actual": 56741.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-06-28",
+        "actual": 83809.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-07-05",
+        "actual": 58587.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-07-12",
+        "actual": 73837.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-07-19",
+        "actual": 73140.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-07-26",
+        "actual": 69746.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-08-02",
+        "actual": 71106.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-08-09",
+        "actual": 78759.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-08-16",
+        "actual": 84028.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-08-23",
+        "actual": 76016.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-08-30",
+        "actual": 70302.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-09-06",
+        "actual": 58983.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-09-13",
+        "actual": 82720.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-09-20",
+        "actual": 113948.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-09-27",
+        "actual": 210767.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-10-04",
+        "actual": 149249.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-10-11",
+        "actual": 134988.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-10-18",
+        "actual": 112806.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-10-25",
+        "actual": 95560.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-11-01",
+        "actual": 137372.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-11-08",
+        "actual": 161707.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-11-15",
+        "actual": 142569.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-11-22",
+        "actual": 135315.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-11-29",
+        "actual": 123980.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-12-06",
+        "actual": 108201.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-12-13",
+        "actual": 95928.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-12-20",
+        "actual": 28392.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-12-27",
+        "actual": 0.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-01-03",
+        "actual": 65828.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-01-10",
+        "actual": 66224.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-01-17",
+        "actual": 49240.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-01-24",
+        "actual": 49107.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-01-31",
+        "actual": 62144.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-02-07",
+        "actual": 44050.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-02-14",
+        "actual": 61602.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-02-21",
+        "actual": 63670.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-02-28",
+        "actual": 50351.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-03-07",
+        "actual": 59228.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-03-14",
+        "actual": 73621.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-03-21",
+        "actual": 68403.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-03-28",
+        "actual": 83643.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-04-04",
+        "actual": 56232.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-04-11",
+        "actual": 80914.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-04-18",
+        "actual": 69883.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-04-25",
+        "actual": 48475.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-05-02",
+        "actual": 68692.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-05-09",
+        "actual": 78261.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-05-16",
+        "actual": 89027.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-05-23",
+        "actual": 71796.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-05-30",
+        "actual": 48135.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-06-06",
+        "actual": 83452.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-06-13",
+        "actual": 72191.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-06-20",
+        "actual": 61117.0,
+        "split": "validation",
+        "Naive": 72191.0,
+        "Seasonal Naive": 56741.0,
+        "Linear Regression": 81817.9,
+        "Random Forest": 74025.5,
+        "XGBoost": 68560.2,
+        "Exponential Smoothing": 72653.3
+      },
+      {
+        "week_start": "2011-06-27",
+        "actual": 58765.0,
+        "split": "validation",
+        "Naive": 61117.0,
+        "Seasonal Naive": 83809.0,
+        "Linear Regression": 78897.5,
+        "Random Forest": 76181.2,
+        "XGBoost": 72202.6,
+        "Exponential Smoothing": 66217.8
+      },
+      {
+        "week_start": "2011-07-04",
+        "actual": 81766.0,
+        "split": "validation",
+        "Naive": 58765.0,
+        "Seasonal Naive": 58587.0,
+        "Linear Regression": 78298.8,
+        "Random Forest": 77440.5,
+        "XGBoost": 74982.7,
+        "Exponential Smoothing": 62149.4
+      },
+      {
+        "week_start": "2011-07-11",
+        "actual": 66828.0,
+        "split": "validation",
+        "Naive": 81766.0,
+        "Seasonal Naive": 73837.0,
+        "Linear Regression": 88929.4,
+        "Random Forest": 77720.5,
+        "XGBoost": 82064.8,
+        "Exponential Smoothing": 72855.4
+      },
+      {
+        "week_start": "2011-07-18",
+        "actual": 91299.0,
+        "split": "validation",
+        "Naive": 66828.0,
+        "Seasonal Naive": 73140.0,
+        "Linear Regression": 83640.4,
+        "Random Forest": 73932.2,
+        "XGBoost": 70838.9,
+        "Exponential Smoothing": 69576.9
+      },
+      {
+        "week_start": "2011-07-25",
+        "actual": 82891.0,
+        "split": "validation",
+        "Naive": 91299.0,
+        "Seasonal Naive": 69746.0,
+        "Linear Regression": 95489.3,
+        "Random Forest": 71357.4,
+        "XGBoost": 71328.8,
+        "Exponential Smoothing": 81879.5
+      },
+      {
+        "week_start": "2011-08-01",
+        "actual": 90318.0,
+        "split": "validation",
+        "Naive": 82891.0,
+        "Seasonal Naive": 71106.0,
+        "Linear Regression": 92465.3,
+        "Random Forest": 86515.6,
+        "XGBoost": 87336.2,
+        "Exponential Smoothing": 82192.5
+      },
+      {
+        "week_start": "2011-08-08",
+        "actual": 67081.0,
+        "split": "validation",
+        "Naive": 90318.0,
+        "Seasonal Naive": 78759.0,
+        "Linear Regression": 96858.9,
+        "Random Forest": 71523.4,
+        "XGBoost": 73910.2,
+        "Exponential Smoothing": 86636.0
+      },
+      {
+        "week_start": "2011-08-15",
+        "actual": 75028.0,
+        "split": "validation",
+        "Naive": 67081.0,
+        "Seasonal Naive": 84028.0,
+        "Linear Regression": 87037.5,
+        "Random Forest": 79816.2,
+        "XGBoost": 68953.8,
+        "Exponential Smoothing": 76075.9
+      },
+      {
+        "week_start": "2011-08-22",
+        "actual": 80016.0,
+        "split": "validation",
+        "Naive": 75028.0,
+        "Seasonal Naive": 76016.0,
+        "Linear Regression": 90663.7,
+        "Random Forest": 72537.3,
+        "XGBoost": 76683.3,
+        "Exponential Smoothing": 75508.1
+      },
+      {
+        "week_start": "2011-08-29",
+        "actual": 65497.0,
+        "split": "validation",
+        "Naive": 80016.0,
+        "Seasonal Naive": 70302.0,
+        "Linear Regression": 73775.8,
+        "Random Forest": 71521.2,
+        "XGBoost": 72102.7,
+        "Exponential Smoothing": 77933.2
+      },
+      {
+        "week_start": "2011-09-05",
+        "actual": 89538.0,
+        "split": "validation",
+        "Naive": 65497.0,
+        "Seasonal Naive": 58983.0,
+        "Linear Regression": 86615.0,
+        "Random Forest": 79942.6,
+        "XGBoost": 71576.3,
+        "Exponential Smoothing": 71257.9
+      },
+      {
+        "week_start": "2011-09-12",
+        "actual": 106910.0,
+        "split": "test",
+        "Naive": 89538.0,
+        "Seasonal Naive": 82720.0,
+        "Linear Regression": 93189.1,
+        "Random Forest": 89990.9,
+        "XGBoost": 80802.7,
+        "Exponential Smoothing": 80996.6
+      },
+      {
+        "week_start": "2011-09-19",
+        "actual": 134760.0,
+        "split": "test",
+        "Naive": 106910.0,
+        "Seasonal Naive": 113948.0,
+        "Linear Regression": 101317.1,
+        "Random Forest": 112107.8,
+        "XGBoost": 109346.1,
+        "Exponential Smoothing": 95044.2
+      },
+      {
+        "week_start": "2011-09-26",
+        "actual": 108425.0,
+        "split": "test",
+        "Naive": 134760.0,
+        "Seasonal Naive": 210767.0,
+        "Linear Regression": 114355.7,
+        "Random Forest": 136202.2,
+        "XGBoost": 179363.2,
+        "Exponential Smoothing": 118375.7
+      },
+      {
+        "week_start": "2011-10-03",
+        "actual": 147862.0,
+        "split": "test",
+        "Naive": 108425.0,
+        "Seasonal Naive": 149249.0,
+        "Linear Regression": 104159.1,
+        "Random Forest": 116631.3,
+        "XGBoost": 122518.7,
+        "Exponential Smoothing": 112466.4
+      },
+      {
+        "week_start": "2011-10-10",
+        "actual": 96489.0,
+        "split": "test",
+        "Naive": 147862.0,
+        "Seasonal Naive": 134988.0,
+        "Linear Regression": 121396.1,
+        "Random Forest": 142356.1,
+        "XGBoost": 152354.6,
+        "Exponential Smoothing": 133562.1
+      },
+      {
+        "week_start": "2011-10-17",
+        "actual": 103481.0,
+        "split": "test",
+        "Naive": 96489.0,
+        "Seasonal Naive": 112806.0,
+        "Linear Regression": 99354.3,
+        "Random Forest": 109721.8,
+        "XGBoost": 102930.9,
+        "Exponential Smoothing": 112594.9
+      },
+      {
+        "week_start": "2011-10-24",
+        "actual": 126787.0,
+        "split": "test",
+        "Naive": 103481.0,
+        "Seasonal Naive": 95560.0,
+        "Linear Regression": 100910.5,
+        "Random Forest": 92769.0,
+        "XGBoost": 98087.6,
+        "Exponential Smoothing": 107642.0
+      },
+      {
+        "week_start": "2011-10-31",
+        "actual": 140733.0,
+        "split": "test",
+        "Naive": 126787.0,
+        "Seasonal Naive": 137372.0,
+        "Linear Regression": 118675.7,
+        "Random Forest": 141924.3,
+        "XGBoost": 158133.3,
+        "Exponential Smoothing": 117914.8
+      },
+      {
+        "week_start": "2011-11-07",
+        "actual": 159601.0,
+        "split": "test",
+        "Naive": 140733.0,
+        "Seasonal Naive": 161707.0,
+        "Linear Regression": 124251.7,
+        "Random Forest": 130938.2,
+        "XGBoost": 142044.3,
+        "Exponential Smoothing": 130273.0
+      },
+      {
+        "week_start": "2011-11-14",
+        "actual": 156683.0,
+        "split": "test",
+        "Naive": 159601.0,
+        "Seasonal Naive": 142569.0,
+        "Linear Regression": 132969.7,
+        "Random Forest": 135120.1,
+        "XGBoost": 136360.8,
+        "Exponential Smoothing": 146917.5
+      },
+      {
+        "week_start": "2011-11-21",
+        "actual": 133560.0,
+        "split": "test",
+        "Naive": 156683.0,
+        "Seasonal Naive": 135315.0,
+        "Linear Regression": 132212.7,
+        "Random Forest": 124603.5,
+        "XGBoost": 132929.8,
+        "Exponential Smoothing": 152635.8
+      },
+      {
+        "week_start": "2011-11-28",
+        "actual": 138906.0,
+        "split": "test",
+        "Naive": 133560.0,
+        "Seasonal Naive": 123980.0,
+        "Linear Regression": 121804.9,
+        "Random Forest": 115973.1,
+        "XGBoost": 118713.7,
+        "Exponential Smoothing": 141871.7
+      }
+    ],
+    "future": [
+      {
+        "week_start": "2011-12-05",
+        "forecast": 116284.9,
+        "step": 1,
+        "lower": 67529.6,
+        "upper": 165040.2
+      },
+      {
+        "week_start": "2011-12-12",
+        "forecast": 99968.8,
+        "step": 2,
+        "lower": 31018.4,
+        "upper": 168919.2
+      },
+      {
+        "week_start": "2011-12-19",
+        "forecast": 91552.4,
+        "step": 3,
+        "lower": 7105.7,
+        "upper": 175999.1
+      },
+      {
+        "week_start": "2011-12-26",
+        "forecast": 39459.8,
+        "step": 4,
+        "lower": 0,
+        "upper": 136970.4
+      },
+      {
+        "week_start": "2012-01-02",
+        "forecast": 51539.0,
+        "step": 5,
+        "lower": 0,
+        "upper": 160559.2
+      },
+      {
+        "week_start": "2012-01-09",
+        "forecast": 63851.1,
+        "step": 6,
+        "lower": 0,
+        "upper": 183276.7
+      },
+      {
+        "week_start": "2012-01-16",
+        "forecast": 58241.6,
+        "step": 7,
+        "lower": 0,
+        "upper": 187236.0
+      },
+      {
+        "week_start": "2012-01-23",
+        "forecast": 55588.0,
+        "step": 8,
+        "lower": 0,
+        "upper": 193488.8
+      }
+    ],
+    "rf_feature_importance": {
+      "lag_1": 0.3005,
+      "roll_mean_4": 0.2416,
+      "week_sin": 0.1447,
+      "week_cos": 0.0903,
+      "lag_2": 0.0758,
+      "lag_4": 0.0598,
+      "holiday_days": 0.0487,
+      "lag_3": 0.035,
+      "is_pre_christmas": 0.0035
+    },
+    "interval_note": "Approximate 95% band = forecast +/- 1.96 x test residual SD x sqrt(step). Not a calibrated interval."
+  },
+  "Western Europe": {
+    "series": "Western Europe",
+    "target": "units per week",
+    "n_weeks": 105,
+    "periods": {
+      "train": {
+        "start": "2009-11-30",
+        "end": "2011-06-13",
+        "weeks": 81
+      },
+      "validation": {
+        "start": "2011-06-20",
+        "end": "2011-09-05",
+        "weeks": 12
+      },
+      "test": {
+        "start": "2011-09-12",
+        "end": "2011-11-28",
+        "weeks": 12
+      }
+    },
+    "horizon_weeks": 8,
+    "features": [
+      "lag_1",
+      "lag_2",
+      "lag_3",
+      "lag_4",
+      "roll_mean_4",
+      "week_sin",
+      "week_cos",
+      "holiday_days",
+      "is_pre_christmas"
+    ],
+    "validation_metrics": {
+      "Naive": {
+        "mae": 6548.583333333333,
+        "rmse": 9214.464186809779,
+        "mape": 90.04367588468938,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Seasonal Naive": {
+        "mae": 9520.583333333334,
+        "rmse": 22057.893264090293,
+        "mape": 70.49892451534761,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Linear Regression": {
+        "mae": 8284.22814357413,
+        "rmse": 9000.408226484104,
+        "mape": 149.11006159199215,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Random Forest": {
+        "mae": 3863.388221450618,
+        "rmse": 5149.786093643476,
+        "mape": 46.573637060656786,
+        "mape_excluded_zero_weeks": 0
+      },
+      "XGBoost": {
+        "mae": 3223.5492350260415,
+        "rmse": 4610.062189328519,
+        "mape": 36.71210462390318,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Exponential Smoothing": {
+        "mae": 4785.5136034213865,
+        "rmse": 6081.588512348153,
+        "mape": 68.76606933911754,
+        "mape_excluded_zero_weeks": 0
+      }
+    },
+    "test_metrics": {
+      "Naive": {
+        "mae": 7910.166666666667,
+        "rmse": 10187.173037697947,
+        "mape": 67.73000518146345,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Seasonal Naive": {
+        "mae": 7929.166666666667,
+        "rmse": 9931.69914130172,
+        "mape": 57.80648208127518,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Linear Regression": {
+        "mae": 6373.935691239888,
+        "rmse": 7760.559983739184,
+        "mape": 49.60379502466803,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Random Forest": {
+        "mae": 6092.745754188713,
+        "rmse": 8335.647198467268,
+        "mape": 41.048303522321476,
+        "mape_excluded_zero_weeks": 0
+      },
+      "XGBoost": {
+        "mae": 5868.714925130208,
+        "rmse": 8350.121708250113,
+        "mape": 39.39154711050459,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Exponential Smoothing": {
+        "mae": 5188.559077121058,
+        "rmse": 7675.136094603632,
+        "mape": 32.958311134982885,
+        "mape_excluded_zero_weeks": 0
+      }
+    },
+    "selected_model": "XGBoost",
+    "lowest_test_mae_model": "Exponential Smoothing",
+    "history": [
+      {
+        "week_start": "2009-11-30",
+        "actual": 6461.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2009-12-07",
+        "actual": 2750.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2009-12-14",
+        "actual": 10213.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2009-12-21",
+        "actual": 695.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2009-12-28",
+        "actual": 0.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-01-04",
+        "actual": 3870.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-01-11",
+        "actual": 3356.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-01-18",
+        "actual": 9541.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-01-25",
+        "actual": 15995.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-02-01",
+        "actual": 2106.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-02-08",
+        "actual": 6535.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-02-15",
+        "actual": 9659.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-02-22",
+        "actual": 2729.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-03-01",
+        "actual": 6952.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-03-08",
+        "actual": 9743.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-03-15",
+        "actual": 4420.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-03-22",
+        "actual": 10183.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-03-29",
+        "actual": 4364.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-04-05",
+        "actual": 6402.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-04-12",
+        "actual": 4404.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-04-19",
+        "actual": 4886.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-04-26",
+        "actual": 5044.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-05-03",
+        "actual": 18986.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-05-10",
+        "actual": 4526.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-05-17",
+        "actual": 6586.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-05-24",
+        "actual": 4249.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-05-31",
+        "actual": 6640.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-06-07",
+        "actual": 3792.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-06-14",
+        "actual": 7201.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-06-21",
+        "actual": 2097.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-06-28",
+        "actual": 18236.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-07-05",
+        "actual": 5266.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-07-12",
+        "actual": 4751.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-07-19",
+        "actual": 6136.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-07-26",
+        "actual": 2684.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-08-02",
+        "actual": 2170.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-08-09",
+        "actual": 100717.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-08-16",
+        "actual": 7537.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-08-23",
+        "actual": 3875.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-08-30",
+        "actual": 14112.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-09-06",
+        "actual": 4938.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-09-13",
+        "actual": 9523.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-09-20",
+        "actual": 17564.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-09-27",
+        "actual": 7680.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-10-04",
+        "actual": 5579.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-10-11",
+        "actual": 24677.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-10-18",
+        "actual": 5592.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-10-25",
+        "actual": 4718.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-11-01",
+        "actual": 15189.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-11-08",
+        "actual": 6879.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-11-15",
+        "actual": 18604.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-11-22",
+        "actual": 8219.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-11-29",
+        "actual": 12714.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-12-06",
+        "actual": 4104.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-12-13",
+        "actual": 2822.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-12-20",
+        "actual": 10248.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-12-27",
+        "actual": 0.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-01-03",
+        "actual": 4475.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-01-10",
+        "actual": 13286.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-01-17",
+        "actual": 17023.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-01-24",
+        "actual": 4494.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-01-31",
+        "actual": 5389.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-02-07",
+        "actual": 3376.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-02-14",
+        "actual": 3186.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-02-21",
+        "actual": 18503.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-02-28",
+        "actual": 3224.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-03-07",
+        "actual": 2494.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-03-14",
+        "actual": 3680.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-03-21",
+        "actual": 7214.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-03-28",
+        "actual": 19571.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-04-04",
+        "actual": 3762.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-04-11",
+        "actual": 2899.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-04-18",
+        "actual": 3208.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-04-25",
+        "actual": 2419.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-05-02",
+        "actual": 4758.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-05-09",
+        "actual": 24525.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-05-16",
+        "actual": 5831.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-05-23",
+        "actual": 10469.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-05-30",
+        "actual": 8623.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-06-06",
+        "actual": 8175.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-06-13",
+        "actual": 9806.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-06-20",
+        "actual": 5005.0,
+        "split": "validation",
+        "Naive": 9806.0,
+        "Seasonal Naive": 2097.0,
+        "Linear Regression": 12114.1,
+        "Random Forest": 7156.2,
+        "XGBoost": 5917.6,
+        "Exponential Smoothing": 9533.1
+      },
+      {
+        "week_start": "2011-06-27",
+        "actual": 12702.0,
+        "split": "validation",
+        "Naive": 5005.0,
+        "Seasonal Naive": 18236.0,
+        "Linear Regression": 13782.0,
+        "Random Forest": 7202.7,
+        "XGBoost": 10085.2,
+        "Exponential Smoothing": 9441.8
+      },
+      {
+        "week_start": "2011-07-04",
+        "actual": 4764.0,
+        "split": "validation",
+        "Naive": 12702.0,
+        "Seasonal Naive": 5266.0,
+        "Linear Regression": 14105.9,
+        "Random Forest": 6167.3,
+        "XGBoost": 5706.9,
+        "Exponential Smoothing": 9507.0
+      },
+      {
+        "week_start": "2011-07-11",
+        "actual": 4175.0,
+        "split": "validation",
+        "Naive": 4764.0,
+        "Seasonal Naive": 4751.0,
+        "Linear Regression": 14533.0,
+        "Random Forest": 6642.1,
+        "XGBoost": 6617.1,
+        "Exponential Smoothing": 9415.0
+      },
+      {
+        "week_start": "2011-07-18",
+        "actual": 4773.0,
+        "split": "validation",
+        "Naive": 4175.0,
+        "Seasonal Naive": 6136.0,
+        "Linear Regression": 17479.0,
+        "Random Forest": 6108.0,
+        "XGBoost": 6246.5,
+        "Exponential Smoothing": 9317.7
+      },
+      {
+        "week_start": "2011-07-25",
+        "actual": 4416.0,
+        "split": "validation",
+        "Naive": 4773.0,
+        "Seasonal Naive": 2684.0,
+        "Linear Regression": 17158.8,
+        "Random Forest": 6214.1,
+        "XGBoost": 4846.2,
+        "Exponential Smoothing": 9236.7
+      },
+      {
+        "week_start": "2011-08-01",
+        "actual": 7227.0,
+        "split": "validation",
+        "Naive": 4416.0,
+        "Seasonal Naive": 2170.0,
+        "Linear Regression": 19073.4,
+        "Random Forest": 13344.0,
+        "XGBoost": 10343.0,
+        "Exponential Smoothing": 9152.8
+      },
+      {
+        "week_start": "2011-08-08",
+        "actual": 25708.0,
+        "split": "validation",
+        "Naive": 7227.0,
+        "Seasonal Naive": 100717.0,
+        "Linear Regression": 19079.9,
+        "Random Forest": 12194.2,
+        "XGBoost": 13154.6,
+        "Exponential Smoothing": 9121.1
+      },
+      {
+        "week_start": "2011-08-15",
+        "actual": 4760.0,
+        "split": "validation",
+        "Naive": 25708.0,
+        "Seasonal Naive": 7537.0,
+        "Linear Regression": 15089.7,
+        "Random Forest": 7779.6,
+        "XGBoost": 7129.2,
+        "Exponential Smoothing": 9403.3
+      },
+      {
+        "week_start": "2011-08-22",
+        "actual": 11830.0,
+        "split": "validation",
+        "Naive": 4760.0,
+        "Seasonal Naive": 3875.0,
+        "Linear Regression": 14918.7,
+        "Random Forest": 7754.2,
+        "XGBoost": 5571.6,
+        "Exponential Smoothing": 9324.2
+      },
+      {
+        "week_start": "2011-08-29",
+        "actual": 6197.0,
+        "split": "validation",
+        "Naive": 11830.0,
+        "Seasonal Naive": 14112.0,
+        "Linear Regression": 13977.5,
+        "Random Forest": 11149.8,
+        "XGBoost": 11279.2,
+        "Exponential Smoothing": 9367.4
+      },
+      {
+        "week_start": "2011-09-05",
+        "actual": 7857.0,
+        "split": "validation",
+        "Naive": 6197.0,
+        "Seasonal Naive": 4938.0,
+        "Linear Regression": 14256.8,
+        "Random Forest": 7829.3,
+        "XGBoost": 8342.2,
+        "Exponential Smoothing": 9314.2
+      },
+      {
+        "week_start": "2011-09-12",
+        "actual": 8014.0,
+        "split": "test",
+        "Naive": 7857.0,
+        "Seasonal Naive": 9523.0,
+        "Linear Regression": 15642.5,
+        "Random Forest": 14268.3,
+        "XGBoost": 16802.0,
+        "Exponential Smoothing": 9290.8
+      },
+      {
+        "week_start": "2011-09-19",
+        "actual": 23065.0,
+        "split": "test",
+        "Naive": 8014.0,
+        "Seasonal Naive": 17564.0,
+        "Linear Regression": 14304.8,
+        "Random Forest": 12167.0,
+        "XGBoost": 12447.1,
+        "Exponential Smoothing": 9270.9
+      },
+      {
+        "week_start": "2011-09-26",
+        "actual": 5383.0,
+        "split": "test",
+        "Naive": 23065.0,
+        "Seasonal Naive": 7680.0,
+        "Linear Regression": 12512.1,
+        "Random Forest": 9221.2,
+        "XGBoost": 7735.9,
+        "Exponential Smoothing": 9490.3
+      },
+      {
+        "week_start": "2011-10-03",
+        "actual": 11004.0,
+        "split": "test",
+        "Naive": 5383.0,
+        "Seasonal Naive": 5579.0,
+        "Linear Regression": 12043.0,
+        "Random Forest": 10041.3,
+        "XGBoost": 7654.4,
+        "Exponential Smoothing": 9425.0
+      },
+      {
+        "week_start": "2011-10-10",
+        "actual": 9684.0,
+        "split": "test",
+        "Naive": 11004.0,
+        "Seasonal Naive": 24677.0,
+        "Linear Regression": 13650.8,
+        "Random Forest": 11456.4,
+        "XGBoost": 11384.6,
+        "Exponential Smoothing": 9450.1
+      },
+      {
+        "week_start": "2011-10-17",
+        "actual": 29382.0,
+        "split": "test",
+        "Naive": 9684.0,
+        "Seasonal Naive": 5592.0,
+        "Linear Regression": 10706.8,
+        "Random Forest": 7187.3,
+        "XGBoost": 6754.8,
+        "Exponential Smoothing": 9453.5
+      },
+      {
+        "week_start": "2011-10-24",
+        "actual": 15903.0,
+        "split": "test",
+        "Naive": 29382.0,
+        "Seasonal Naive": 4718.0,
+        "Linear Regression": 10019.8,
+        "Random Forest": 7505.7,
+        "XGBoost": 7965.5,
+        "Exponential Smoothing": 9769.6
+      },
+      {
+        "week_start": "2011-10-31",
+        "actual": 11282.0,
+        "split": "test",
+        "Naive": 15903.0,
+        "Seasonal Naive": 15189.0,
+        "Linear Regression": 6771.9,
+        "Random Forest": 8020.6,
+        "XGBoost": 9942.6,
+        "Exponential Smoothing": 9871.4
+      },
+      {
+        "week_start": "2011-11-07",
+        "actual": 15774.0,
+        "split": "test",
+        "Naive": 11282.0,
+        "Seasonal Naive": 6879.0,
+        "Linear Regression": 9097.8,
+        "Random Forest": 9698.2,
+        "XGBoost": 10131.3,
+        "Exponential Smoothing": 9895.1
+      },
+      {
+        "week_start": "2011-11-14",
+        "actual": 11648.0,
+        "split": "test",
+        "Naive": 15774.0,
+        "Seasonal Naive": 18604.0,
+        "Linear Regression": 6044.7,
+        "Random Forest": 8472.9,
+        "XGBoost": 10793.8,
+        "Exponential Smoothing": 9995.0
+      },
+      {
+        "week_start": "2011-11-21",
+        "actual": 14126.0,
+        "split": "test",
+        "Naive": 11648.0,
+        "Seasonal Naive": 8219.0,
+        "Linear Regression": 7770.9,
+        "Random Forest": 8101.4,
+        "XGBoost": 10082.8,
+        "Exponential Smoothing": 10022.8
+      },
+      {
+        "week_start": "2011-11-28",
+        "actual": 7929.0,
+        "split": "test",
+        "Naive": 14126.0,
+        "Seasonal Naive": 12714.0,
+        "Linear Regression": 8189.5,
+        "Random Forest": 7670.6,
+        "XGBoost": 9100.3,
+        "Exponential Smoothing": 10092.9
+      }
+    ],
+    "future": [
+      {
+        "week_start": "2011-12-05",
+        "forecast": 10678.2,
+        "step": 1,
+        "lower": 0,
+        "upper": 26166.5
+      },
+      {
+        "week_start": "2011-12-12",
+        "forecast": 8176.6,
+        "step": 2,
+        "lower": 0,
+        "upper": 30080.3
+      },
+      {
+        "week_start": "2011-12-19",
+        "forecast": 6262.7,
+        "step": 3,
+        "lower": 0,
+        "upper": 33089.2
+      },
+      {
+        "week_start": "2011-12-26",
+        "forecast": 7492.2,
+        "step": 4,
+        "lower": 0,
+        "upper": 38468.7
+      },
+      {
+        "week_start": "2012-01-02",
+        "forecast": 3098.6,
+        "step": 5,
+        "lower": 0,
+        "upper": 37731.4
+      },
+      {
+        "week_start": "2012-01-09",
+        "forecast": 7039.7,
+        "step": 6,
+        "lower": 0,
+        "upper": 44978.1
+      },
+      {
+        "week_start": "2012-01-16",
+        "forecast": 6814.6,
+        "step": 7,
+        "lower": 0,
+        "upper": 47792.7
+      },
+      {
+        "week_start": "2012-01-23",
+        "forecast": 6786.9,
+        "step": 8,
+        "lower": 0,
+        "upper": 50594.3
+      }
+    ],
+    "rf_feature_importance": {
+      "roll_mean_4": 0.3149,
+      "lag_1": 0.1785,
+      "week_cos": 0.142,
+      "week_sin": 0.1365,
+      "lag_2": 0.0846,
+      "lag_3": 0.0767,
+      "lag_4": 0.0456,
+      "holiday_days": 0.012,
+      "is_pre_christmas": 0.0092
+    },
+    "interval_note": "Approximate 95% band = forecast +/- 1.96 x test residual SD x sqrt(step). Not a calibrated interval."
+  },
+  "Ireland & Channel Is.": {
+    "series": "Ireland & Channel Is.",
+    "target": "units per week",
+    "n_weeks": 105,
+    "periods": {
+      "train": {
+        "start": "2009-11-30",
+        "end": "2011-06-13",
+        "weeks": 81
+      },
+      "validation": {
+        "start": "2011-06-20",
+        "end": "2011-09-05",
+        "weeks": 12
+      },
+      "test": {
+        "start": "2011-09-12",
+        "end": "2011-11-28",
+        "weeks": 12
+      }
+    },
+    "horizon_weeks": 8,
+    "features": [
+      "lag_1",
+      "lag_2",
+      "lag_3",
+      "lag_4",
+      "roll_mean_4",
+      "week_sin",
+      "week_cos",
+      "holiday_days",
+      "is_pre_christmas"
+    ],
+    "validation_metrics": {
+      "Naive": {
+        "mae": 2869.25,
+        "rmse": 4015.1864527067733,
+        "mape": 115.47248917151052,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Seasonal Naive": {
+        "mae": 4738.25,
+        "rmse": 5930.126410962923,
+        "mape": 241.10479095867922,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Linear Regression": {
+        "mae": 2434.016677240807,
+        "rmse": 3163.1771531528548,
+        "mape": 114.36451620697711,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Random Forest": {
+        "mae": 2888.2237847122,
+        "rmse": 3901.9640557965267,
+        "mape": 126.53379461504673,
+        "mape_excluded_zero_weeks": 0
+      },
+      "XGBoost": {
+        "mae": 3666.4119968414307,
+        "rmse": 4670.986875610928,
+        "mape": 164.32471723075457,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Exponential Smoothing": {
+        "mae": 2374.331247013559,
+        "rmse": 3519.224898652257,
+        "mape": 89.90846103160965,
+        "mape_excluded_zero_weeks": 0
+      }
+    },
+    "test_metrics": {
+      "Naive": {
+        "mae": 3495.1666666666665,
+        "rmse": 4515.4634498207015,
+        "mape": 316.3628305339314,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Seasonal Naive": {
+        "mae": 3044.8333333333335,
+        "rmse": 4039.7986335954915,
+        "mape": 199.14169397728253,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Linear Regression": {
+        "mae": 2251.6640316806734,
+        "rmse": 2727.3099932119103,
+        "mape": 170.29844893501874,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Random Forest": {
+        "mae": 1973.2620343915341,
+        "rmse": 2599.91508209385,
+        "mape": 151.73465061047526,
+        "mape_excluded_zero_weeks": 0
+      },
+      "XGBoost": {
+        "mae": 2946.7041625976562,
+        "rmse": 3525.7871657810197,
+        "mape": 192.74466980313838,
+        "mape_excluded_zero_weeks": 0
+      },
+      "Exponential Smoothing": {
+        "mae": 2151.5448928402193,
+        "rmse": 2602.2064247048706,
+        "mape": 118.60040199027748,
+        "mape_excluded_zero_weeks": 0
+      }
+    },
+    "selected_model": "Exponential Smoothing",
+    "lowest_test_mae_model": "Random Forest",
+    "history": [
+      {
+        "week_start": "2009-11-30",
+        "actual": 1378.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2009-12-07",
+        "actual": 1234.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2009-12-14",
+        "actual": 2721.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2009-12-21",
+        "actual": 4512.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2009-12-28",
+        "actual": 0.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-01-04",
+        "actual": 26350.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-01-11",
+        "actual": 150.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-01-18",
+        "actual": 3110.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-01-25",
+        "actual": 1370.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-02-01",
+        "actual": 6433.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-02-08",
+        "actual": 1044.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-02-15",
+        "actual": 1936.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-02-22",
+        "actual": 2213.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-03-01",
+        "actual": 9780.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-03-08",
+        "actual": 664.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-03-15",
+        "actual": 1977.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-03-22",
+        "actual": 1760.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-03-29",
+        "actual": 1603.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-04-05",
+        "actual": 204.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-04-12",
+        "actual": 7976.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-04-19",
+        "actual": 3451.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-04-26",
+        "actual": 3101.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-05-03",
+        "actual": 5582.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-05-10",
+        "actual": 2102.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-05-17",
+        "actual": 1149.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-05-24",
+        "actual": 2686.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-05-31",
+        "actual": 853.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-06-07",
+        "actual": 858.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-06-14",
+        "actual": 8702.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-06-21",
+        "actual": 1860.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-06-28",
+        "actual": 1069.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-07-05",
+        "actual": 10183.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-07-12",
+        "actual": 3705.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-07-19",
+        "actual": 288.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-07-26",
+        "actual": 683.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-08-02",
+        "actual": 1483.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-08-09",
+        "actual": 1573.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-08-16",
+        "actual": 11457.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-08-23",
+        "actual": 1358.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-08-30",
+        "actual": 1452.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-09-06",
+        "actual": 2433.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-09-13",
+        "actual": 5567.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-09-20",
+        "actual": 5707.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-09-27",
+        "actual": 15181.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-10-04",
+        "actual": 1205.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-10-11",
+        "actual": 3316.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-10-18",
+        "actual": 5281.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-10-25",
+        "actual": 5817.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-11-01",
+        "actual": 4503.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-11-08",
+        "actual": 3096.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-11-15",
+        "actual": 7403.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-11-22",
+        "actual": 1251.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-11-29",
+        "actual": 3153.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-12-06",
+        "actual": 1357.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-12-13",
+        "actual": 1211.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-12-20",
+        "actual": 451.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2010-12-27",
+        "actual": 0.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-01-03",
+        "actual": 84.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-01-10",
+        "actual": 6198.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-01-17",
+        "actual": 1618.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-01-24",
+        "actual": 1149.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-01-31",
+        "actual": 811.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-02-07",
+        "actual": 0.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-02-14",
+        "actual": 4948.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-02-21",
+        "actual": 1140.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-02-28",
+        "actual": 1984.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-03-07",
+        "actual": 5060.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-03-14",
+        "actual": 2861.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-03-21",
+        "actual": 646.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-03-28",
+        "actual": 1834.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-04-04",
+        "actual": 2282.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-04-11",
+        "actual": 835.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-04-18",
+        "actual": 233.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-04-25",
+        "actual": 162.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-05-02",
+        "actual": 2852.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-05-09",
+        "actual": 487.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-05-16",
+        "actual": 4182.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-05-23",
+        "actual": 713.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-05-30",
+        "actual": 0.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-06-06",
+        "actual": 3682.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-06-13",
+        "actual": 4995.0,
+        "split": "train"
+      },
+      {
+        "week_start": "2011-06-20",
+        "actual": 1698.0,
+        "split": "validation",
+        "Naive": 4995.0,
+        "Seasonal Naive": 1860.0,
+        "Linear Regression": 2983.7,
+        "Random Forest": 3326.9,
+        "XGBoost": 3048.0,
+        "Exponential Smoothing": 3143.9
+      },
+      {
+        "week_start": "2011-06-27",
+        "actual": 4149.0,
+        "split": "validation",
+        "Naive": 1698.0,
+        "Seasonal Naive": 1069.0,
+        "Linear Regression": 3583.0,
+        "Random Forest": 4371.2,
+        "XGBoost": 5599.5,
+        "Exponential Smoothing": 3124.8
+      },
+      {
+        "week_start": "2011-07-04",
+        "actual": 557.0,
+        "split": "validation",
+        "Naive": 4149.0,
+        "Seasonal Naive": 10183.0,
+        "Linear Regression": 3371.2,
+        "Random Forest": 4422.7,
+        "XGBoost": 5447.1,
+        "Exponential Smoothing": 3138.2
+      },
+      {
+        "week_start": "2011-07-11",
+        "actual": 865.0,
+        "split": "validation",
+        "Naive": 557.0,
+        "Seasonal Naive": 3705.0,
+        "Linear Regression": 4601.7,
+        "Random Forest": 3775.5,
+        "XGBoost": 4561.7,
+        "Exponential Smoothing": 3105.0
+      },
+      {
+        "week_start": "2011-07-18",
+        "actual": 9236.0,
+        "split": "validation",
+        "Naive": 865.0,
+        "Seasonal Naive": 288.0,
+        "Linear Regression": 4948.9,
+        "Random Forest": 2015.6,
+        "XGBoost": 809.0,
+        "Exponential Smoothing": 3076.6
+      },
+      {
+        "week_start": "2011-07-25",
+        "actual": 10643.0,
+        "split": "validation",
+        "Naive": 9236.0,
+        "Seasonal Naive": 683.0,
+        "Linear Regression": 3314.1,
+        "Random Forest": 2084.3,
+        "XGBoost": 98.8,
+        "Exponential Smoothing": 3153.7
+      },
+      {
+        "week_start": "2011-08-01",
+        "actual": 3181.0,
+        "split": "validation",
+        "Naive": 10643.0,
+        "Seasonal Naive": 1483.0,
+        "Linear Regression": 2324.8,
+        "Random Forest": 1841.8,
+        "XGBoost": 0.0,
+        "Exponential Smoothing": 3246.5
+      },
+      {
+        "week_start": "2011-08-08",
+        "actual": 3225.0,
+        "split": "validation",
+        "Naive": 3181.0,
+        "Seasonal Naive": 1573.0,
+        "Linear Regression": 3570.3,
+        "Random Forest": 3790.0,
+        "XGBoost": 2864.6,
+        "Exponential Smoothing": 3245.7
+      },
+      {
+        "week_start": "2011-08-15",
+        "actual": 3050.0,
+        "split": "validation",
+        "Naive": 3225.0,
+        "Seasonal Naive": 11457.0,
+        "Linear Regression": 4380.5,
+        "Random Forest": 4356.8,
+        "XGBoost": 5481.5,
+        "Exponential Smoothing": 3245.4
+      },
+      {
+        "week_start": "2011-08-22",
+        "actual": 2613.0,
+        "split": "validation",
+        "Naive": 3050.0,
+        "Seasonal Naive": 1358.0,
+        "Linear Regression": 5355.5,
+        "Random Forest": 4130.9,
+        "XGBoost": 4831.1,
+        "Exponential Smoothing": 3243.1
+      },
+      {
+        "week_start": "2011-08-29",
+        "actual": 3616.0,
+        "split": "validation",
+        "Naive": 2613.0,
+        "Seasonal Naive": 1452.0,
+        "Linear Regression": 3435.0,
+        "Random Forest": 4161.5,
+        "XGBoost": 5291.1,
+        "Exponential Smoothing": 3235.7
+      },
+      {
+        "week_start": "2011-09-05",
+        "actual": 9500.0,
+        "split": "validation",
+        "Naive": 3616.0,
+        "Seasonal Naive": 2433.0,
+        "Linear Regression": 5765.8,
+        "Random Forest": 4522.1,
+        "XGBoost": 5727.6,
+        "Exponential Smoothing": 3240.0
+      },
+      {
+        "week_start": "2011-09-12",
+        "actual": 1043.0,
+        "split": "test",
+        "Naive": 9500.0,
+        "Seasonal Naive": 5567.0,
+        "Linear Regression": 4816.1,
+        "Random Forest": 4568.6,
+        "XGBoost": 5177.1,
+        "Exponential Smoothing": 3312.2
+      },
+      {
+        "week_start": "2011-09-19",
+        "actual": 4565.0,
+        "split": "test",
+        "Naive": 1043.0,
+        "Seasonal Naive": 5707.0,
+        "Linear Regression": 6085.8,
+        "Random Forest": 4691.5,
+        "XGBoost": 3540.0,
+        "Exponential Smoothing": 3286.4
+      },
+      {
+        "week_start": "2011-09-26",
+        "actual": 5011.0,
+        "split": "test",
+        "Naive": 4565.0,
+        "Seasonal Naive": 15181.0,
+        "Linear Regression": 5720.0,
+        "Random Forest": 5257.6,
+        "XGBoost": 10811.9,
+        "Exponential Smoothing": 3300.8
+      },
+      {
+        "week_start": "2011-10-03",
+        "actual": 1771.0,
+        "split": "test",
+        "Naive": 5011.0,
+        "Seasonal Naive": 1205.0,
+        "Linear Regression": 6055.6,
+        "Random Forest": 5881.2,
+        "XGBoost": 7594.0,
+        "Exponential Smoothing": 3319.9
+      },
+      {
+        "week_start": "2011-10-10",
+        "actual": 4922.0,
+        "split": "test",
+        "Naive": 1771.0,
+        "Seasonal Naive": 3316.0,
+        "Linear Regression": 6771.2,
+        "Random Forest": 6833.7,
+        "XGBoost": 7063.9,
+        "Exponential Smoothing": 3302.8
+      },
+      {
+        "week_start": "2011-10-17",
+        "actual": 9809.0,
+        "split": "test",
+        "Naive": 4922.0,
+        "Seasonal Naive": 5281.0,
+        "Linear Regression": 6275.4,
+        "Random Forest": 4743.9,
+        "XGBoost": 4700.5,
+        "Exponential Smoothing": 3320.5
+      },
+      {
+        "week_start": "2011-10-24",
+        "actual": 404.0,
+        "split": "test",
+        "Naive": 9809.0,
+        "Seasonal Naive": 5817.0,
+        "Linear Regression": 5086.6,
+        "Random Forest": 4391.8,
+        "XGBoost": 5112.1,
+        "Exponential Smoothing": 3390.4
+      },
+      {
+        "week_start": "2011-10-31",
+        "actual": 1923.0,
+        "split": "test",
+        "Naive": 404.0,
+        "Seasonal Naive": 4503.0,
+        "Linear Regression": 3205.7,
+        "Random Forest": 3403.7,
+        "XGBoost": 3019.2,
+        "Exponential Smoothing": 3358.5
+      },
+      {
+        "week_start": "2011-11-07",
+        "actual": 5732.0,
+        "split": "test",
+        "Naive": 1923.0,
+        "Seasonal Naive": 3096.0,
+        "Linear Regression": 3273.4,
+        "Random Forest": 4332.3,
+        "XGBoost": 3346.5,
+        "Exponential Smoothing": 3343.4
+      },
+      {
+        "week_start": "2011-11-14",
+        "actual": 5932.0,
+        "split": "test",
+        "Naive": 5732.0,
+        "Seasonal Naive": 7403.0,
+        "Linear Regression": 3046.6,
+        "Random Forest": 5674.4,
+        "XGBoost": 7322.4,
+        "Exponential Smoothing": 3368.4
+      },
+      {
+        "week_start": "2011-11-21",
+        "actual": 2626.0,
+        "split": "test",
+        "Naive": 5932.0,
+        "Seasonal Naive": 1251.0,
+        "Linear Regression": 2593.4,
+        "Random Forest": 4136.2,
+        "XGBoost": 3868.7,
+        "Exponential Smoothing": 3394.9
+      },
+      {
+        "week_start": "2011-11-28",
+        "actual": 2626.0,
+        "split": "test",
+        "Naive": 2626.0,
+        "Seasonal Naive": 3153.0,
+        "Linear Regression": 2633.7,
+        "Random Forest": 2683.5,
+        "XGBoost": 2121.9,
+        "Exponential Smoothing": 3387.0
+      }
+    ],
+    "future": [
+      {
+        "week_start": "2011-12-05",
+        "forecast": 3379.4,
+        "step": 1,
+        "lower": 0,
+        "upper": 8597.7
+      },
+      {
+        "week_start": "2011-12-12",
+        "forecast": 3400.2,
+        "step": 2,
+        "lower": 0,
+        "upper": 10780.0
+      },
+      {
+        "week_start": "2011-12-19",
+        "forecast": 3379.6,
+        "step": 3,
+        "lower": 0,
+        "upper": 12418.0
+      },
+      {
+        "week_start": "2011-12-26",
+        "forecast": 3379.6,
+        "step": 4,
+        "lower": 0,
+        "upper": 13816.2
+      },
+      {
+        "week_start": "2012-01-02",
+        "forecast": 3379.5,
+        "step": 5,
+        "lower": 0,
+        "upper": 15048.0
+      },
+      {
+        "week_start": "2012-01-09",
+        "forecast": 3379.6,
+        "step": 6,
+        "lower": 0,
+        "upper": 16161.8
+      },
+      {
+        "week_start": "2012-01-16",
+        "forecast": 3379.5,
+        "step": 7,
+        "lower": 0,
+        "upper": 17185.9
+      },
+      {
+        "week_start": "2012-01-23",
+        "forecast": 3379.5,
+        "step": 8,
+        "lower": 0,
+        "upper": 18139.1
+      }
+    ],
+    "rf_feature_importance": {
+      "lag_1": 0.2438,
+      "week_sin": 0.1863,
+      "roll_mean_4": 0.1727,
+      "lag_3": 0.1072,
+      "lag_4": 0.0989,
+      "week_cos": 0.0927,
+      "lag_2": 0.0836,
+      "holiday_days": 0.0145,
+      "is_pre_christmas": 0.0003
+    },
+    "interval_note": "Approximate 95% band = forecast +/- 1.96 x test residual SD x sqrt(step). Not a calibrated interval."
+  }
+}

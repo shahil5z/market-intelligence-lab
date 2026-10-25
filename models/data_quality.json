@@ -1,0 +1,84 @@
+{
+  "raw": {
+    "stage": "raw",
+    "rows": 1067371,
+    "columns": 8,
+    "missing_cells_pct": 2.897,
+    "missing_by_column_pct": {
+      "Invoice": 0.0,
+      "StockCode": 0.0,
+      "Description": 0.411,
+      "Quantity": 0.0,
+      "InvoiceDate": 0.0,
+      "Price": 0.0,
+      "Customer ID": 22.767,
+      "Country": 0.0
+    },
+    "duplicate_rows_pct": 3.217,
+    "invalid_dates_pct": 0.0,
+    "cancellation_rows_pct": 1.826,
+    "negative_quantity_pct": 2.15,
+    "impossible_price_pct": 0.582,
+    "non_product_code_pct": 0.571,
+    "inconsistent_category_pct": 24.889,
+    "inconsistent_category_note": "share of stock codes with more than one description spelling",
+    "unspecified_country_pct": 0.071,
+    "quantity_outlier_pct": 3.923,
+    "quantity_outlier_rule": "quantity > Q3 + 3*IQR = 37 among valid sales lines",
+    "extreme_quantity_rows": 11
+  },
+  "cleaning_steps": [
+    {
+      "rule": "drop exact duplicate rows",
+      "rows_removed": 34335
+    },
+    {
+      "rule": "drop cancellations (invoice starts with 'C')",
+      "rows_removed": 19104
+    },
+    {
+      "rule": "drop non-positive quantity",
+      "rows_removed": 3393
+    },
+    {
+      "rule": "drop non-positive price",
+      "rows_removed": 2626
+    },
+    {
+      "rule": "drop non-merchandise stock codes (postage, fees, manual)",
+      "rows_removed": 4700
+    },
+    {
+      "rule": "drop extreme quantity lines (> 10000)",
+      "rows_removed": 7
+    },
+    {
+      "rule": "drop 'Unspecified' country",
+      "rows_removed": 748
+    },
+    {
+      "rule": "drop rows outside 2009-12-01..2011-12-09",
+      "rows_removed": 0
+    }
+  ],
+  "clean": {
+    "stage": "clean",
+    "rows": 1002458,
+    "rows_removed_total": 64913,
+    "rows_removed_pct": 6.082,
+    "missing_customer_id_pct": 22.585,
+    "invalid_foreign_keys": {
+      "sales.product_id": 0,
+      "sales.region_id": 0,
+      "sales.customer_id (non-null)": 0,
+      "sales.campaign_id (non-null)": 0,
+      "sales.date": 0
+    },
+    "customers": 5846,
+    "products": 4706,
+    "countries": 42,
+    "campaign_lines_pct": 0.81,
+    "date_min": "2009-12-01",
+    "date_max": "2011-12-09"
+  }
+}
