@@ -33,7 +33,7 @@ export default function SegmentsPage() {
           </div>
           <Interpretation>
             k = {data.best_k_silhouette} has the highest silhouette but splits customers only into broad active/inactive halves; k = {data.chosen_k} is the best-scoring k ≥ 3 and gives segments that can be acted on.
-            Hierarchical (Ward) clustering on a 3,000-customer sample agrees moderately (ARI {data.ward_adjusted_rand_index.toFixed(2)}), so the segment boundaries are reasonably — not perfectly — stable.
+            Hierarchical (Ward) clustering on a 3,000-customer sample agrees moderately (ARI {data.ward_adjusted_rand_index.toFixed(2)}), so the segment boundaries are reasonably (not perfectly) stable.
           </Interpretation>
 
           <div className="mt-4 grid gap-4 lg:grid-cols-2">
@@ -93,7 +93,7 @@ export default function SegmentsPage() {
             <Card title="Business interpretation">
               <ul className="space-y-2 text-sm text-slate-700">
                 {data.segments.map((s: Row) => (
-                  <li key={s.name}><strong>{s.name}</strong> — {fmtPct(s.customer_share_pct)} of customers, {fmtPct(s.revenue_share_pct)} of revenue. {describe(s, data.medians)}</li>
+                  <li key={s.name}><strong>{s.name}</strong>: {fmtPct(s.customer_share_pct)} of customers, {fmtPct(s.revenue_share_pct)} of revenue. {describe(s, data.medians)}</li>
                 ))}
               </ul>
             </Card>

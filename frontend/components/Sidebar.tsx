@@ -73,7 +73,7 @@ export default function Sidebar() {
           })}
         </ul>
         <div className="border-t border-slate-200 px-5 py-4 text-[11px] leading-relaxed text-slate-500 lg:mt-auto">
-          <p>Built as a Data Science portfolio project by Shahil.</p>
+          <p>A Data Science portfolio project by Shahil</p>
           <p className="mt-1">Data: UCI Online Retail II (CC BY 4.0) plus clearly labelled synthetic fields.</p>
         </div>
       </nav>

@@ -17,7 +17,7 @@ export default function CampaignsPage() {
   return (
     <>
       <PageHeader title="Campaign Analysis"
-        description="Observed performance of each campaign window against its own pre-period and against a control group (difference-in-differences). This is an observational analysis of synthetic campaigns — it demonstrates the method, not real marketing effects." />
+        description="Observed performance of each campaign window against its own pre-period and against a control group (difference-in-differences). This is an observational analysis of synthetic campaigns: it demonstrates the method, not real marketing effects." />
       <Status loading={list.loading} error={list.error} what="campaign results" onRetry={list.reload} rows={6} />
       {list.data && (
         <>
@@ -34,11 +34,11 @@ export default function CampaignsPage() {
               { key: "budget", label: "Budget", align: "right", format: (v) => fmtGBP(v) },
               { key: "revenue", label: "Revenue", align: "right", format: (v) => fmtGBP(v) },
               { key: "observed_uplift_pct", label: "Observed uplift", align: "right", format: (v, r) => (r.sufficient_data ? fmtPct(v, 1, true) : "insufficient data") },
-              { key: "welch_p_value", label: "p (Welch)", align: "right", format: (v) => (v === undefined || v === null ? "—" : fmtP(v)) },
-              { key: "did_p_value", label: "p (DiD)", align: "right", format: (v) => (v === undefined || v === null ? "—" : fmtP(v)) },
-              { key: "did_p_value_holm", label: "p (DiD, Holm)", align: "right", format: (v) => (v === undefined || v === null ? "—" : fmtP(v)) },
-              { key: "did_p_value_bh", label: "p (DiD, BH)", align: "right", format: (v) => (v === undefined || v === null ? "—" : fmtP(v)) },
-              { key: "naive_roi_pct", label: "Naive ROI", align: "right", format: (v) => (v === undefined || v === null ? "—" : fmtPct(v, 0, true)) },
+              { key: "welch_p_value", label: "p (Welch)", align: "right", format: (v) => (v === undefined || v === null ? "-" : fmtP(v)) },
+              { key: "did_p_value", label: "p (DiD)", align: "right", format: (v) => (v === undefined || v === null ? "-" : fmtP(v)) },
+              { key: "did_p_value_holm", label: "p (DiD, Holm)", align: "right", format: (v) => (v === undefined || v === null ? "-" : fmtP(v)) },
+              { key: "did_p_value_bh", label: "p (DiD, BH)", align: "right", format: (v) => (v === undefined || v === null ? "-" : fmtP(v)) },
+              { key: "naive_roi_pct", label: "Naive ROI", align: "right", format: (v) => (v === undefined || v === null ? "-" : fmtPct(v, 0, true)) },
             ]} />
           </Card>
         </>

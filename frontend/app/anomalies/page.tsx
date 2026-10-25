@@ -31,7 +31,7 @@ export default function AnomaliesPage() {
       {data && (
         <>
           <div className="mt-4"><Note>{data.method} Expected range: {data.expected_range_rule}. Severity: {data.severity_rule}.</Note></div>
-          <Card title={`Weekly revenue — ${data.series_name}`} subtitle="Dots mark flagged weeks (teal = spike, violet = drop)" className="mt-4">
+          <Card title={`Weekly revenue: ${data.series_name}`} subtitle="Dots mark flagged weeks (teal = spike, violet = drop)" className="mt-4">
             <ResponsiveContainer width="100%" height={280}>
               <LineChart data={data.series}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />

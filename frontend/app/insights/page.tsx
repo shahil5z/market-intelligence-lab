@@ -12,7 +12,7 @@ export default function InsightsPage() {
   return (
     <>
       <PageHeader title="Business Insights"
-        description="Key findings generated automatically from the computed results. Each sentence is a template filled with numbers returned by the analysis endpoints — nothing is written by hand or by a language model." />
+        description="Key findings generated automatically from the computed results. Each sentence is a template filled with numbers returned by the analysis endpoints. Nothing is written by hand or by a language model." />
       <Status loading={loading} error={error} what="insights" onRetry={reload} rows={6} />
       {data && (
         <Card title="Key findings">

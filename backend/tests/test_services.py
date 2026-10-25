@@ -86,3 +86,10 @@ def test_ai_fallback_without_key():
     out = ai_analyst.analyze("Which region had the strongest growth?")
     assert out["explanation_source"] == "rule_based"
     assert out["result"]["rows"][0]["region_group"] in out["answer"]
+
+
+def test_strip_em_dashes():
+    from app.services.ai_analyst import strip_em_dashes
+
+    assert strip_em_dashes("Revenue rose \u2014 mostly in Q4") == "Revenue rose, mostly in Q4"
+    assert "\u2014" not in strip_em_dashes("a\u2014b")

@@ -56,7 +56,7 @@ export default function ForecastPage() {
             <Kpi label="Forecast horizon" value={`${data.horizon_weeks} weeks`} note="recursive, beyond the data" />
           </div>
 
-          <Card title={`Actual vs predicted weekly units — ${series}`} subtitle="Shaded: validation (light) and test (darker). Predictions are one-step-ahead. Dashed line: future forecast with approximate band." className="mt-4">
+          <Card title={`Actual vs predicted weekly units: ${series}`} subtitle="Shaded: validation (light) and test (darker). Predictions are one-step-ahead. Dashed line: future forecast with approximate band." className="mt-4">
             <ResponsiveContainer width="100%" height={340}>
               <ComposedChart data={chartRows}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
@@ -73,8 +73,8 @@ export default function ForecastPage() {
               </ComposedChart>
             </ResponsiveContainer>
             <Interpretation>
-              On the test weeks, {data.selected_model} has MAE {fmtNumber(sel.mae)} units versus {fmtNumber(naive)} for the naive (last week) baseline
-              — {naive > sel.mae ? `${fmtPct((100 * (naive - sel.mae)) / naive)} lower error` : `${fmtPct((100 * (sel.mae - naive)) / naive)} higher error`}.
+              On the test weeks, {data.selected_model} has MAE {fmtNumber(sel.mae)} units versus {fmtNumber(naive)} for the naive (last week) baseline,
+              {naive > sel.mae ? `${fmtPct((100 * (naive - sel.mae)) / naive)} lower error` : `${fmtPct((100 * (sel.mae - naive)) / naive)} higher error`}.
               {data.selected_model !== data.lowest_test_mae_model && ` ${data.lowest_test_mae_model} happened to score best on test, which shows that model rankings on 12 weeks are noisy.`}
             </Interpretation>
           </Card>
@@ -87,7 +87,7 @@ export default function ForecastPage() {
                 { key: "test_mae", label: "Test MAE", align: "right", format: (v) => fmtNumber(v) },
                 { key: "test_rmse", label: "Test RMSE", align: "right", format: (v) => fmtNumber(v) },
                 { key: "test_mape", label: "Test MAPE", align: "right", format: (v) => fmtPct(v) },
-                { key: "rec_mae", label: "Test MAE (12-wk recursive)", align: "right", format: (v) => (v == null ? "—" : fmtNumber(v)) },
+                { key: "rec_mae", label: "Test MAE (12-wk recursive)", align: "right", format: (v) => (v == null ? "-" : fmtNumber(v)) },
               ]} />
               <p className="mt-2 text-xs text-slate-500">{data.evaluation_note}</p>
             </Card>
