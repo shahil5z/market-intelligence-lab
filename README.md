@@ -256,5 +256,11 @@ What the forecast numbers show:
 - A CI workflow (GitHub Actions) running the tests and lint on every push.
 - An LLM-based intent router with the same grounding check.
 
+## Author
+
+Designed and developed by **Shohrab Haque Shahil**
+
+[LinkedIn](https://www.linkedin.com/in/shohrab-haque) | [Website](https://shahil-personal.vercel.app)
+
 ## Licence
 Code: MIT (see `LICENSE`). Data: UCI Online Retail II, CC BY 4.0, with attribution as above; derived data in this repo carries the same licence.
